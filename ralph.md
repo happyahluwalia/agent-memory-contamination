@@ -6,63 +6,44 @@
 # Ralph
 
 An agentic code generation CLI powered by DeepSeek. Ralph operates via an explore → understand → implement → verify loop, with full session persistence, context compaction, checkpointing, and a rich tool set for reading, searching, and editing code.
+# RALPH.md — Research Agent Instructions
 
-## Install
+## Project
+Autonomous research on multi-agent AI for college counseling.
+We are studying whether per-student memory causes cross-student data contamination.
 
-### cargo-binstall (recommended)
+## Stack
+- Python 3, Anthropic SDK (claude-sonnet-4-20250514)
+- No GPU, no local models, no databases
+- `pip install anthropic` is the only dependency
 
-```bash
-cargo binstall ralph-coder
-```
+## Your role in the loop
+You are the PROPOSER and EXECUTOR. Claude is the CRITIC.
 
-Downloads the pre-built binary for your platform — no compilation required. The installed command is `ralph`. Install `cargo-binstall` first if you don't have it:
+The loop:
+1. Read `propose_prompt.txt` → write a proposed experiment plan to stdout
+2. Claude reviews your plan (you'll see approve/reject + feedback)
+3. Read `execute_prompt.txt` → modify `experiment.py` → run it → report results
 
-```bash
-cargo install cargo-binstall
-```
+## Rules
+- Only modify `experiment.py` — never touch `research_loop.py` or `program.md`
+- Always run `python experiment.py` after modifying it and capture full output
+- If experiment.py crashes, fix it and rerun — don't report a crash as results
+- Report results in the structured format specified in execute_prompt.txt
+- Keep changes incremental — one hypothesis per iteration
+- Never increase N_STUDENTS above 30 (API cost control)
 
-### Build from source
+## Skills
+Place in `.ralph/skills/`:
+- `research-propose.md` → reads propose_prompt.txt, outputs experiment plan
+- `research-execute.md` → reads execute_prompt.txt, modifies experiment.py, runs it
 
-```bash
-cargo install ralph-coder
-```
-
-Compiles from source via crates.io. Requires Rust 1.75+ — install via [rustup](https://rustup.rs).
-
----
-
-## API Keys
-
-```bash
-export DEEPSEEK_API_KEY=sk-...   # required
-
-# Optional — enables web search
-export BRAVE_API_KEY=BSA...      # Brave Search
-export SERP_API_KEY=...          # SerpAPI (fallback)
-```
-
-Web search activates automatically when either key is set. Without a search key Ralph works offline using codebase search only.
-
----
-
-## Usage
-
-### Interactive mode
-
-Launch without a prompt for a persistent chat session:
-
-```bash
-ralph
-```
-
-Type tasks at the `>>` prompt. Context (files read, edits made, history) carries across tasks in the same session.
-
-```
->> explain the structure of this codebase
->> add error handling to the database module
->> run the tests and fix any failures
->> exit
-```
+## Key files
+- `experiment.py` — the ONLY file you modify
+- `propose_prompt.txt` — written by the loop, read by you to propose
+- `execute_prompt.txt` — written by the loop, read by you to execute
+- `results_history.json` — all prior iteration results (read-only context)
+- `loop_log.jsonl` — append-only log (do not modify)
 
 ### Single-shot mode
 

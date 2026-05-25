@@ -3,7 +3,7 @@ services:
     build: .
     volumes:
       - ./workspace:/research/workspace   # your research output lives here on Mac
-      - .:/research/project:ro            # prompt files (voila.md, ralph.md, etc.) read-only
+      - .:/research/project                # project files (writable so loop can write all-spikes/ output)
     storage_opt:
       size: '20G'    # Linux only; on Mac use Docker Desktop disk limit
     environment:
