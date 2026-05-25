@@ -102,7 +102,15 @@ def load_current_iteration() -> int:
     return len(history)
 
 def run_ralph(prompt: str, cwd: Path, timeout: int = 900) -> str:
-    """Invoke ralph in single-shot mode, streaming output live while capturing it."""
+    """Invoke ralph in single-shot mode, streaming output live while capturing it.
+    Resets the ralph session directory first to prevent context carry-over between iterations.
+    """
+    # Force a fresh session each call — session carry-over causes the execute step
+    # to inherit the propose context and get confused about what file to read.
+    sessions_dir = cwd / ".ralph" / "sessions"
+    if sessions_dir.exists():
+        shutil.rmtree(sessions_dir)
+
     print(f"\n[ralph] Starting: {prompt[:80]}...")
     proc = subprocess.Popen(
         ["ralph", "--no-confirm", prompt],
@@ -267,11 +275,14 @@ Output a concise plan covering:
     print(f"ITERATION {iteration} — RALPH PROPOSES")
     print(f"{'='*60}")
 
-    return run_ralph(
-        "Read propose_prompt.txt and output an experiment proposal with all six sections: "
-        "HYPOTHESIS, CHANGES, METRICS, N, EXPECTED RUNTIME, WHY NOW.",
-        cwd=SPIKE_DIR
+    # Pass the full prompt content directly — avoids ralph needing to read a file,
+    # which can fail if it inherits a confused session state.
+    full_prompt = (
+        propose_prompt
+        + "\n\nOutput your proposal now with all six sections: "
+          "HYPOTHESIS, CHANGES, METRICS, N, EXPECTED RUNTIME, WHY NOW."
     )
+    return run_ralph(full_prompt, cwd=SPIKE_DIR)
 
 def ralph_execute_experiment(plan: str, iteration: int, critique: dict) -> str:
     """Invoke ralph to execute the approved experiment plan. Fully automated."""
@@ -305,14 +316,106 @@ NOW EXECUTE:
     print(f"ITERATION {iteration} — RALPH EXECUTES (plan approved {critique['score']}/10)")
     print(f"{'='*60}")
 
-    return run_ralph(
-        "Read execute_prompt.txt. Modify experiment.py as specified, incorporate Claude's suggestions, "
-        "run python experiment.py, fix any errors and rerun until it succeeds, then report results "
-        "in the exact format: HYPOTHESIS TESTED, METRICS table, KEY OBSERVATION, "
-        "CONTAMINATION RATE, SURPRISES, RAW OUTPUT.",
-        cwd=SPIKE_DIR,
-        timeout=600
+    full_prompt = (
+        execute_prompt
+        + "\n\nYour task now: modify experiment.py as specified above, run `python experiment.py`, "
+          "fix any errors and rerun until it succeeds. Report results in the exact format: "
+          "HYPOTHESIS TESTED, METRICS table, KEY OBSERVATION, CONTAMINATION RATE, SURPRISES, RAW OUTPUT."
     )
+    return run_ralph(full_prompt, cwd=SPIKE_DIR, timeout=900)
+
+# ─── Paper Writer ──────────────────────────────────────────────────────────────
+
+def write_paper(history: list):
+    """Use Claude to draft the research paper from accumulated results."""
+    kept = [r for r in history if r.get('kept')]
+    print(f"\n{'='*60}")
+    print(f"WRITING PAPER — {len(kept)} kept experiments, {len(history)} total iterations")
+    print(f"{'='*60}")
+
+    kept_summary = "\n\n".join([
+        f"Experiment {r['iteration']} (scored {r['claude_score']}/10):\n"
+        f"  Hypothesis: {r['hypothesis']}\n"
+        f"  Finding: {r['key_findings']}\n"
+        f"  Supports claim: {r.get('supports_claim', '?')}\n"
+        f"  Paper contribution: {r.get('paper_contribution', 'not specified')}"
+        for r in kept
+    ]) or "No experiments were kept. Paper covers methodology and negative results."
+
+    all_results = "\n\n".join([
+        f"Iteration {r['iteration']} (kept={r.get('kept',False)}, score={r['claude_score']}/10):\n"
+        f"  Hypothesis: {r['hypothesis']}\n"
+        f"  Finding: {r['key_findings']}"
+        for r in history
+    ])
+
+    paper_prompt = f"""Write a research paper for CAISc 2026 based on the following experimental results.
+
+TITLE: Memory Contamination in Multi-Agent AI College Counseling: A Study of Per-Student Agent Architecture
+
+CORE CLAIM: Per-student memory in shared-infrastructure AI agents causes cross-student data contamination, degrading accuracy and consistency — especially when student profiles are similar.
+
+DOMAIN: lumne.ai production college counseling platform. Two agent architectures compared:
+- Memory agent: per-student conversation history in system prompt
+- Shared agent: sliding window over shared history across all students
+
+ALL EXPERIMENT RESULTS ({len(history)} iterations, {len(kept)} kept):
+{all_results}
+
+KEPT RESULTS (the evidence base):
+{kept_summary}
+
+Write the full paper with these sections (be concise but complete):
+
+# Abstract
+[150 words max. State claim, method, key finding, implication]
+
+# 1. Introduction
+[Motivate from lumne.ai context. State the contamination problem. Preview findings.]
+
+# 2. Related Work
+[Bloom 2-sigma tutoring, LLM multi-agent coordination, hallucination in high-stakes domains, RAG vs memory tradeoffs]
+
+# 3. Methodology
+[Synthetic student profiles, two agent architectures, evaluation protocol, metrics: personalization/accuracy/hallucination/consistency/contamination_rate]
+
+# 4. Results
+[Report from kept experiments. Use markdown tables. Be honest about N sizes.]
+
+# 5. Discussion
+[What conditions drive contamination. Practical implications for AI advising system design. Negative results are informative too.]
+
+# 6. Limitations
+[Synthetic students, LLM-as-judge bias, small N, single model tested]
+
+# 7. Conclusion
+[One paragraph. Restate claim with appropriate caveats.]
+
+# Appendix A: Prompts
+[System prompts for both agents, evaluator prompt]
+
+# Appendix B: AI Involvement Checklist
+[Fill out for CAISc 2026 submission]
+
+Be direct. No hedging phrases. Scope claims to what the evidence supports."""
+
+    print("[paper] Calling Claude to write draft...")
+
+    sections = []
+    response = client.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=8000,
+        messages=[{"role": "user", "content": paper_prompt}]
+    )
+    sections.append(response.content[0].text)
+
+    paper_text = "\n\n".join(sections)
+    out_file = SPIKE_DIR / "paper_draft.md"
+    out_file.write_text(paper_text)
+
+    print(f"[paper] Draft written to: {out_file}")
+    print(f"[paper] Word count approx: {len(paper_text.split())}")
+
 
 # ─── Main Loop ─────────────────────────────────────────────────────────────────
 
@@ -439,19 +542,23 @@ def run_loop(max_iterations: int, resume: bool):
         kept_count = sum(1 for r in history if r.get('kept'))
         if kept_count >= 5:
             print(f"\n[loop] 🎉 {kept_count} kept experiments — enough to write the paper!")
-            print(f"[loop] Run: python scripts/write_paper_prompt.py")
-    
+            write_paper(load_results_history())
+            break
+
     # ── End of loop summary ─────────────────────────────────────────────
+    final_history = load_results_history()
+    kept = [r for r in final_history if r.get('kept')]
     print(f"\n{'='*60}")
-    print(f"LOOP COMPLETE — {load_current_iteration()} iterations run")
-    kept = [r for r in load_results_history() if r.get('kept')]
+    print(f"LOOP COMPLETE — {len(final_history)} iterations run")
     print(f"Kept: {len(kept)} experiments")
     print(f"Best score: {best['score']}/10 (iter {best['iteration']})")
-    print(f"\nTop findings:")
-    for r in kept:
-        print(f"  Iter {r['iteration']}: {r['key_findings']}")
+    if kept:
+        print(f"\nTop findings:")
+        for r in kept:
+            print(f"  Iter {r['iteration']}: {r['key_findings']}")
     print(f"\nAll results: {RESULTS_FILE}")
     print(f"Loop log:    {LOG_FILE}")
+    write_paper(final_history)
 
 
 if __name__ == "__main__":
