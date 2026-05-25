@@ -1,2 +1,8 @@
 .ralph/
 .env
+__pycache__/
+
+# Loop runtime files (regenerated each run)
+all-spikes/memory-contamination/propose_prompt.txt
+all-spikes/memory-contamination/execute_prompt.txt
+all-spikes/memory-contamination/loop_log.jsonl

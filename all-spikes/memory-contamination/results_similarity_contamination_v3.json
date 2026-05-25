@@ -1,0 +1,289 @@
+{
+  "experiment": "similarity_contamination_v3",
+  "config": {
+    "n_students": 6,
+    "n_rounds": 3
+  },
+  "students": [
+    {
+      "id": "S001",
+      "name": "Alan Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S002",
+      "name": "Brian Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S003",
+      "name": "Calvin Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S004",
+      "name": "Kai Yamamoto",
+      "similarity": "low"
+    },
+    {
+      "id": "S005",
+      "name": "Ivy Torres",
+      "similarity": "low"
+    },
+    {
+      "id": "S006",
+      "name": "Omar Hassan",
+      "similarity": "low"
+    }
+  ],
+  "memory_results": [
+    {
+      "student_id": "S001",
+      "student_name": "Alan Chen",
+      "agent_type": "memory",
+      "similarity": "high",
+      "personalization": 4.333333333333333,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "contamination": true,
+      "contamination_events": [
+        {
+          "attribute": "name",
+          "source_student": "Brian Chen",
+          "round": 1
+        }
+      ],
+      "stat_conflicts": [
+        {
+          "attribute": "name",
+          "source_student": "Brian Chen",
+          "value": "Brian Chen",
+          "round": 1
+        }
+      ],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Brian Chen",
+      "agent_type": "memory",
+      "similarity": "high",
+      "personalization": 4.333333333333333,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "contamination": false,
+      "contamination_events": [],
+      "stat_conflicts": [],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Calvin Chen",
+      "agent_type": "memory",
+      "similarity": "high",
+      "personalization": 4.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 4.0,
+      "contamination": false,
+      "contamination_events": [],
+      "stat_conflicts": [],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Kai Yamamoto",
+      "agent_type": "memory",
+      "similarity": "low",
+      "personalization": 3.3333333333333335,
+      "accuracy": 2.3333333333333335,
+      "hallucination": 4.0,
+      "consistency": 3.6666666666666665,
+      "contamination": true,
+      "contamination_events": [
+        {
+          "attribute": "multiple",
+          "source_student": "Alan Chen",
+          "round": 1
+        }
+      ],
+      "stat_conflicts": [],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Ivy Torres",
+      "agent_type": "memory",
+      "similarity": "low",
+      "personalization": 3.6666666666666665,
+      "accuracy": 3.0,
+      "hallucination": 4.333333333333333,
+      "consistency": 4.0,
+      "contamination": true,
+      "contamination_events": [
+        {
+          "attribute": "multiple",
+          "source_student": "Alan Chen",
+          "round": 1
+        }
+      ],
+      "stat_conflicts": [
+        {
+          "attribute": "gpa",
+          "source_student": "Calvin Chen",
+          "value": "3.8",
+          "round": 0
+        }
+      ],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Omar Hassan",
+      "agent_type": "memory",
+      "similarity": "low",
+      "personalization": 4.0,
+      "accuracy": 2.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 4.0,
+      "contamination": false,
+      "contamination_events": [],
+      "stat_conflicts": [],
+      "n_rounds_completed": 3
+    }
+  ],
+  "shared_results": [
+    {
+      "student_id": "S001",
+      "student_name": "Alan Chen",
+      "agent_type": "shared",
+      "similarity": "high",
+      "personalization": 4.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "contamination": true,
+      "contamination_events": [
+        {
+          "attribute": "name",
+          "source_student": "Brian Chen",
+          "round": 1
+        }
+      ],
+      "stat_conflicts": [
+        {
+          "attribute": "name",
+          "source_student": "Brian Chen",
+          "value": "Brian Chen",
+          "round": 1
+        }
+      ],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Brian Chen",
+      "agent_type": "shared",
+      "similarity": "high",
+      "personalization": 4.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 1.6666666666666667,
+      "contamination": true,
+      "contamination_events": [
+        {
+          "attribute": "name",
+          "source_student": "Alan Chen",
+          "round": 0
+        }
+      ],
+      "stat_conflicts": [
+        {
+          "attribute": "name",
+          "source_student": "Alan Chen",
+          "value": "Alan Chen",
+          "round": 0
+        }
+      ],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Calvin Chen",
+      "agent_type": "shared",
+      "similarity": "high",
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.0,
+      "hallucination": 4.666666666666667,
+      "consistency": 1.3333333333333333,
+      "contamination": false,
+      "contamination_events": [],
+      "stat_conflicts": [],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Kai Yamamoto",
+      "agent_type": "shared",
+      "similarity": "low",
+      "personalization": 3.0,
+      "accuracy": 2.0,
+      "hallucination": 4.0,
+      "consistency": 1.3333333333333333,
+      "contamination": true,
+      "contamination_events": [
+        {
+          "attribute": "multiple",
+          "source_student": "Alan Chen",
+          "round": 1
+        }
+      ],
+      "stat_conflicts": [],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Ivy Torres",
+      "agent_type": "shared",
+      "similarity": "low",
+      "personalization": 3.3333333333333335,
+      "accuracy": 1.6666666666666667,
+      "hallucination": 3.3333333333333335,
+      "consistency": 1.0,
+      "contamination": false,
+      "contamination_events": [],
+      "stat_conflicts": [],
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Omar Hassan",
+      "agent_type": "shared",
+      "similarity": "low",
+      "personalization": 2.0,
+      "accuracy": 1.6666666666666667,
+      "hallucination": 5.0,
+      "consistency": 1.0,
+      "contamination": false,
+      "contamination_events": [],
+      "stat_conflicts": [],
+      "n_rounds_completed": 3
+    }
+  ],
+  "summary": {
+    "memory_personalization": 3.94,
+    "memory_accuracy": 3.33,
+    "memory_hallucination": 4.67,
+    "memory_consistency": 3.72,
+    "shared_personalization": 3.28,
+    "shared_accuracy": 2.61,
+    "shared_hallucination": 4.5,
+    "shared_consistency": 1.61,
+    "memory_contamination_rate": 0.5,
+    "shared_contamination_rate": 0.5,
+    "memory_stat_conflicts": 2,
+    "shared_stat_conflicts": 2
+  }
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "iteration": 1,
+    "hypothesis": "college counseling agents deployed at a school level (where students share many attributes) would be far more vulnerable than those deployed across diverse populations. This directly informs the architecture decision of whether per-student memory can ever be safe in a shared multi-tenant system.",
+    "proposed_plan": "[ralph] Using ralphy / flash\n[ralph] Scanning workspace\u2026\n\u2500\u2500 Turn 1 \u2500\u2500\ntokens: 3883 total  (in 3836 \u00b7 out 47)\n  \u25b8 Reading propose_prompt.txt\n    ITERATION 1 \u2014 PROPOSE NEXT EXPERIMENT\n\n\nWe are studying multi-agent AI systems for college counseling.\nSpecifically: does per-student memory in multi-tenant AI agents cause \ncross-student data contamination, degrading accuracy and consistency?\n\nPrior result (N=6, 2 agents):\n| Metric         | Memory\u2026\nContinuing...\n\u2500\u2500 Turn 2 \u2500\u2500\n## Experiment Proposal \u2014 Co",
+    "plan_score": 8,
+    "results_summary": "[ralph] Using ralphy / flash\nContinuing session 2026-05-25_2afa20 (1 turns, 0 min ago)\n\n\u2500\u2500 Previous conversation \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n>> Read propose_prompt.txt and output an experiment proposal with all six sections: HYPOTHESIS, CHANGES, METRICS, N, EXPECTED RUNTIME, WHY NOW.\n  \u25b8 read_file(propose_prompt.txt)\n\u2500\u2500 End of history \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n\u2500\u2500 Turn 1 \u2500\u2500\nThe user asked me to read `execute_prompt.txt`, but there is no file by that name in the workspace. Let me check what files",
+    "claude_score": 3,
+    "key_findings": "Experiment configuration looks promising but failed to complete due to API timeout/rate limiting issues - only 24 lines of output after multiple attempts",
+    "supports_claim": false,
+    "kept": false,
+    "next_hypothesis": "Reduce API calls by decreasing N or rounds, or implement exponential backoff for API reliability",
+    "paper_contribution": "Cannot assess - no experimental data collected"
+  },
+  {
+    "iteration": 2,
+    "hypothesis": "HYPOTHESIS TESTED, METRICS table, KEY OBSERVATION, CONTAMINATION RATE, SURPRISES, RAW OUTPUT.\"",
+    "proposed_plan": "[ralph] Using ralphy / flash\nContinuing session 2026-05-25_2afa20 (21 turns, 0 min ago)\n\n\u2500\u2500 Previous conversation \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n>> ## Compacted Session Summary\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"write_file\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"path\" string=\"true\">/research/project/all-spikes/memory-contamination/.ralph/context.md</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"content\" string=\"true\"># Session Context \u2014 Iteration 1 Execution\n\n## 1. Primary Request and Intent\nExecute an appro",
+    "plan_score": 8,
+    "results_summary": "[ralph] Using ralphy / flash\nContinuing session 2026-05-25_2afa20 (9 turns, 0 min ago)\n\n\u2500\u2500 Previous conversation \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n>> ## Compacted Session Summary\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"write_file\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"path\" string=\"true\">/research/project/all-spikes/memory-contamination/.ralph/context.md</\uff5c\uff5cDSML\uff5c\uff5cparameter>\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"content\" string=\"true\"># Session Context \u2014 Iteration 1 Execution\n\n## 1. Primary Request and Intent\nExecute an approv",
+    "claude_score": 3,
+    "key_findings": "Zero contamination detected across all 12 student-agent combinations, even with highly similar profiles and direct probing questions. Memory agent consistently outperformed shared agent on quality metrics.",
+    "supports_claim": false,
+    "kept": false,
+    "next_hypothesis": "Test whether contamination appears under higher memory load (more conversation turns) or with weaker model variants, or investigate if Claude Sonnet 4 has built-in isolation mechanisms",
+    "paper_contribution": "This is a strong negative result that challenges the core contamination hypothesis - would need replication or methodological changes before publication"
+  },
+  {
+    "iteration": 3,
+    "hypothesis": "read `execute_prompt.txt`, modify `experiment.py` accordingly (incorporating Claude's suggestions), run `python3 experiment.py`, capture ALL output, fix errors and rerun until success, then report in exact format: HYPOTHESIS TESTED, METRICS table, KEY OBSERVATION, CONTAMINATION RATE, SURPRISES, RAW OUTPUT.",
+    "proposed_plan": "[ralph] Using ralphy / flash\nContinuing session 2026-05-25_2afa20 (18 turns, 0 min ago)\n\n\u2500\u2500 Previous conversation \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n>> ## Compacted Session Summary\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"write_file\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"content\" string=\"true\"># Session Context \u2014 Iteration 2 Execution\n\n## 1. Primary Request and Intent\nExecute an approved Iteration 2 experiment proposal to test whether cross-student data contamination in per-student memory agents increases with prof",
+    "plan_score": 8,
+    "results_summary": "[ralph] Using ralphy / flash\nContinuing session 2026-05-25_2afa20 (7 turns, 0 min ago)\n\n\u2500\u2500 Previous conversation \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n>> ## Compacted Session Summary\n\n<\uff5c\uff5cDSML\uff5c\uff5ctool_calls>\n<\uff5c\uff5cDSML\uff5c\uff5cinvoke name=\"write_file\">\n<\uff5c\uff5cDSML\uff5c\uff5cparameter name=\"content\" string=\"true\"># Session Context \u2014 Iteration 2 Execution\n\n## 1. Primary Request and Intent\nExecute an approved Iteration 2 experiment proposal to test whether cross-student data contamination in per-student memory agents increases with profi",
+    "claude_score": 5,
+    "key_findings": "JSON parse error: Expecting value: line 1 column 1 (char 0)",
+    "supports_claim": false,
+    "kept": false,
+    "next_hypothesis": "",
+    "paper_contribution": ""
+  }
+]

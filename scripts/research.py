@@ -47,14 +47,25 @@ We are studying multi-agent AI systems for college counseling.
 Specifically: does per-student memory in multi-tenant AI agents cause 
 cross-student data contamination, degrading accuracy and consistency?
 
-Prior result (N=6, 2 agents):
+Baseline result (N=6, 2 agents, explicit student stats in system prompt):
 | Metric         | Memory Agent | Shared Agent |
 |----------------|:------------:|:------------:|
 | Personalization| 3.83         | 3.75         |
 | Accuracy       | 3.33         | 3.67         |
 | Hallucination  | 2.92         | 3.50         |
 | Consistency    | 3.00         | 4.00         |
+| Contamination  | 0%           | 0%           |
 Memory recall was 1.58/5, with agents confusing student names, SAT scores, ECs.
+
+KEY FINDING FROM PRIOR RUN: When student stats (GPA, SAT, ECs) are explicitly 
+listed in the memory agent's system prompt, ZERO contamination is detected 
+across all student pairs — even with high-similarity profiles.
+Hypothesis: explicit stats act as an anchor that prevents cross-student leakage.
+
+IMPLICATION: Real-world memory agents use GENERIC system prompts (no per-student 
+stats hardcoded). The next experiment should test whether removing explicit stats 
+from the system prompt — and relying on conversation history alone — causes 
+contamination to emerge. This is hypothesis #3 from program.md.
 
 The CORE CLAIM we are trying to validate/strengthen:
 "Per-student memory in shared-infrastructure agents causes cross-student 

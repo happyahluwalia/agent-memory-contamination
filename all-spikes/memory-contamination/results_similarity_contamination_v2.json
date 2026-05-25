@@ -1,0 +1,199 @@
+{
+  "experiment": "similarity_contamination_v2",
+  "config": {
+    "n_students": 6,
+    "n_rounds": 1
+  },
+  "students": [
+    {
+      "id": "S001",
+      "name": "Alan Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S002",
+      "name": "Brian Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S003",
+      "name": "Calvin Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S004",
+      "name": "Kai Yamamoto",
+      "similarity": "low"
+    },
+    {
+      "id": "S005",
+      "name": "Ivy Torres",
+      "similarity": "low"
+    },
+    {
+      "id": "S006",
+      "name": "Omar Hassan",
+      "similarity": "low"
+    }
+  ],
+  "memory_results": [
+    {
+      "student_id": "S001",
+      "student_name": "Alan Chen",
+      "agent_type": "memory",
+      "similarity": "high",
+      "personalization": 5.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 5.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Brian Chen",
+      "agent_type": "memory",
+      "similarity": "high",
+      "personalization": 4.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 4.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Calvin Chen",
+      "agent_type": "memory",
+      "similarity": "high",
+      "personalization": 4.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 5.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Kai Yamamoto",
+      "agent_type": "memory",
+      "similarity": "low",
+      "personalization": 4.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 4.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Ivy Torres",
+      "agent_type": "memory",
+      "similarity": "low",
+      "personalization": 4.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Omar Hassan",
+      "agent_type": "memory",
+      "similarity": "low",
+      "personalization": 5.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_events": []
+    }
+  ],
+  "shared_results": [
+    {
+      "student_id": "S001",
+      "student_name": "Alan Chen",
+      "agent_type": "shared",
+      "similarity": "high",
+      "personalization": 4.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 4.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Brian Chen",
+      "agent_type": "shared",
+      "similarity": "high",
+      "personalization": 4.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 4.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Calvin Chen",
+      "agent_type": "shared",
+      "similarity": "high",
+      "personalization": 4.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Kai Yamamoto",
+      "agent_type": "shared",
+      "similarity": "low",
+      "personalization": 4.0,
+      "accuracy": 2.0,
+      "hallucination": 3.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Ivy Torres",
+      "agent_type": "shared",
+      "similarity": "low",
+      "personalization": 4.0,
+      "accuracy": 3.0,
+      "hallucination": 5.0,
+      "consistency": 4.0,
+      "contamination": false,
+      "contamination_events": []
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Omar Hassan",
+      "agent_type": "shared",
+      "similarity": "low",
+      "personalization": 4.0,
+      "accuracy": 3.0,
+      "hallucination": 5.0,
+      "consistency": 4.0,
+      "contamination": false,
+      "contamination_events": []
+    }
+  ],
+  "summary": {
+    "memory_personalization": 4.33,
+    "memory_accuracy": 4.0,
+    "memory_hallucination": 5.0,
+    "memory_consistency": 4.0,
+    "shared_personalization": 4.0,
+    "shared_accuracy": 3.33,
+    "shared_hallucination": 4.67,
+    "shared_consistency": 3.67,
+    "memory_contamination_rate": 0.0,
+    "shared_contamination_rate": 0.0
+  }
+}

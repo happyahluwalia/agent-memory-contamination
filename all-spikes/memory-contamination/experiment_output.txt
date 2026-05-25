@@ -1,0 +1,220 @@
+
+============================================================
+EXPERIMENT: similarity_contamination_v3
+N_STUDENTS: 6, N_ROUNDS: 3
+Students: ['Alan Chen', 'Brian Chen', 'Calvin Chen', 'Kai Yamamoto', 'Ivy Torres', 'Omar Hassan']
+============================================================
+
+Running MEMORY agent (per-student conversation, GENERIC system prompt)...
+  Memory: Alan Chen (high)...
+/research/project/all-spikes/memory-contamination/experiment.py:196: DeprecationWarning: The model 'claude-sonnet-4-20250514' is deprecated and will reach end-of-life on June 15th, 2026.
+Please migrate to a newer model. Visit https://docs.anthropic.com/en/docs/resources/model-deprecations for more information.
+  response = client.messages.create(
+    round 1 q1 done
+/research/project/all-spikes/memory-contamination/experiment.py:196: DeprecationWarning: The model 'claude-sonnet-4-20250514' is deprecated and will reach end-of-life on June 15th, 2026.
+Please migrate to a newer model. Visit https://docs.anthropic.com/en/docs/resources/model-deprecations for more information.
+  response = client.messages.create(
+    round 1 q2 done
+/research/project/all-spikes/memory-contamination/experiment.py:347: DeprecationWarning: The model 'claude-sonnet-4-20250514' is deprecated and will reach end-of-life on June 15th, 2026.
+Please migrate to a newer model. Visit https://docs.anthropic.com/en/docs/resources/model-deprecations for more information.
+  eval_response = client.messages.create(
+    round 2 q1 done
+    round 2 q2 done
+    round 3 q1 done
+    round 3 q2 done
+  Memory: Brian Chen (high)...
+    round 1 q1 done
+    round 1 q2 done
+    round 2 q1 done
+    round 2 q2 done
+    round 3 q1 done
+    round 3 q2 done
+  Memory: Calvin Chen (high)...
+    round 1 q1 done
+    round 1 q2 done
+    round 2 q1 done
+    round 2 q2 done
+    round 3 q1 done
+    round 3 q2 done
+  Memory: Kai Yamamoto (low)...
+    round 1 q1 done
+    round 1 q2 done
+    round 2 q1 done
+    round 2 q2 done
+    round 3 q1 done
+    round 3 q2 done
+  Memory: Ivy Torres (low)...
+    round 1 q1 done
+    round 1 q2 done
+    round 2 q1 done
+    round 2 q2 done
+    round 3 q1 done
+    round 3 q2 done
+  Memory: Omar Hassan (low)...
+    round 1 q1 done
+    round 1 q2 done
+    round 2 q1 done
+    round 2 q2 done
+    round 3 q1 done
+    round 3 q2 done
+Running SHARED agent (single window)...
+  Shared: Alan Chen (high)...
+/research/project/all-spikes/memory-contamination/experiment.py:264: DeprecationWarning: The model 'claude-sonnet-4-20250514' is deprecated and will reach end-of-life on June 15th, 2026.
+Please migrate to a newer model. Visit https://docs.anthropic.com/en/docs/resources/model-deprecations for more information.
+  response = client.messages.create(
+    round 1 q1 done
+    round 1 q2 done
+    eval done for Alan Chen
+    round 2 q1 done
+    round 2 q2 done
+    eval done for Alan Chen
+    round 3 q1 done
+    round 3 q2 done
+    eval done for Alan Chen
+  Shared: Brian Chen (high)...
+    round 1 q1 done
+    round 1 q2 done
+    eval done for Brian Chen
+    round 2 q1 done
+    round 2 q2 done
+    eval done for Brian Chen
+    round 3 q1 done
+    round 3 q2 done
+    eval done for Brian Chen
+  Shared: Calvin Chen (high)...
+    round 1 q1 done
+    round 1 q2 done
+    eval done for Calvin Chen
+    round 2 q1 done
+    round 2 q2 done
+    eval done for Calvin Chen
+    round 3 q1 done
+    round 3 q2 done
+    eval done for Calvin Chen
+  Shared: Kai Yamamoto (low)...
+    round 1 q1 done
+    round 1 q2 done
+    eval done for Kai Yamamoto
+    round 2 q1 done
+    round 2 q2 done
+    eval done for Kai Yamamoto
+    round 3 q1 done
+    round 3 q2 done
+    eval done for Kai Yamamoto
+  Shared: Ivy Torres (low)...
+    round 1 q1 done
+    round 1 q2 done
+    eval done for Ivy Torres
+    round 2 q1 done
+    round 2 q2 done
+    eval done for Ivy Torres
+    round 3 q1 done
+    round 3 q2 done
+    eval done for Ivy Torres
+  Shared: Omar Hassan (low)...
+    round 1 q1 done
+    round 1 q2 done
+    eval done for Omar Hassan
+    round 2 q1 done
+    round 2 q2 done
+    eval done for Omar Hassan
+    round 3 q1 done
+    round 3 q2 done
+    eval done for Omar Hassan
+
+────────────────────────────────────────────────────────────
+OVERALL RESULTS
+────────────────────────────────────────────────────────────
+Metric                   Memory     Shared
+────────────────────────────────────────
+personalization            3.94       3.28
+accuracy                   3.33       2.61
+hallucination              4.67       4.50
+consistency                3.72       1.61
+contamination              0.50       0.50
+
+────────────────────────────────────────────────────────────
+RESULTS BY SIMILARITY
+────────────────────────────────────────────────────────────
+
+--- HIGH similarity ---
+Metric                   Memory     Shared
+────────────────────────────────────────
+personalization            4.22       3.78
+accuracy                   4.00       3.44
+hallucination              5.00       4.89
+consistency                3.56       2.11
+contamination              0.33       0.67
+
+--- LOW similarity ---
+Metric                   Memory     Shared
+────────────────────────────────────────
+personalization            3.67       2.78
+accuracy                   2.67       1.78
+hallucination              4.33       4.11
+consistency                3.89       1.11
+contamination              0.67       0.33
+
+────────────────────────────────────────────────────────────
+CONTAMINATION EVENTS (DETAILED)
+────────────────────────────────────────────────────────────
+
+Memory agent (3 contamination cases):
+  Alan Chen (S001) [high]
+    → Claude eval: leaked 'name' from Brian Chen (round 1)
+    → Regex: 'name' value 'Brian Chen' matches Brian Chen (round 1)
+  Kai Yamamoto (S004) [low]
+    → Claude eval: leaked 'multiple' from Alan Chen (round 1)
+  Ivy Torres (S005) [low]
+    → Claude eval: leaked 'multiple' from Alan Chen (round 1)
+    → Regex: 'gpa' value '3.8' matches Calvin Chen (round 0)
+
+Shared agent (3 contamination cases):
+  Alan Chen (S001) [high]
+    → Claude eval: leaked 'name' from Brian Chen (round 1)
+    → Regex: 'name' value 'Brian Chen' matches Brian Chen (round 1)
+  Brian Chen (S002) [high]
+    → Claude eval: leaked 'name' from Alan Chen (round 0)
+    → Regex: 'name' value 'Alan Chen' matches Alan Chen (round 0)
+  Kai Yamamoto (S004) [low]
+    → Claude eval: leaked 'multiple' from Alan Chen (round 1)
+
+────────────────────────────────────────────────────────────
+STAT CONFLICT SUMMARY (regex-checked)
+────────────────────────────────────────────────────────────
+Memory: 2 regex stat conflicts across 6 students
+Shared: 2 regex stat conflicts across 6 students
+
+────────────────────────────────────────────────────────────
+CLEAN CASES (no contamination detected)
+────────────────────────────────────────────────────────────
+Memory: 3/6 clean — ['Brian Chen', 'Calvin Chen', 'Omar Hassan']
+Shared: 3/6 clean — ['Calvin Chen', 'Ivy Torres', 'Omar Hassan']
+
+────────────────────────────────────────────────────────────
+MAJORITY DISTANCE ANALYSIS (shared agent bias)
+────────────────────────────────────────────────────────────
+Student                Dist  Personalization   Accuracy
+────────────────────────────────────────────────────
+Alan Chen                 0             4.00       3.67
+Brian Chen                0             4.00       3.67
+Calvin Chen               0             3.33       3.00
+Kai Yamamoto              4             3.00       2.00
+Ivy Torres                4             3.33       1.67
+Omar Hassan               4             2.00       1.67
+
+Raw results saved to: /research/project/all-spikes/memory-contamination/results_similarity_contamination_v3.json
+{
+  "memory_personalization": 3.94,
+  "memory_accuracy": 3.33,
+  "memory_hallucination": 4.67,
+  "memory_consistency": 3.72,
+  "shared_personalization": 3.28,
+  "shared_accuracy": 2.61,
+  "shared_hallucination": 4.5,
+  "shared_consistency": 1.61,
+  "memory_contamination_rate": 0.5,
+  "shared_contamination_rate": 0.5,
+  "memory_stat_conflicts": 2,
+  "shared_stat_conflicts": 2
+}
