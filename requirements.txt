@@ -1,0 +1,8 @@
+anthropic
+pandas
+matplotlib
+seaborn
+scikit-learn
+jupyter
+requests
+python-dotenv

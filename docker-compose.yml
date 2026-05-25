@@ -1,0 +1,12 @@
+services:
+  research:
+    build: .
+    volumes:
+      - ./workspace:/research/workspace   # your research output lives here on Mac
+    storage_opt:
+      size: '20G'    # Linux only; on Mac use Docker Desktop disk limit
+    environment:
+      - RALPH_API_KEY=${RALPH_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    stdin_open: true
+    tty: true
