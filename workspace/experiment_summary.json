@@ -1,0 +1,28 @@
+{
+  "model": "claude-sonnet-4-6",
+  "num_students": 12,
+  "num_similar_pairs": 6,
+  "total_cost": 0.8763,
+  "total_input_tokens": 52293,
+  "total_output_tokens": 43948,
+  "experiment_cost": 0.7965,
+  "evaluation_cost": 0.0798,
+  "condition_a": {
+    "personalization": 3.83,
+    "accuracy": 3.33,
+    "actionability": 3.17,
+    "hallucination": 2.92
+  },
+  "condition_b": {
+    "personalization": 3.75,
+    "accuracy": 3.67,
+    "actionability": 3.0,
+    "hallucination": 3.5
+  },
+  "consistency": {
+    "condition_a": 3.0,
+    "condition_b": 4.0
+  },
+  "recall_score": 1.58,
+  "verdict": "CLAIM SUPPORTED - Per-student memory marginally improves personalization but significantly degrades consistency, accuracy, and increases hallucination. Shared context is more reliable."
+}

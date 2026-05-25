@@ -1,0 +1,23 @@
+{
+  "model": "claude-sonnet-4-6",
+  "num_students": 12,
+  "num_similar_pairs": 6,
+  "condition_a": {
+    "personalization": 3.8333333333333335,
+    "accuracy": 3.3333333333333335,
+    "actionability": 3.1666666666666665,
+    "hallucination": 2.9166666666666665
+  },
+  "condition_b": {
+    "personalization": 3.75,
+    "accuracy": 3.6666666666666665,
+    "actionability": 3.0,
+    "hallucination": 3.5
+  },
+  "consistency": {
+    "condition_a": 3.0,
+    "condition_b": 4.0
+  },
+  "recall_score": 1.5833333333333333,
+  "total_eval_cost": 0.079815
+}

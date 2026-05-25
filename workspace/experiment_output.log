@@ -1,0 +1,186 @@
+Using 12 students, 6 similar pairs
+==================================================
+EXPERIMENT: Per-Student Memory vs Consistency
+Students: 12, Pairs: 6
+Model: claude-sonnet-4-6
+==================================================
+
+--- Phase 1: Per-Student Memory (Condition A) ---
+
+[1/12] Alex Smith (GPA: 3.73, Electrical Engineering)
+  [A-init-991f3e55] In:290 Out:1500 $0.0234  (cumulative: $0.0234)
+  [A-follow-991f3e55] In:1829 Out:553 $0.0138  (cumulative: $0.0372)
+
+[2/12] Jordan Chen (GPA: 3.73, Electrical Engineering)
+  [A-init-2c5e47fe] In:292 Out:1500 $0.0234  (cumulative: $0.0605)
+  [A-follow-2c5e47fe] In:1831 Out:675 $0.0156  (cumulative: $0.0761)
+
+[3/12] Taylor Rodriguez (GPA: 3.36, Mechanical Engineering)
+  [A-init-52a9e4de] In:287 Out:1500 $0.0234  (cumulative: $0.0995)
+  [A-follow-52a9e4de] In:1826 Out:617 $0.0147  (cumulative: $0.1142)
+
+[4/12] Morgan Kim (GPA: 3.36, Mechanical Engineering)
+  [A-init-93096b54] In:288 Out:1500 $0.0234  (cumulative: $0.1376)
+  [A-follow-93096b54] In:1827 Out:406 $0.0116  (cumulative: $0.1492)
+
+[5/12] Casey Patel (GPA: 3.89, Philosophy)
+  [A-init-6a46587c] In:282 Out:1500 $0.0233  (cumulative: $0.1725)
+  [A-follow-6a46587c] In:1821 Out:534 $0.0135  (cumulative: $0.1860)
+
+[6/12] Riley Johnson (GPA: 3.92, Philosophy)
+  [A-init-368c18a4] In:282 Out:1500 $0.0233  (cumulative: $0.2093)
+  [A-follow-368c18a4] In:1821 Out:598 $0.0144  (cumulative: $0.2238)
+
+[7/12] Avery Lee (GPA: 3.9, Philosophy)
+  [A-init-7ca0bb0b] In:284 Out:1500 $0.0234  (cumulative: $0.2471)
+  [A-follow-7ca0bb0b] In:1823 Out:800 $0.0175  (cumulative: $0.2646)
+
+[8/12] Quinn Garcia (GPA: 3.85, Philosophy)
+  [A-init-301cc986] In:279 Out:1500 $0.0233  (cumulative: $0.2879)
+  [A-follow-301cc986] In:1818 Out:328 $0.0104  (cumulative: $0.2983)
+
+[9/12] Maya Wang (GPA: 3.69, Political Science)
+  [A-init-c75f0de9] In:286 Out:1500 $0.0234  (cumulative: $0.3217)
+  [A-follow-c75f0de9] In:1825 Out:671 $0.0155  (cumulative: $0.3372)
+
+[10/12] Ethan Brown (GPA: 3.66, Political Science)
+  [A-init-a9b52688] In:284 Out:1500 $0.0234  (cumulative: $0.3606)
+  [A-follow-a9b52688] In:1823 Out:496 $0.0129  (cumulative: $0.3735)
+
+[11/12] Sophia Jones (GPA: 3.98, Anthropology)
+  [A-init-52b3a40e] In:293 Out:1500 $0.0234  (cumulative: $0.3968)
+  [A-follow-52b3a40e] In:1832 Out:418 $0.0118  (cumulative: $0.4086)
+
+[12/12] Liam Miller (GPA: 3.98, Anthropology)
+  [A-init-c322389a] In:293 Out:1500 $0.0234  (cumulative: $0.4320)
+  [A-follow-c322389a] In:1832 Out:364 $0.0110  (cumulative: $0.4429)
+
+Condition A results saved.
+
+--- Phase 2: Shared Context (Condition B) ---
+
+[1/12] Alex Smith
+  [B-991f3e55] In:290 Out:1499 $0.0234  (cumulative: $0.4663)
+
+[2/12] Jordan Chen
+  [B-2c5e47fe] In:308 Out:1500 $0.0234  (cumulative: $0.4897)
+
+[3/12] Taylor Rodriguez
+  [B-52a9e4de] In:303 Out:1467 $0.0229  (cumulative: $0.5126)
+
+[4/12] Morgan Kim
+  [B-93096b54] In:304 Out:1200 $0.0189  (cumulative: $0.5315)
+
+[5/12] Casey Patel
+  [B-6a46587c] In:298 Out:1027 $0.0163  (cumulative: $0.5478)
+
+[6/12] Riley Johnson
+  [B-368c18a4] In:300 Out:1129 $0.0178  (cumulative: $0.5657)
+
+[7/12] Avery Lee
+  [B-7ca0bb0b] In:300 Out:1500 $0.0234  (cumulative: $0.5891)
+
+[8/12] Quinn Garcia
+  [B-301cc986] In:297 Out:1500 $0.0234  (cumulative: $0.6125)
+
+[9/12] Maya Wang
+  [B-c75f0de9] In:302 Out:1354 $0.0212  (cumulative: $0.6337)
+
+[10/12] Ethan Brown
+  [B-a9b52688] In:300 Out:1500 $0.0234  (cumulative: $0.6571)
+
+[11/12] Sophia Jones
+  [B-52b3a40e] In:311 Out:1041 $0.0165  (cumulative: $0.6736)
+
+[12/12] Liam Miller
+  [B-c322389a] In:310 Out:1178 $0.0186  (cumulative: $0.6922)
+
+Condition B results saved.
+
+--- Phase 3: Memory Recall Evaluation ---
+
+--- Evaluating Memory Recall ---
+  [recall-991f3e55] In:385 Out:218 $0.0044  (cumulative: $0.6967)
+  WARNING: recall eval parse failed for student 991f3e55
+  [recall-2c5e47fe] In:389 Out:194 $0.0041  (cumulative: $0.7007)
+  WARNING: recall eval parse failed for student 2c5e47fe
+  [recall-52a9e4de] In:379 Out:134 $0.0031  (cumulative: $0.7039)
+  WARNING: recall eval parse failed for student 52a9e4de
+  [recall-93096b54] In:390 Out:179 $0.0039  (cumulative: $0.7077)
+  WARNING: recall eval parse failed for student 93096b54
+  [recall-6a46587c] In:364 Out:174 $0.0037  (cumulative: $0.7114)
+  WARNING: recall eval parse failed for student 6a46587c
+  [recall-368c18a4] In:376 Out:112 $0.0028  (cumulative: $0.7143)
+  WARNING: recall eval parse failed for student 368c18a4
+  [recall-7ca0bb0b] In:384 Out:216 $0.0044  (cumulative: $0.7186)
+  WARNING: recall eval parse failed for student 7ca0bb0b
+  [recall-301cc986] In:383 Out:182 $0.0039  (cumulative: $0.7225)
+  WARNING: recall eval parse failed for student 301cc986
+  [recall-c75f0de9] In:375 Out:190 $0.0040  (cumulative: $0.7265)
+  WARNING: recall eval parse failed for student c75f0de9
+  [recall-a9b52688] In:393 Out:148 $0.0034  (cumulative: $0.7299)
+  WARNING: recall eval parse failed for student a9b52688
+  [recall-52b3a40e] In:376 Out:147 $0.0033  (cumulative: $0.7332)
+  WARNING: recall eval parse failed for student 52b3a40e
+  [recall-c322389a] In:359 Out:154 $0.0034  (cumulative: $0.7366)
+  WARNING: recall eval parse failed for student c322389a
+
+--- Phase 4: Personalization & Accuracy ---
+  [eval-991f3e55] In:859 Out:70 $0.0036  (cumulative: $0.7402)
+  WARNING: eval parse failed for student 991f3e55
+  [eval-2c5e47fe] In:833 Out:65 $0.0035  (cumulative: $0.7437)
+  [eval-52a9e4de] In:851 Out:71 $0.0036  (cumulative: $0.7473)
+  WARNING: eval parse failed for student 52a9e4de
+  [eval-93096b54] In:845 Out:70 $0.0036  (cumulative: $0.7509)
+  WARNING: eval parse failed for student 93096b54
+  [eval-6a46587c] In:840 Out:70 $0.0036  (cumulative: $0.7545)
+  WARNING: eval parse failed for student 6a46587c
+  [eval-368c18a4] In:817 Out:70 $0.0035  (cumulative: $0.7580)
+  WARNING: eval parse failed for student 368c18a4
+  [eval-7ca0bb0b] In:823 Out:70 $0.0035  (cumulative: $0.7615)
+  WARNING: eval parse failed for student 7ca0bb0b
+  [eval-301cc986] In:891 Out:70 $0.0037  (cumulative: $0.7652)
+  WARNING: eval parse failed for student 301cc986
+  [eval-c75f0de9] In:809 Out:70 $0.0035  (cumulative: $0.7687)
+  WARNING: eval parse failed for student c75f0de9
+  [eval-a9b52688] In:859 Out:71 $0.0036  (cumulative: $0.7724)
+  WARNING: eval parse failed for student a9b52688
+  [eval-52b3a40e] In:864 Out:70 $0.0036  (cumulative: $0.7760)
+  WARNING: eval parse failed for student 52b3a40e
+  [eval-c322389a] In:838 Out:65 $0.0035  (cumulative: $0.7795)
+
+--- Phase 5: Consistency Across Similar Pairs ---
+  [cons-0] In:832 Out:23 $0.0028  (cumulative: $0.7823)
+  [cons-1] In:822 Out:23 $0.0028  (cumulative: $0.7851)
+  [cons-2] In:819 Out:23 $0.0028  (cumulative: $0.7879)
+  [cons-3] In:865 Out:23 $0.0029  (cumulative: $0.7909)
+  [cons-4] In:803 Out:23 $0.0028  (cumulative: $0.7936)
+  [cons-5] In:830 Out:23 $0.0028  (cumulative: $0.7965)
+
+==================================================
+RESULTS SUMMARY
+==================================================
+
+Cond A: Per-Student Memory:
+  personalization: 3.50/5
+  accuracy: 2.50/5
+  actionability: 3.00/5
+  hallucination: 2.50/5
+
+Cond B: Shared Context:
+  personalization: 3.50/5
+  accuracy: 4.00/5
+  actionability: 3.50/5
+  hallucination: 4.00/5
+
+Consistency (higher = more consistent):
+  Cond A (memory): 2.67/5
+  Cond B (shared):  4.17/5
+
+Memory Recall (Cond A): 0.00/5
+
+==================================================
+Total cost: $0.7965
+Input tokens: 48624, Output tokens: 43373
+
+All results saved to /research/workspace/

@@ -1,0 +1,170 @@
+[
+  {
+    "a": {
+      "personalization": 4,
+      "accuracy": 4,
+      "actionability": 4,
+      "hallucination": 4
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 4
+    }
+  },
+  {
+    "a": {
+      "personalization": 4,
+      "accuracy": 3,
+      "actionability": 3,
+      "hallucination": 3
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 4
+    }
+  },
+  {
+    "a": {
+      "personalization": 4,
+      "accuracy": 3,
+      "actionability": 3,
+      "hallucination": 2
+    },
+    "b": {
+      "personalization": 3,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 4
+    }
+  },
+  {
+    "a": {
+      "personalization": 3,
+      "accuracy": 3,
+      "actionability": 3,
+      "hallucination": 2
+    },
+    "b": {
+      "personalization": 3,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 4
+    }
+  },
+  {
+    "a": {
+      "personalization": 5,
+      "accuracy": 4,
+      "actionability": 4,
+      "hallucination": 5
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 3,
+      "actionability": 3,
+      "hallucination": 4
+    }
+  },
+  {
+    "a": {
+      "personalization": 4,
+      "accuracy": 3,
+      "hallucination": 2,
+      "actionability": 4
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 3,
+      "hallucination": 2,
+      "actionability": 3
+    }
+  },
+  {
+    "a": {
+      "personalization": 3,
+      "accuracy": 2,
+      "hallucination": 2,
+      "actionability": 2
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 4,
+      "hallucination": 4,
+      "actionability": 3
+    }
+  },
+  {
+    "a": {
+      "personalization": 4,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 4
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 4
+    }
+  },
+  {
+    "a": {
+      "personalization": 3,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 2
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 2
+    }
+  },
+  {
+    "a": {
+      "personalization": 4,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 4
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 4,
+      "actionability": 3,
+      "hallucination": 4
+    }
+  },
+  {
+    "a": {
+      "personalization": 4,
+      "accuracy": 3,
+      "actionability": 3,
+      "hallucination": 3
+    },
+    "b": {
+      "personalization": 4,
+      "accuracy": 3,
+      "actionability": 3,
+      "hallucination": 3
+    }
+  },
+  {
+    "a": {
+      "personalization": 4,
+      "accuracy": 3,
+      "actionability": 3,
+      "hallucination": 2
+    },
+    "b": {
+      "personalization": 3,
+      "accuracy": 3,
+      "actionability": 3,
+      "hallucination": 3
+    }
+  }
+]

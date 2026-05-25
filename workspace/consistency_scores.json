@@ -1,0 +1,26 @@
+[
+  {
+    "condition_a_consistency": 2,
+    "condition_b_consistency": 4
+  },
+  {
+    "condition_a_consistency": 3,
+    "condition_b_consistency": 5
+  },
+  {
+    "condition_a_consistency": 3,
+    "condition_b_consistency": 3
+  },
+  {
+    "condition_a_consistency": 4,
+    "condition_b_consistency": 5
+  },
+  {
+    "condition_a_consistency": 4,
+    "condition_b_consistency": 4
+  },
+  {
+    "condition_a_consistency": 2,
+    "condition_b_consistency": 3
+  }
+]
