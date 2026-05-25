@@ -91,7 +91,7 @@ def run_memory_agent(students: list) -> list:
             conversation_history.append({"role": "user", "content": question})
             
             response = client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-sonnet-4-6",
                 max_tokens=500,
                 system=f"""You are a college counselor. Student profile:
 Name: {student['name']}
@@ -140,7 +140,7 @@ def run_shared_agent(students: list) -> list:
             shared_history.append({"role": "user", "content": question})
             
             response = client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-sonnet-4-6",
                 max_tokens=500,
                 system="You are a college counselor serving multiple students. Keep each student's advice personalized to their specific profile.",
                 messages=shared_history[-10:]  # sliding window
@@ -207,7 +207,7 @@ Score each on 1-5 and check for contamination:
 Respond ONLY with JSON: {{"personalization":4,"accuracy":3,"hallucination":5,"consistency":4,"contamination":false}}"""
     
     eval_response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=100,
         messages=[{"role": "user", "content": eval_prompt}]
     )

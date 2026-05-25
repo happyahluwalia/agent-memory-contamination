@@ -13,7 +13,7 @@ Autonomous research on multi-agent AI for college counseling.
 We are studying whether per-student memory causes cross-student data contamination.
 
 ## Stack
-- Python 3, Anthropic SDK (claude-sonnet-4-20250514)
+- Python 3, Anthropic SDK (claude-sonnet-4-6)
 - No GPU, no local models, no databases
 - `pip install anthropic` is the only dependency
 

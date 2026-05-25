@@ -61,7 +61,7 @@ The CORE CLAIM we are trying to validate/strengthen:
 data contamination, degrading accuracy and consistency — especially when 
 student profiles are similar to each other."
 
-All experiments use the Anthropic API (claude-sonnet-4-20250514).
+All experiments use the Anthropic API (claude-sonnet-4-6).
 No GPU. No human eval. Keep total disk < 15GB.
 """
 
@@ -143,7 +143,7 @@ def claude_critique_plan(proposed_plan: str, iteration: int, history: list) -> d
     ]) or "  (none yet)"
 
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=1000,
         system=f"""You are a rigorous AI research critic reviewing experiment plans.
 Context: {RESEARCH_CONTEXT}
@@ -193,7 +193,7 @@ def claude_score_results(results_text: str, hypothesis: str, iteration: int) -> 
     """Claude scores the experiment results. Returns {score, keep, findings, next_hypothesis}."""
     
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=1200,
         system=f"""You are a rigorous AI research evaluator.
 Context: {RESEARCH_CONTEXT}
@@ -403,7 +403,7 @@ Be direct. No hedging phrases. Scope claims to what the evidence supports."""
 
     sections = []
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=8000,
         messages=[{"role": "user", "content": paper_prompt}]
     )
@@ -541,9 +541,7 @@ def run_loop(max_iterations: int, resume: bool):
         # ── Check if we have enough for a paper ────────────────────────
         kept_count = sum(1 for r in history if r.get('kept'))
         if kept_count >= 5:
-            print(f"\n[loop] 🎉 {kept_count} kept experiments — enough to write the paper!")
-            write_paper(load_results_history())
-            break
+            print(f"\n[loop] 🎉 {kept_count} kept experiments — milestone reached, continuing to collect more data...")
 
     # ── End of loop summary ─────────────────────────────────────────────
     final_history = load_results_history()

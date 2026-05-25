@@ -57,7 +57,7 @@ degrading accuracy and consistency — especially when student profiles are simi
 
 DOMAIN CONTEXT:
 - lumne.ai: production college counseling platform with per-student agents
-- Anthropic API (claude-sonnet-4-20250514) used for all agents
+- Anthropic API (claude-sonnet-4-6) used for all agents
 - Synthetic student profiles (varied GPA, demographics, intended major, state)
 - Two agent architectures compared: memory agent (per-student context) vs shared agent (sliding window)
 
@@ -100,7 +100,7 @@ Then add APPENDIX with:
 STYLE RULES:
 - No em dashes in body text
 - No AI-sounding hedging phrases ("it is worth noting", "it is important to")
-- Acknowledge Claude Sonnet 4 (claude-sonnet-4-20250514) in acknowledgements
+- Acknowledge Claude Sonnet 4 (claude-sonnet-4-6) in acknowledgements
 - Claims must be scoped to what the evidence supports (N sizes are modest — say so)
 """
 

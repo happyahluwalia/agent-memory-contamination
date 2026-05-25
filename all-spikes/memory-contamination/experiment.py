@@ -194,7 +194,7 @@ def run_memory_agent(students: list) -> list:
 
                 # KEY CHANGE FOR V3: Generic system prompt — no student stats!
                 response = client.messages.create(
-                    model="claude-sonnet-4-20250514",
+                    model="claude-sonnet-4-6",
                     max_tokens=400,
                     system="You are a college counselor helping students with their applications. Provide personalized advice based on each student's specific profile.",
                     messages=conversation
@@ -262,7 +262,7 @@ def run_shared_agent(students: list) -> list:
                 shared_history.append({"role": "user", "content": prefixed})
 
                 response = client.messages.create(
-                    model="claude-sonnet-4-20250514",
+                    model="claude-sonnet-4-6",
                     max_tokens=400,
                     system="You are a college counselor serving multiple students. Keep each student's advice personalized to their specific profile.",
                     messages=shared_history[-10:]
@@ -345,7 +345,7 @@ Score each on 1-5 and check for contamination:
 Respond ONLY with JSON: {{"personalization":4,"accuracy":3,"hallucination":5,"consistency":4,"contamination":false,"leaked_attribute":"","source_student":""}}"""
 
     eval_response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=120,
         messages=[{"role": "user", "content": eval_prompt}]
     )
