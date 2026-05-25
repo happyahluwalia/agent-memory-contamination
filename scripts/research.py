@@ -101,6 +101,29 @@ def load_current_iteration() -> int:
     history = load_results_history()
     return len(history)
 
+def run_ralph(prompt: str, cwd: Path, timeout: int = 900) -> str:
+    """Invoke ralph in single-shot mode, streaming output live while capturing it."""
+    print(f"\n[ralph] Starting: {prompt[:80]}...")
+    proc = subprocess.Popen(
+        ["ralph", "--no-confirm", prompt],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        cwd=str(cwd)
+    )
+    output_lines = []
+    try:
+        for line in proc.stdout:
+            print(line, end="", flush=True)
+            output_lines.append(line)
+        proc.wait(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        proc.kill()
+        print(f"\n[ralph] Timed out after {timeout}s")
+    if proc.returncode and proc.returncode != 0:
+        print(f"[ralph] Exited with code {proc.returncode}")
+    return "".join(output_lines)
+
 # ─── Claude as Critic ──────────────────────────────────────────────────────────
 
 def claude_critique_plan(proposed_plan: str, iteration: int, history: list) -> dict:
@@ -209,20 +232,14 @@ Score rubric:
 # ─── Ralph as Proposer + Executor ─────────────────────────────────────────────
 
 def ralph_propose_experiment(iteration: int, history: list, claude_feedback: str = "") -> str:
-    """
-    In the real setup, this is where you'd invoke Ralph interactively.
-    We simulate by writing a prompt file that Ralph reads via RALPH.md skill.
-    Returns the proposed plan as a string.
-    
-    In practice: ralph reads propose_prompt.txt and writes its plan to proposed_plan.txt
-    """
+    """Invoke ralph to propose the next experiment. Fully automated."""
     feedback_section = f"\nClaude's feedback on last proposal:\n{claude_feedback}\n" if claude_feedback else ""
-    
+
     history_summary = "\n".join([
         f"  Iter {r['iteration']}: {r.get('hypothesis','?')} → kept={r.get('kept',False)}, finding: {r.get('key_findings','?')}"
         for r in history[-3:]
     ]) or "  (first iteration)"
-    
+
     propose_prompt = f"""ITERATION {iteration} — PROPOSE NEXT EXPERIMENT
 
 {RESEARCH_CONTEXT}
@@ -242,33 +259,22 @@ Output a concise plan covering:
 5. EXPECTED RUNTIME: Approximate API calls needed
 6. WHY NOW: Why is this the right next experiment given prior results?
 """
-    
+
     propose_file = SPIKE_DIR / "propose_prompt.txt"
     propose_file.write_text(propose_prompt)
-    
+
     print(f"\n{'='*60}")
     print(f"ITERATION {iteration} — RALPH PROPOSES")
     print(f"{'='*60}")
-    print(f"Prompt written to: {propose_file}")
-    print("\nRun Ralph now to generate the experiment plan:")
-    print(f"  cd {SPIKE_DIR} && ralph  (then type: /research-propose)")
-    print("\nWhen Ralph is done, paste the proposed plan, then press Ctrl+D:")
-    
-    lines = []
-    try:
-        while True:
-            line = input()
-            lines.append(line)
-    except EOFError:
-        pass
-    
-    return "\n".join(lines)
+
+    return run_ralph(
+        "Read propose_prompt.txt and output an experiment proposal with all six sections: "
+        "HYPOTHESIS, CHANGES, METRICS, N, EXPECTED RUNTIME, WHY NOW.",
+        cwd=SPIKE_DIR
+    )
 
 def ralph_execute_experiment(plan: str, iteration: int, critique: dict) -> str:
-    """
-    Ralph executes the approved experiment plan.
-    Returns the results as a string.
-    """
+    """Invoke ralph to execute the approved experiment plan. Fully automated."""
     execute_prompt = f"""ITERATION {iteration} — EXECUTE APPROVED EXPERIMENT
 
 Approved plan:
@@ -291,27 +297,22 @@ NOW EXECUTE:
    SURPRISES: ...
    RAW OUTPUT: (paste stdout)
 """
-    
+
     execute_file = SPIKE_DIR / "execute_prompt.txt"
     execute_file.write_text(execute_prompt)
-    
+
     print(f"\n{'='*60}")
     print(f"ITERATION {iteration} — RALPH EXECUTES (plan approved {critique['score']}/10)")
     print(f"{'='*60}")
-    print(f"Execute prompt written to: {execute_file}")
-    print("\nRun Ralph now to execute the experiment:")
-    print(f"  cd {SPIKE_DIR} && ralph  (then type: /research-execute)")
-    print("\nPaste Ralph's results output, then press Ctrl+D:")
-    
-    lines = []
-    try:
-        while True:
-            line = input()
-            lines.append(line)
-    except EOFError:
-        pass
-    
-    return "\n".join(lines)
+
+    return run_ralph(
+        "Read execute_prompt.txt. Modify experiment.py as specified, incorporate Claude's suggestions, "
+        "run python experiment.py, fix any errors and rerun until it succeeds, then report results "
+        "in the exact format: HYPOTHESIS TESTED, METRICS table, KEY OBSERVATION, "
+        "CONTAMINATION RATE, SURPRISES, RAW OUTPUT.",
+        cwd=SPIKE_DIR,
+        timeout=600
+    )
 
 # ─── Main Loop ─────────────────────────────────────────────────────────────────
 
