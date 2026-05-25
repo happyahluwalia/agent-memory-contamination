@@ -7,11 +7,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     curl git python3 python3-pip python3-venv \
     texlive-full \
-    wget unzip \
+    wget unzip jq \
     && rm -rf /var/lib/apt/lists/*
 
-# Install ralph binary (Linux x86-64)
-RUN curl -L -o ralph.tar.gz https://github.com/akkeshavan/ralph-releases/releases/latest/download/ralph-LATEST-x86_64-unknown-linux-musl.tar.gz \
+# Install ralph binary (Linux x86-64) — resolve latest version tag via API
+RUN RALPH_VERSION=$(curl -s https://api.github.com/repos/akkeshavan/ralph-releases/releases/latest | jq -r '.tag_name') \
+    && curl -L -o ralph.tar.gz "https://github.com/akkeshavan/ralph-releases/releases/download/${RALPH_VERSION}/ralph-${RALPH_VERSION}-x86_64-unknown-linux-musl.tar.gz" \
     && tar xzf ralph.tar.gz \
     && mv ralph-*/ralph /usr/local/bin/ralph \
     && rm -rf ralph.tar.gz ralph-*/
