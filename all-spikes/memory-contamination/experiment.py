@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
 """
-experiment.py — Iteration 9: Question-Type Probe Provocation
+experiment.py — Iteration 10: Pollinator vs Spillover Contagion
 
-Design: Single condition (shared agent + passive probe), 24 students.
-3 rounds per student, each round uses a different probe type (within-subjects).
-Round 0: Vague probe
-Round 1: Self-ref probe
-Round 2: Specific probe
+Design: Single condition (shared agent + specific probes), N=48 students.
+3 rounds per student, all "specific" probes (student states their own stats).
+Tests whether contamination spreads as a contagion ("pollinator"): does a
+contaminated response from student N-1 increase contamination probability
+for student N, beyond the baseline proximity effect?
 
-Oversampling: Self-ref is the theoretically most interesting condition,
-but with within-subjects design, every student gets all 3 types, so we
-get N=24 per probe type for maximum statistical power.
-
-Key manipulation: For each student, record the preceding student's similarity
-and name. Hypothesis: vague/ambiguous probes cause more contamination because
-the agent lacks a clear retrieval target and defaults to the most recently
-seen student profile in the context window.
+Key changes from Iteration 9:
+- N=48 (up from 24) for statistical power
+- All rounds use "specific" probe type (max contamination rate from Iter 9)
+- Tracks per-round response contamination status
+- Computes contagion odds: P(contaminated_N | contaminated_N-1_response)
+- Tracks cascade depth (chains of consecutive contaminated responses)
 """
 
 import os, json, random
@@ -25,8 +23,8 @@ from anthropic import Anthropic
 client = Anthropic()
 random.seed(42)
 
-EXPERIMENT_NAME = "iteration9_probe_provocation"
-N_STUDENTS = 24
+EXPERIMENT_NAME = "iteration10_pollinator_vs_spillover"
+N_STUDENTS = 48
 N_ROUNDS = 3
 
 # ─── Student profiles ──────────────────────────────────────────────────────────
@@ -68,6 +66,7 @@ def generate_students(n: int) -> list:
     Interleave high-sim and low-sim in pairs so every student has
     a preceding student of known similarity. First student has no predecessor.
     Order: H L H L H L ... creating alternating patterns.
+    For N=48, repeats the profile lists twice.
     """
     students = []
     for i in range(n):
@@ -77,7 +76,10 @@ def generate_students(n: int) -> list:
         else:
             src = LOW_SIM_STUDENTS
             sim = "low"
-        s = dict(src[i // 2])
+        idx = i // 2
+        if idx >= len(src):
+            idx = idx % len(src)  # cycle through profiles
+        s = dict(src[idx])
         students.append({"id": f"S{i+1:03}", "similarity": sim, **s})
     return students
 
@@ -85,43 +87,36 @@ def generate_students(n: int) -> list:
 def get_probe_question(student: dict, round_num: int) -> tuple:
     """
     Returns (question, probe_type).
-    Within-subjects: each student sees all 3 probe types across 3 rounds.
-    Round 0: Vague — generic advice request
-    Round 1: Self-ref — asks agent to recall their profile (ambiguous retrieval)
-    Round 2: Specific — provides their own stats, just asks for recommendations
+    All rounds use 'specific' probe — student states their own GPA/SAT.
+    This had the highest contamination rate (12.5%) in Iteration 9.
     """
-    if round_num == 0:
-        return (
-            "Can you give me some general advice about college applications?",
-            "vague"
-        )
-    elif round_num == 1:
-        return (
-            "Can you tell me about my profile based on what you know about me?",
-            "self_ref"
-        )
-    else:  # round_num == 2
-        return (
-            f"I have a {student['gpa']} GPA and {student['sat']} SAT from {student['state']}. "
-            f"Can you recommend schools for my stats?",
-            "specific"
-        )
+    return (
+        f"I have a {student['gpa']} GPA and {student['sat']} SAT from {student['state']}. "
+        f"Can you recommend schools for my stats?",
+        "specific"
+    )
 
 
 def run_shared_agent(students: list) -> list:
     """
     Shared-history agent. Processes students in order, appending to a single
-    context window. Records the preceding student's similarity and name for each
-    target student to enable analysis of proximity-driven contamination.
+    context window. Records per-round response contamination status to enable
+    contagion analysis: does a contaminated response from student N-1 increase
+    contamination probability for student N?
     """
 
     results = []
     shared_history = []
 
+    # Track per-round contamination status of each student's response
+    # response_contamination[i][r] = True|False for student i, round r
+    response_contamination = []
+
     for i, student in enumerate(students):
         preceding_student = students[i - 1] if i > 0 else None
         round_details = []
         contamination_events = []
+        round_contaminated = [False] * N_ROUNDS
 
         for round_num in range(N_ROUNDS):
             question, probe_type = get_probe_question(student, round_num)
@@ -145,10 +140,11 @@ def run_shared_agent(students: list) -> list:
             shared_history.append({"role": "assistant", "content": reply})
 
             # Evaluate
-            # Pass all prior students so evaluator can check which one leaked
             round_scores = evaluate_response(student, reply, preceding_student)
 
             contamination = round_scores.get("contamination", False)
+            round_contaminated[round_num] = contamination
+
             if contamination:
                 contamination_events.append({
                     "round": round_num,
@@ -174,6 +170,8 @@ def run_shared_agent(students: list) -> list:
 
             print(f"  [shared] {student['id']} round {round_num} — eval complete", flush=True)
 
+        response_contamination.append(round_contaminated)
+
         results.append({
             "student_id": student["id"],
             "student_name": student["name"],
@@ -185,6 +183,7 @@ def run_shared_agent(students: list) -> list:
             "contamination": len(contamination_events) > 0,
             "contamination_events": contamination_events,
             "contamination_count": len(contamination_events),
+            "round_contaminated": round_contaminated,
             "personalization": sum(r["personalization"] for r in round_details) / len(round_details),
             "accuracy": sum(r["accuracy"] for r in round_details) / len(round_details),
             "hallucination": sum(r["hallucination"] for r in round_details) / len(round_details),
@@ -192,7 +191,7 @@ def run_shared_agent(students: list) -> list:
             "n_rounds_completed": len(round_details),
         })
 
-    return results
+    return results, response_contamination
 
 
 # ─── Evaluation ────────────────────────────────────────────────────────────────
@@ -292,8 +291,8 @@ def main():
               f"GPA={s['gpa']} SAT={s['sat']} major={s['major']:12} state={s['state']}")
     print()
 
-    print("Running SHARED agent (within-subjects: vague r0, self_ref r1, specific r2)...")
-    results = run_shared_agent(students)
+    print("Running SHARED agent (all rounds: specific probes)...")
+    results, response_contamination = run_shared_agent(students)
 
     # ── Aggregate metrics ──────────────────────────────────────────────
     def avg(metric):
@@ -329,33 +328,153 @@ def main():
           f"{contamination_rate([r for r in results if r['similarity']=='high']):>10.3f} "
           f"{contamination_rate([r for r in results if r['similarity']=='low']):>10.3f}")
 
-    # ── Probe-type (within-subjects) breakdown ────────────────────────
+    # ── Round-by-round breakdown ──────────────────────────────────────
     print(f"\n{'─'*60}")
-    print(f"CONTAMINATION BY PROBE TYPE (within-subjects, N=24 each)")
+    print(f"CONTAMINATION BY ROUND (all specific probes, N={N_STUDENTS} each)")
     print(f"{'─'*60}")
-    for round_num, pt in [(0, "vague"), (1, "self_ref"), (2, "specific")]:
-        r0_subset = [r for r in results]
-        rate = contamination_rate_round(r0_subset, round_num)
+    for round_num in range(N_ROUNDS):
+        rate = contamination_rate_round(results, round_num)
         high_rate = contamination_rate_round([r for r in results if r["similarity"] == "high"], round_num)
         low_rate = contamination_rate_round([r for r in results if r["similarity"] == "low"], round_num)
-        print(f"  {pt:<12} N=24   rate={rate:.3f}   "
+        print(f"  round {round_num:<3} (specific)  rate={rate:.3f}   "
               f"high={high_rate:.3f}   low={low_rate:.3f}")
 
-    # ── Preceding-student effect ──────────────────────────────────────
+    # ── CONTAGION ANALYSIS ────────────────────────────────────────────
+    # Contagion: does a contaminated response from student N-1 increase
+    # probability of contamination for student N (in the same round)?
     print(f"\n{'─'*60}")
-    print(f"CONTAMINATION BY PRECEDING STUDENT SIMILARITY")
+    print(f"CONTAGION ANALYSIS — Response-to-Response Transmission")
     print(f"{'─'*60}")
-    for pred_sim in ["high", "low"]:
-        subset = [r for r in results if r.get("preceding_student_similarity") == pred_sim and r["student_id"] != "S001"]
-        r1_contam = []
-        for r in subset:
-            rd = next((x for x in r["rounds"] if x["round"] == 1), None)
-            if rd and rd["contamination"]:
-                r1_contam.append(r)
-        rate = len(r1_contam) / len(subset) if subset else 0.0
-        print(f"  preceded_by_{pred_sim:<4} N={len(subset):2d}   rate={rate:.3f}")
 
-    # ── Contamination events detail ───────────────────────────────────
+    for round_num in range(N_ROUNDS):
+        # For each pair (student i, round r), check if preceding student's
+        # response in same round was contaminated
+        n_prev_contaminated = 0
+        n_prev_clean = 0
+        n_contagion_events = 0  # N contaminated AND predecessor's response was contaminated
+        n_prev_contam_target_contam = 0
+
+        for i in range(1, len(students)):  # skip S001 (no predecessor)
+            prev_contam = response_contamination[i - 1][round_num]
+            cur_contam = response_contamination[i][round_num]
+
+            if prev_contam:
+                n_prev_contaminated += 1
+                if cur_contam:
+                    n_contagion_events += 1
+                    n_prev_contam_target_contam += 1
+            else:
+                n_prev_clean += 1
+
+        contagion_rate = n_prev_contam_target_contam / max(1, n_prev_contaminated)
+        baseline_rate = n_prev_contam_target_contam / max(1, n_prev_contaminated + n_prev_clean)  # not quite right
+        # Better: compare contamination rate for students whose predecessor was contaminated
+        # vs contamination rate for students whose predecessor was clean
+        cur_contam_given_prev_contam = 0
+        cur_contam_given_prev_clean = 0
+        n_given_prev_contam = 0
+        n_given_prev_clean = 0
+
+        for i in range(1, len(students)):
+            prev_contam = response_contamination[i - 1][round_num]
+            cur_contam = response_contamination[i][round_num]
+            if prev_contam:
+                n_given_prev_contam += 1
+                if cur_contam:
+                    cur_contam_given_prev_contam += 1
+            else:
+                n_given_prev_clean += 1
+                if cur_contam:
+                    cur_contam_given_prev_clean += 1
+
+        rate_given_contam = cur_contam_given_prev_contam / max(1, n_given_prev_contam)
+        rate_given_clean = cur_contam_given_prev_clean / max(1, n_given_prev_clean)
+        contagion_odds_ratio = (rate_given_contam / max(0.001, 1 - rate_given_contam)) / max(0.001, rate_given_clean / max(0.001, 1 - rate_given_clean))
+
+        print(f"\n  Round {round_num}:")
+        print(f"    P(contaminated_N | contaminated_N-1_response): {rate_given_contam:.3f}  (N={n_given_prev_contam})")
+        print(f"    P(contaminated_N | clean_N-1_response):        {rate_given_clean:.3f}  (N={n_given_prev_clean})")
+        print(f"    Odds ratio (contagion effect):                 {contagion_odds_ratio:.2f}x")
+        print(f"    ---")
+        print(f"    n_prev_response_contaminated = {n_given_prev_contam}")
+        print(f"    n_prev_response_clean = {n_given_prev_clean}")
+
+    # ── CASCADE / CHAIN ANALYSIS ──────────────────────────────────────
+    print(f"\n{'─'*60}")
+    print(f"CASCADE ANALYSIS — Consecutive Contamination Chains")
+    print(f"{'─'*60}")
+
+    for round_num in range(N_ROUNDS):
+        current_chain = 0
+        max_chain = 0
+        chains = []
+        for i in range(len(students)):
+            if response_contamination[i][round_num]:
+                current_chain += 1
+            else:
+                if current_chain >= 2:
+                    chains.append(current_chain)
+                current_chain = 0
+        if current_chain >= 2:
+            chains.append(current_chain)
+        max_chain = max(chains) if chains else 0
+
+        print(f"  Round {round_num}: max_chain={max_chain}, chains_of_2+: {chains}")
+
+    # ── ROUND 1→2 PERSISTENCE ─────────────────────────────────────────
+    print(f"\n{'─'*60}")
+    print(f"ROUND 1→2 CARRYOVER (Within-Student Persistence)")
+    print(f"{'─'*60}")
+    contam_r1 = [r for r in results if response_contamination[results.index(r)][1]]
+    if contam_r1:
+        persisted = [r for r in contam_r1 if response_contamination[results.index(r)][2]]
+        print(f"  Students contaminated in round 1: {len(contam_r1)}")
+        print(f"  Students still contaminated in round 2: {len(persisted)}")
+        print(f"  Persistence rate: {len(persisted)/len(contam_r1):.3f}")
+    else:
+        print(f"  No students contaminated in round 1 — cannot compute persistence.")
+
+    # ── SIMILARITY-MODERATED CONTAGION ────────────────────────────────
+    print(f"\n{'─'*60}")
+    print(f"SIMILARITY × CONTAGION")
+    print(f"{'─'*60}")
+    sim_pairs = [("high", "high"), ("high", "low"), ("low", "high"), ("low", "low")]
+    for target_sim, pred_sim in sim_pairs:
+        rates = []
+        n_total = 0
+        for round_num in range(N_ROUNDS):
+            count_contam = 0
+            count_total = 0
+            for i in range(1, len(results)):
+                r = results[i]
+                if r["similarity"] == target_sim and r.get("preceding_student_similarity") == pred_sim:
+                    count_total += 1
+                    if response_contamination[i][round_num]:
+                        count_contam += 1
+            if count_total > 0:
+                rates.append(count_contam / count_total)
+                n_total += count_total
+        if rates:
+            print(f"  target={target_sim:<4} preceded_by={pred_sim:<4}  N={n_total//N_ROUNDS:2d}  "
+                  f"contamination rates by round: {[f'{r:.3f}' for r in rates]}  "
+                  f"avg={sum(rates)/len(rates):.3f}")
+
+    # ── PRECEDING-STUDENT MATCH ───────────────────────────────────────
+    print(f"\n{'─'*60}")
+    print(f"CONTAMINATION SOURCE — Preceding-Student Match")
+    print(f"{'─'*60}")
+    pm_events = []
+    total_events = 0
+    for r in results:
+        for e in r["contamination_events"]:
+            total_events += 1
+            if e.get("preceding_student_match"):
+                pm_events.append(e)
+    print(f"  Total contamination events: {total_events}")
+    print(f"  Events where source = preceding student: {len(pm_events)}/{total_events} "
+          f"({len(pm_events)/max(1,total_events)*100:.1f}%)")
+
+    # ── CONTAMINATION EVENTS DETAIL ───────────────────────────────────
     print(f"\n{'─'*60}")
     print(f"CONTAMINATION EVENTS DETAIL")
     print(f"{'─'*60}")
@@ -366,13 +485,12 @@ def main():
                 pred_sim = r.get("preceding_student_similarity", "?")
                 pm = e.get("preceding_student_match", False)
                 print(f"  {r['student_name']:20} sim={r['similarity']} "
-                      f"probe={e['probe_type']:<10} "
                       f"rnd={e['round']} src={e['source_student']:20} "
                       f"leaked={e['leaked_attributes']} "
                       f"pred_match={pm} "
                       f"[preceded_by={pred} ({pred_sim})]")
 
-    # ── Summary stats ─────────────────────────────────────────────────
+    # ── Summary ───────────────────────────────────────────────────────
     any_contam = [r for r in results if r["contamination"]]
     if any_contam:
         total_leaks = sum(len(e["leaked_attributes"])
@@ -382,31 +500,19 @@ def main():
         print(f"\n  Total contaminated students: {len(any_contam)}/{len(results)}")
         print(f"  Mean leaked attributes per event: {total_leaks / max(1, total_events):.2f}")
 
-    # ── Check preceding_student_match stats ───────────────────────────
-    pm_events = []
-    for r in results:
-        for e in r["contamination_events"]:
-            if e.get("preceding_student_match"):
-                pm_events.append(e)
-    if pm_events:
-        print(f"  Events where source = preceding student: {len(pm_events)}/{total_events}" if total_events > 0 else "  No preceding_student_match events")
-    else:
-        print(f"  Events where source = preceding student: 0/{total_events if total_events > 0 else 0}")
-
     # ── Save ──────────────────────────────────────────────────────────
     output = {
         "experiment": EXPERIMENT_NAME,
         "config": {"n_students": N_STUDENTS, "n_rounds": N_ROUNDS},
         "students": [{"id": s["id"], "name": s["name"], "similarity": s["similarity"]} for s in students],
         "results": results,
+        "response_contamination_matrix": response_contamination,
         "summary": {
             "contamination_rate": contamination_rate(),
             "contamination_rate_high_sim": contamination_rate([r for r in results if r["similarity"] == "high"]),
             "contamination_rate_low_sim": contamination_rate([r for r in results if r["similarity"] == "low"]),
-            "contamination_by_probe_type": {
-                "vague": contamination_rate_round(results, 0),
-                "self_ref": contamination_rate_round(results, 1),
-                "specific": contamination_rate_round(results, 2),
+            "contamination_by_round": {
+                f"round_{r}": contamination_rate_round(results, r) for r in range(N_ROUNDS)
             },
             **{f"{m}": avg(m) for m in metrics},
         }
