@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 """
-experiment.py — Iteration 10: Pollinator vs Spillover Contagion
+experiment.py — Iteration 11: Name-Tagging Intervention for Shared-History Contamination
 
-Design: Single condition (shared agent + specific probes), N=48 students.
-3 rounds per student, all "specific" probes (student states their own stats).
-Tests whether contamination spreads as a contagion ("pollinator"): does a
-contaminated response from student N-1 increase contamination probability
-for student N, beyond the baseline proximity effect?
+Design: Replicates Iteration 10 (shared agent, N=48, 3 rounds, specific probes)
+but adds student name tags to BOTH user questions AND assistant responses.
 
-Key changes from Iteration 9:
-- N=48 (up from 24) for statistical power
-- All rounds use "specific" probe type (max contamination rate from Iter 9)
-- Tracks per-round response contamination status
-- Computes contagion odds: P(contaminated_N | contaminated_N-1_response)
-- Tracks cascade depth (chains of consecutive contaminated responses)
+Key question: Does explicitly tagging every turn with the student's identity
+break the pollinator contagion chain documented in Iteration 10 (92% rate)?
+
+The mechanism: In Iteration 10, only user turns were tagged. Assistant responses
+were untagged, so the agent's own past replies became anonymous in the window —
+creating ambiguity about which student they referred to. By tagging both sides
+of every conversation pair, the agent should be able to correctly attribute
+each past response to its student, preventing cross-student leakage.
 """
 
 import os, json, random
@@ -23,7 +22,7 @@ from anthropic import Anthropic
 client = Anthropic()
 random.seed(42)
 
-EXPERIMENT_NAME = "iteration10_pollinator_vs_spillover"
+EXPERIMENT_NAME = "iteration11_name_tagging_intervention"
 N_STUDENTS = 48
 N_ROUNDS = 3
 
@@ -127,17 +126,15 @@ def run_shared_agent(students: list) -> list:
                 model="claude-sonnet-4-6",
                 max_tokens=500,
                 system=(
-                    "You are a college counselor serving multiple students. "
-                    "Keep each student's advice personalized to their specific profile. "
-                    "If a student gives generic or vague questions, respond helpfully "
-                    "but do NOT mix up information between different students."
+                    "You are a college counselor helping students with their applications. "
                 ),
                 messages=shared_history[-8:]  # sliding window
             )
             print(f"  [shared] {student['id']} ({student['name']}) round {round_num} ({probe_type}) — API call", flush=True)
 
             reply = response.content[0].text
-            shared_history.append({"role": "assistant", "content": reply})
+            tagged_reply = f"[Student: {student['name']}] {reply}"
+            shared_history.append({"role": "assistant", "content": tagged_reply})
 
             # Evaluate
             round_scores = evaluate_response(student, reply, preceding_student)
