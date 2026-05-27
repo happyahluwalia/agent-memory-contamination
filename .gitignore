@@ -6,3 +6,19 @@ __pycache__/
 all-spikes/memory-contamination/propose_prompt.txt
 all-spikes/memory-contamination/execute_prompt.txt
 all-spikes/memory-contamination/loop_log.jsonl
+all-spikes/memory-contamination/paper_prompt.txt
+all-spikes/memory-contamination/experiment_output.txt
+
+# Execution logs
+all-spikes/memory-contamination/*.log
+
+# Scratch / intermediate artifacts
+all-spikes/memory-contamination/proposed_experiment_*.md
+all-spikes/memory-contamination/iteration*_summary.md
+
+# Incomplete / crashed experiments
+all-spikes/memory-contamination/results_iteration12_tag_decomposition.json
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
