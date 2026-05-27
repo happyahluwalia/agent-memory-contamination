@@ -1,0 +1,4983 @@
+{
+  "experiment": "iteration8_prompt_anchoring",
+  "config": {
+    "n_students": 12,
+    "n_rounds": 3,
+    "condition": "prompt_anchoring",
+    "conditions": [
+      "Memory + Stats Prompt",
+      "Memory + Generic Prompt",
+      "Shared + Stats Prompt",
+      "Shared + Generic Prompt"
+    ]
+  },
+  "students": [
+    {
+      "id": "S001",
+      "name": "Alan Chen",
+      "similarity": "high",
+      "majority_distance": 0
+    },
+    {
+      "id": "S002",
+      "name": "Brian Chen",
+      "similarity": "high",
+      "majority_distance": 0
+    },
+    {
+      "id": "S003",
+      "name": "Calvin Chen",
+      "similarity": "high",
+      "majority_distance": 0
+    },
+    {
+      "id": "S004",
+      "name": "Diana Park",
+      "similarity": "high",
+      "majority_distance": 0
+    },
+    {
+      "id": "S005",
+      "name": "Eric Wu",
+      "similarity": "high",
+      "majority_distance": 0
+    },
+    {
+      "id": "S006",
+      "name": "Felix Li",
+      "similarity": "high",
+      "majority_distance": 2
+    },
+    {
+      "id": "S007",
+      "name": "Kai Yamamoto",
+      "similarity": "low",
+      "majority_distance": 4
+    },
+    {
+      "id": "S008",
+      "name": "Ivy Torres",
+      "similarity": "low",
+      "majority_distance": 4
+    },
+    {
+      "id": "S009",
+      "name": "Omar Hassan",
+      "similarity": "low",
+      "majority_distance": 3
+    },
+    {
+      "id": "S010",
+      "name": "Nina Patel",
+      "similarity": "low",
+      "majority_distance": 4
+    },
+    {
+      "id": "S011",
+      "name": "Leo Garcia",
+      "similarity": "low",
+      "majority_distance": 4
+    },
+    {
+      "id": "S012",
+      "name": "Maya Singh",
+      "similarity": "low",
+      "majority_distance": 4
+    }
+  ],
+  "results_by_condition": {
+    "Memory + Stats Prompt": [
+      {
+        "student_id": "S001",
+        "student_name": "Alan Chen",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Calvin Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S002",
+        "student_name": "Brian Chen",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Eric Wu",
+                "value": "3.8"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 2,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.3333333333333335,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S003",
+        "student_name": "Calvin Chen",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Alan Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 4,
+            "contamination": true,
+            "contamination_source": "Diana Park",
+            "leaked_attributes": [
+              "name",
+              "ecs"
+            ],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Alan Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.333333333333333,
+        "hallucination": 4.666666666666667,
+        "consistency": 4.333333333333333,
+        "contamination": true,
+        "contamination_events": [
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "source_student": "Diana Park",
+            "leaked_attributes": [
+              "name",
+              "ecs"
+            ]
+          }
+        ],
+        "contamination_count": 1,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S004",
+        "student_name": "Diana Park",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S005",
+        "student_name": "Eric Wu",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "coding club"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S006",
+        "student_name": "Felix Li",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Maya Singh",
+                "value": "3.6"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S007",
+        "student_name": "Kai Yamamoto",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S008",
+        "student_name": "Ivy Torres",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S009",
+        "student_name": "Omar Hassan",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Diana Park",
+                "value": "3.7"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Diana Park",
+                "value": "3.7"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S010",
+        "student_name": "Nina Patel",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 3,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S011",
+        "student_name": "Leo Garcia",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 3,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S012",
+        "student_name": "Maya Singh",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Alan Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Calvin Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 3,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 3.6666666666666665,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      }
+    ],
+    "Memory + Generic Prompt": [
+      {
+        "student_id": "S001",
+        "student_name": "Alan Chen",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "coding club"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S002",
+        "student_name": "Brian Chen",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S003",
+        "student_name": "Calvin Chen",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "coding club"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Alan Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S004",
+        "student_name": "Diana Park",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Brian Chen",
+                "value": "3.8"
+              },
+              {
+                "attribute": "sat",
+                "source_student": "Brian Chen",
+                "value": "1470"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Eric Wu",
+                "value": "3.8"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Omar Hassan",
+                "value": "3.7"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S005",
+        "student_name": "Eric Wu",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 2,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "coding club"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.3333333333333335,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S006",
+        "student_name": "Felix Li",
+        "similarity": "high",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Brian Chen",
+                "value": "3.8"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Eric Wu",
+                "value": "3.8"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Maya Singh",
+                "value": "3.6"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "math team"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S007",
+        "student_name": "Kai Yamamoto",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 2,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.3333333333333335,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S008",
+        "student_name": "Ivy Torres",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 3,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "volunteer"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 3.6666666666666665,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S009",
+        "student_name": "Omar Hassan",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Diana Park",
+                "value": "3.7"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 2,
+            "accuracy": 3,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": true,
+            "contamination_source": "Ivy Torres",
+            "leaked_attributes": [
+              "name",
+              "gpa",
+              "sat",
+              "ecs",
+              "major",
+              "state"
+            ],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.0,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": true,
+        "contamination_events": [
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "source_student": "Ivy Torres",
+            "leaked_attributes": [
+              "name",
+              "gpa",
+              "sat",
+              "ecs",
+              "major",
+              "state"
+            ]
+          }
+        ],
+        "contamination_count": 1,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S010",
+        "student_name": "Nina Patel",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S011",
+        "student_name": "Leo Garcia",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Diana Park",
+                "value": "3.7"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Omar Hassan",
+                "value": "3.7"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Nina Patel",
+                "value": "3.4"
+              },
+              {
+                "attribute": "sat",
+                "source_student": "Nina Patel",
+                "value": "1280"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "volunteer"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Nina Patel",
+                "value": "NY"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Nina Patel",
+                "value": "psychology"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S012",
+        "student_name": "Maya Singh",
+        "similarity": "low",
+        "agent_type": "memory",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Ivy Torres",
+                "value": "3.2"
+              },
+              {
+                "attribute": "sat",
+                "source_student": "Ivy Torres",
+                "value": "1200"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      }
+    ],
+    "Shared + Stats Prompt": [
+      {
+        "student_id": "S001",
+        "student_name": "Alan Chen",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Calvin Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 3,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.0,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S002",
+        "student_name": "Brian Chen",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Eric Wu",
+                "value": "3.8"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 2,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S003",
+        "student_name": "Calvin Chen",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Alan Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Nina Patel",
+                "value": "NY"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S004",
+        "student_name": "Diana Park",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Omar Hassan",
+                "value": "3.7"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S005",
+        "student_name": "Eric Wu",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Brian Chen",
+                "value": "3.8"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 5.0,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S006",
+        "student_name": "Felix Li",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Maya Singh",
+                "value": "3.6"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S007",
+        "student_name": "Kai Yamamoto",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Alan Chen",
+                "value": "CS"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Brian Chen",
+                "value": "CS"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Calvin Chen",
+                "value": "CS"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Diana Park",
+                "value": "CS"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Eric Wu",
+                "value": "CS"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Felix Li",
+                "value": "CS"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "major",
+                "source_student": "Nina Patel",
+                "value": "psychology"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Omar Hassan",
+                "value": "DECA"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 4.666666666666667,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S008",
+        "student_name": "Ivy Torres",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "volunteer"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Nina Patel",
+                "value": "psychology"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.0,
+        "hallucination": 4.666666666666667,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S009",
+        "student_name": "Omar Hassan",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 3,
+            "contamination": true,
+            "contamination_source": "Ivy Torres",
+            "leaked_attributes": [
+              "name"
+            ],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Diana Park",
+                "value": "3.7"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 4.666666666666667,
+        "consistency": 4.0,
+        "contamination": true,
+        "contamination_events": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "source_student": "Ivy Torres",
+            "leaked_attributes": [
+              "name"
+            ]
+          }
+        ],
+        "contamination_count": 1,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S010",
+        "student_name": "Nina Patel",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.0,
+        "hallucination": 4.666666666666667,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S011",
+        "student_name": "Leo Garcia",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Omar Hassan",
+                "value": "finance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 4.666666666666667,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S012",
+        "student_name": "Maya Singh",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": true,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Felix Li",
+                "value": "3.6"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.0,
+        "hallucination": 4.666666666666667,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      }
+    ],
+    "Shared + Generic Prompt": [
+      {
+        "student_id": "S001",
+        "student_name": "Alan Chen",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Calvin Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 2,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S002",
+        "student_name": "Brian Chen",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Eric Wu",
+                "value": "3.8"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 3,
+            "accuracy": 4,
+            "hallucination": 2,
+            "consistency": 4,
+            "contamination": true,
+            "contamination_source": "Eric Wu",
+            "leaked_attributes": [
+              "ecs"
+            ],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Diana Park",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "coding club"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Eric Wu",
+                "value": "math team"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 4.333333333333333,
+        "hallucination": 4.0,
+        "consistency": 3.6666666666666665,
+        "contamination": true,
+        "contamination_events": [
+          {
+            "round": 2,
+            "question_type": "normal",
+            "source_student": "Eric Wu",
+            "leaked_attributes": [
+              "ecs"
+            ]
+          }
+        ],
+        "contamination_count": 1,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S003",
+        "student_name": "Calvin Chen",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Alan Chen",
+                "value": "3.9"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "MUN"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felix Li",
+                "value": "debate"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S004",
+        "student_name": "Diana Park",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Omar Hassan",
+                "value": "3.7"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "robotics"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "robotics"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S005",
+        "student_name": "Eric Wu",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "gpa",
+                "source_student": "Brian Chen",
+                "value": "3.8"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "coding club"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Brian Chen",
+                "value": "coding club"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S006",
+        "student_name": "Felix Li",
+        "similarity": "high",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Maya Singh",
+                "value": "3.6"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "MUN"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S007",
+        "student_name": "Kai Yamamoto",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S008",
+        "student_name": "Ivy Torres",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.0,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S009",
+        "student_name": "Omar Hassan",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Diana Park",
+                "value": "3.7"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.333333333333333,
+        "hallucination": 4.666666666666667,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S010",
+        "student_name": "Nina Patel",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S011",
+        "student_name": "Leo Garcia",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Kai Yamamoto",
+                "value": "business"
+              },
+              {
+                "attribute": "major",
+                "source_student": "Nina Patel",
+                "value": "psychology"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S012",
+        "student_name": "Maya Singh",
+        "similarity": "low",
+        "agent_type": "shared",
+        "use_stats_prompt": false,
+        "rounds": [
+          {
+            "round": 0,
+            "question_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 3,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "state",
+                "source_student": "Alan Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Brian Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Calvin Chen",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Diana Park",
+                "value": "CA"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Eric Wu",
+                "value": "CA"
+              },
+              {
+                "attribute": "gpa",
+                "source_student": "Felix Li",
+                "value": "3.6"
+              },
+              {
+                "attribute": "state",
+                "source_student": "Felix Li",
+                "value": "CA"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "question_type": "cross_talk",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "question_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "contamination_source": "none",
+            "leaked_attributes": [],
+            "stat_conflicts": [
+              {
+                "attribute": "major",
+                "source_student": "Ivy Torres",
+                "value": "education"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.333333333333333,
+        "hallucination": 4.666666666666667,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "n_rounds_completed": 3
+      }
+    ]
+  },
+  "summary": {
+    "Memory + Stats Prompt_personalization": 3.97,
+    "Memory + Stats Prompt_accuracy": 4.17,
+    "Memory + Stats Prompt_hallucination": 4.97,
+    "Memory + Stats Prompt_consistency": 4.22,
+    "Memory + Generic Prompt_personalization": 3.69,
+    "Memory + Generic Prompt_accuracy": 4.17,
+    "Memory + Generic Prompt_hallucination": 5.0,
+    "Memory + Generic Prompt_consistency": 3.92,
+    "Shared + Stats Prompt_personalization": 4.42,
+    "Shared + Stats Prompt_accuracy": 4.39,
+    "Shared + Stats Prompt_hallucination": 4.83,
+    "Shared + Stats Prompt_consistency": 4.0,
+    "Shared + Generic Prompt_personalization": 4.25,
+    "Shared + Generic Prompt_accuracy": 4.39,
+    "Shared + Generic Prompt_hallucination": 4.86,
+    "Shared + Generic Prompt_consistency": 3.83,
+    "Memory + Stats Prompt_contamination_rate": 0.08,
+    "Memory + Generic Prompt_contamination_rate": 0.08,
+    "Shared + Stats Prompt_contamination_rate": 0.08,
+    "Shared + Generic Prompt_contamination_rate": 0.08,
+    "Memory + Stats Prompt_contamination_high_sim": 0.17,
+    "Memory + Generic Prompt_contamination_high_sim": 0.0,
+    "Shared + Stats Prompt_contamination_high_sim": 0.0,
+    "Shared + Generic Prompt_contamination_high_sim": 0.17,
+    "Memory + Stats Prompt_contamination_low_sim": 0.0,
+    "Memory + Generic Prompt_contamination_low_sim": 0.17,
+    "Shared + Stats Prompt_contamination_low_sim": 0.17,
+    "Shared + Generic Prompt_contamination_low_sim": 0.0,
+    "Memory + Stats Prompt_contamination_round0": 0.0,
+    "Memory + Stats Prompt_contamination_round1": 0.08,
+    "Memory + Stats Prompt_contamination_round2": 0.0,
+    "Memory + Generic Prompt_contamination_round0": 0.0,
+    "Memory + Generic Prompt_contamination_round1": 0.08,
+    "Memory + Generic Prompt_contamination_round2": 0.0,
+    "Shared + Stats Prompt_contamination_round0": 0.08,
+    "Shared + Stats Prompt_contamination_round1": 0.0,
+    "Shared + Stats Prompt_contamination_round2": 0.0,
+    "Shared + Generic Prompt_contamination_round0": 0.0,
+    "Shared + Generic Prompt_contamination_round1": 0.0,
+    "Shared + Generic Prompt_contamination_round2": 0.08,
+    "Memory + Stats Prompt_contamination_normal": 0.0,
+    "Memory + Stats Prompt_contamination_cross_talk": 0.08,
+    "Memory + Generic Prompt_contamination_normal": 0.0,
+    "Memory + Generic Prompt_contamination_cross_talk": 0.08,
+    "Shared + Stats Prompt_contamination_normal": 0.04,
+    "Shared + Stats Prompt_contamination_cross_talk": 0.0,
+    "Shared + Generic Prompt_contamination_normal": 0.04,
+    "Shared + Generic Prompt_contamination_cross_talk": 0.0,
+    "memory_anchoring_benefit_ratio": 0.0,
+    "shared_anchoring_benefit_ratio": 0.0
+  }
+}

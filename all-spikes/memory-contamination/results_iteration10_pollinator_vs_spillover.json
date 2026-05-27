@@ -1,0 +1,6931 @@
+{
+  "experiment": "iteration10_pollinator_vs_spillover",
+  "config": {
+    "n_students": 48,
+    "n_rounds": 3
+  },
+  "students": [
+    {
+      "id": "S001",
+      "name": "Alan Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S002",
+      "name": "Maya Singh",
+      "similarity": "low"
+    },
+    {
+      "id": "S003",
+      "name": "Brian Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S004",
+      "name": "Nina Patel",
+      "similarity": "low"
+    },
+    {
+      "id": "S005",
+      "name": "Calvin Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S006",
+      "name": "Omar Hassan",
+      "similarity": "low"
+    },
+    {
+      "id": "S007",
+      "name": "Diana Park",
+      "similarity": "high"
+    },
+    {
+      "id": "S008",
+      "name": "Priya Sharma",
+      "similarity": "low"
+    },
+    {
+      "id": "S009",
+      "name": "Eric Wu",
+      "similarity": "high"
+    },
+    {
+      "id": "S010",
+      "name": "Quinn Miller",
+      "similarity": "low"
+    },
+    {
+      "id": "S011",
+      "name": "Felix Li",
+      "similarity": "high"
+    },
+    {
+      "id": "S012",
+      "name": "Rachel Wilson",
+      "similarity": "low"
+    },
+    {
+      "id": "S013",
+      "name": "Grace Kim",
+      "similarity": "high"
+    },
+    {
+      "id": "S014",
+      "name": "Sam Taylor",
+      "similarity": "low"
+    },
+    {
+      "id": "S015",
+      "name": "Henry Liu",
+      "similarity": "high"
+    },
+    {
+      "id": "S016",
+      "name": "Tina Brown",
+      "similarity": "low"
+    },
+    {
+      "id": "S017",
+      "name": "Iris Wang",
+      "similarity": "high"
+    },
+    {
+      "id": "S018",
+      "name": "Uma Patel",
+      "similarity": "low"
+    },
+    {
+      "id": "S019",
+      "name": "Jason Park",
+      "similarity": "high"
+    },
+    {
+      "id": "S020",
+      "name": "Victor Kim",
+      "similarity": "low"
+    },
+    {
+      "id": "S021",
+      "name": "Karen Tan",
+      "similarity": "high"
+    },
+    {
+      "id": "S022",
+      "name": "Wendy Liu",
+      "similarity": "low"
+    },
+    {
+      "id": "S023",
+      "name": "Leo Zhang",
+      "similarity": "high"
+    },
+    {
+      "id": "S024",
+      "name": "Xander Chen",
+      "similarity": "low"
+    },
+    {
+      "id": "S025",
+      "name": "Alan Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S026",
+      "name": "Maya Singh",
+      "similarity": "low"
+    },
+    {
+      "id": "S027",
+      "name": "Brian Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S028",
+      "name": "Nina Patel",
+      "similarity": "low"
+    },
+    {
+      "id": "S029",
+      "name": "Calvin Chen",
+      "similarity": "high"
+    },
+    {
+      "id": "S030",
+      "name": "Omar Hassan",
+      "similarity": "low"
+    },
+    {
+      "id": "S031",
+      "name": "Diana Park",
+      "similarity": "high"
+    },
+    {
+      "id": "S032",
+      "name": "Priya Sharma",
+      "similarity": "low"
+    },
+    {
+      "id": "S033",
+      "name": "Eric Wu",
+      "similarity": "high"
+    },
+    {
+      "id": "S034",
+      "name": "Quinn Miller",
+      "similarity": "low"
+    },
+    {
+      "id": "S035",
+      "name": "Felix Li",
+      "similarity": "high"
+    },
+    {
+      "id": "S036",
+      "name": "Rachel Wilson",
+      "similarity": "low"
+    },
+    {
+      "id": "S037",
+      "name": "Grace Kim",
+      "similarity": "high"
+    },
+    {
+      "id": "S038",
+      "name": "Sam Taylor",
+      "similarity": "low"
+    },
+    {
+      "id": "S039",
+      "name": "Henry Liu",
+      "similarity": "high"
+    },
+    {
+      "id": "S040",
+      "name": "Tina Brown",
+      "similarity": "low"
+    },
+    {
+      "id": "S041",
+      "name": "Iris Wang",
+      "similarity": "high"
+    },
+    {
+      "id": "S042",
+      "name": "Uma Patel",
+      "similarity": "low"
+    },
+    {
+      "id": "S043",
+      "name": "Jason Park",
+      "similarity": "high"
+    },
+    {
+      "id": "S044",
+      "name": "Victor Kim",
+      "similarity": "low"
+    },
+    {
+      "id": "S045",
+      "name": "Karen Tan",
+      "similarity": "high"
+    },
+    {
+      "id": "S046",
+      "name": "Wendy Liu",
+      "similarity": "low"
+    },
+    {
+      "id": "S047",
+      "name": "Leo Zhang",
+      "similarity": "high"
+    },
+    {
+      "id": "S048",
+      "name": "Xander Chen",
+      "similarity": "low"
+    }
+  ],
+  "results": [
+    {
+      "student_id": "S001",
+      "student_name": "Alan Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": null,
+      "preceding_student_similarity": null,
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": false,
+      "contamination_events": [],
+      "contamination_count": 0,
+      "round_contaminated": [
+        false,
+        false,
+        false
+      ],
+      "personalization": 2.6666666666666665,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Maya Singh",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Alan Chen",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source_student": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source_student": "Wendy Liu",
+              "value": "dance"
+            }
+          ],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": false,
+      "contamination_events": [],
+      "contamination_count": 0,
+      "round_contaminated": [
+        false,
+        false,
+        false
+      ],
+      "personalization": 2.6666666666666665,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Brian Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Maya Singh",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Maya Singh",
+              "value": 1330
+            },
+            {
+              "attribute": "name",
+              "source_student": "Maya Singh",
+              "value": "Maya Singh"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Xander Chen",
+              "value": 1330
+            }
+          ],
+          "contamination_source": "Maya Singh",
+          "leaked_attributes": [
+            "name",
+            "state",
+            "gpa",
+            "sat"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Maya Singh",
+          "leaked_attributes": [
+            "name",
+            "state",
+            "gpa",
+            "sat"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 1,
+      "round_contaminated": [
+        false,
+        true,
+        false
+      ],
+      "personalization": 2.6666666666666665,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Nina Patel",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Brian Chen",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": false,
+      "contamination_events": [],
+      "contamination_count": 0,
+      "round_contaminated": [
+        false,
+        false,
+        false
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Calvin Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Nina Patel",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Nina Patel",
+              "value": 3.4
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Nina Patel",
+              "value": 1280
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Wendy Liu",
+              "value": 3.4
+            }
+          ],
+          "contamination_source": "Nina Patel",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Nina Patel",
+              "value": 3.4
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Nina Patel",
+              "value": 1280
+            },
+            {
+              "attribute": "name",
+              "source_student": "Nina Patel",
+              "value": "Nina Patel"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Wendy Liu",
+              "value": 3.4
+            }
+          ],
+          "contamination_source": "Nina Patel",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Nina Patel",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Nina Patel",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 2.6666666666666665,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Omar Hassan",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Calvin Chen",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Calvin Chen",
+              "value": "Calvin Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Calvin Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Calvin Chen",
+              "value": "Calvin Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Calvin Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Calvin Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Calvin Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 4.0,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S007",
+      "student_name": "Diana Park",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Omar Hassan",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Calvin Chen",
+              "value": "Calvin Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Omar Hassan",
+              "value": 1350
+            },
+            {
+              "attribute": "name",
+              "source_student": "Omar Hassan",
+              "value": "Omar Hassan"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Omar Hassan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Calvin Chen",
+              "value": "Calvin Chen"
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Omar Hassan",
+              "value": 1350
+            },
+            {
+              "attribute": "name",
+              "source_student": "Omar Hassan",
+              "value": "Omar Hassan"
+            }
+          ],
+          "contamination_source": "Omar Hassan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "source_student": "Omar Hassan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Omar Hassan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        true,
+        true,
+        false
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S008",
+      "student_name": "Priya Sharma",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Diana Park",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Calvin Chen",
+              "value": "Calvin Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "name",
+              "source_student": "Diana Park",
+              "value": "Diana Park"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Omar Hassan",
+              "value": 1350
+            },
+            {
+              "attribute": "name",
+              "source_student": "Omar Hassan",
+              "value": "Omar Hassan"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Diana Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "name",
+              "source_student": "Diana Park",
+              "value": "Diana Park"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Diana Park",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state",
+            "gpa"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "source_student": "Diana Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Diana Park",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state",
+            "gpa"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        true,
+        true,
+        false
+      ],
+      "personalization": 3.6666666666666665,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.333333333333333,
+      "consistency": 4.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S009",
+      "student_name": "Eric Wu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Priya Sharma",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": false,
+      "contamination_events": [],
+      "contamination_count": 0,
+      "round_contaminated": [
+        false,
+        false,
+        false
+      ],
+      "personalization": 4.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S010",
+      "student_name": "Quinn Miller",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Eric Wu",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Eric Wu",
+              "value": "Eric Wu"
+            }
+          ],
+          "contamination_source": "Eric Wu",
+          "leaked_attributes": [
+            "name"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Eric Wu",
+          "leaked_attributes": [
+            "name"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 1,
+      "round_contaminated": [
+        false,
+        true,
+        false
+      ],
+      "personalization": 3.6666666666666665,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S011",
+      "student_name": "Felix Li",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Quinn Miller",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Quinn Miller",
+              "value": "Quinn Miller"
+            }
+          ],
+          "contamination_source": "Quinn Miller",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Quinn Miller",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 1,
+      "round_contaminated": [
+        false,
+        true,
+        false
+      ],
+      "personalization": 3.6666666666666665,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S012",
+      "student_name": "Rachel Wilson",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Felix Li",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Felix Li",
+              "value": "Felix Li"
+            }
+          ],
+          "contamination_source": "Felix Li",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 2,
+          "hallucination": 4,
+          "consistency": 2,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Felix Li",
+              "value": "Felix Li"
+            }
+          ],
+          "contamination_source": "Felix Li",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Felix Li",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Felix Li",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.0,
+      "hallucination": 4.0,
+      "consistency": 3.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S013",
+      "student_name": "Grace Kim",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Rachel Wilson",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Rachel Wilson",
+              "value": "Rachel Wilson"
+            }
+          ],
+          "contamination_source": "Rachel Wilson",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Rachel Wilson",
+              "value": "Rachel Wilson"
+            }
+          ],
+          "contamination_source": "Rachel Wilson",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Rachel Wilson",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Rachel Wilson",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S014",
+      "student_name": "Sam Taylor",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Grace Kim",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Grace Kim",
+              "value": 1400
+            },
+            {
+              "attribute": "name",
+              "source_student": "Grace Kim",
+              "value": "Grace Kim"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Grace Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Grace Kim",
+              "value": 1400
+            },
+            {
+              "attribute": "name",
+              "source_student": "Grace Kim",
+              "value": "Grace Kim"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Grace Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Grace Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Grace Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S015",
+      "student_name": "Henry Liu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Sam Taylor",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Sam Taylor",
+              "value": "Sam Taylor"
+            }
+          ],
+          "contamination_source": "Sam Taylor",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Sam Taylor",
+              "value": "Sam Taylor"
+            }
+          ],
+          "contamination_source": "Sam Taylor",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Sam Taylor",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Sam Taylor",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S016",
+      "student_name": "Tina Brown",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Henry Liu",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Henry Liu",
+              "value": "Henry Liu"
+            }
+          ],
+          "contamination_source": "Henry Liu",
+          "leaked_attributes": [
+            "name"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 2,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Henry Liu",
+              "value": "Henry Liu"
+            }
+          ],
+          "contamination_source": "Henry Liu",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Henry Liu",
+          "leaked_attributes": [
+            "name"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Henry Liu",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S017",
+      "student_name": "Iris Wang",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Tina Brown",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Tina Brown",
+              "value": "Tina Brown"
+            }
+          ],
+          "contamination_source": "Tina Brown",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Tina Brown",
+              "value": "Tina Brown"
+            }
+          ],
+          "contamination_source": "Tina Brown",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Tina Brown",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Tina Brown",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S018",
+      "student_name": "Uma Patel",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Iris Wang",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 2,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Iris Wang",
+              "value": "Iris Wang"
+            }
+          ],
+          "contamination_source": "Iris Wang",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Iris Wang",
+              "value": "Iris Wang"
+            }
+          ],
+          "contamination_source": "Iris Wang",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Iris Wang",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Iris Wang",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.6666666666666665,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S019",
+      "student_name": "Jason Park",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Uma Patel",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Uma Patel",
+              "value": "Uma Patel"
+            }
+          ],
+          "contamination_source": "Uma Patel",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Uma Patel",
+              "value": "Uma Patel"
+            }
+          ],
+          "contamination_source": "Uma Patel",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Uma Patel",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Uma Patel",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.6666666666666665,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S020",
+      "student_name": "Victor Kim",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Jason Park",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Jason Park",
+              "value": "Jason Park"
+            }
+          ],
+          "contamination_source": "Jason Park",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Jason Park",
+              "value": 1430
+            },
+            {
+              "attribute": "name",
+              "source_student": "Jason Park",
+              "value": "Jason Park"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Jason Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Jason Park",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Jason Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S021",
+      "student_name": "Karen Tan",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Victor Kim",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Quinn Miller",
+              "value": 3.5
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Victor Kim",
+              "value": 3.5
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Victor Kim",
+              "value": 1310
+            },
+            {
+              "attribute": "name",
+              "source_student": "Victor Kim",
+              "value": "Victor Kim"
+            }
+          ],
+          "contamination_source": "Victor Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 3,
+          "consistency": 2,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Victor Kim",
+              "value": "Victor Kim"
+            }
+          ],
+          "contamination_source": "Victor Kim",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Victor Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Victor Kim",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 2.6666666666666665,
+      "accuracy": 4.0,
+      "hallucination": 4.0,
+      "consistency": 3.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S022",
+      "student_name": "Wendy Liu",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Karen Tan",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Karen Tan",
+              "value": 1410
+            },
+            {
+              "attribute": "name",
+              "source_student": "Karen Tan",
+              "value": "Karen Tan"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            }
+          ],
+          "contamination_source": "Karen Tan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Karen Tan",
+              "value": "Karen Tan"
+            }
+          ],
+          "contamination_source": "Karen Tan",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Karen Tan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Karen Tan",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.6666666666666665,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S023",
+      "student_name": "Leo Zhang",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Wendy Liu",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Nina Patel",
+              "value": 3.4
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Wendy Liu",
+              "value": 3.4
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Wendy Liu",
+              "value": 1260
+            },
+            {
+              "attribute": "name",
+              "source_student": "Wendy Liu",
+              "value": "Wendy Liu"
+            }
+          ],
+          "contamination_source": "Wendy Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Nina Patel",
+              "value": 3.4
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Wendy Liu",
+              "value": 3.4
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Wendy Liu",
+              "value": 1260
+            },
+            {
+              "attribute": "name",
+              "source_student": "Wendy Liu",
+              "value": "Wendy Liu"
+            }
+          ],
+          "contamination_source": "Wendy Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Wendy Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Wendy Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S024",
+      "student_name": "Xander Chen",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Leo Zhang",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Felix Li",
+              "value": 1440
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Leo Zhang",
+              "value": 1440
+            },
+            {
+              "attribute": "name",
+              "source_student": "Leo Zhang",
+              "value": "Leo Zhang"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Leo Zhang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Felix Li",
+              "value": 1440
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Leo Zhang",
+              "value": 1440
+            },
+            {
+              "attribute": "name",
+              "source_student": "Leo Zhang",
+              "value": "Leo Zhang"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Leo Zhang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Leo Zhang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Leo Zhang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S025",
+      "student_name": "Alan Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Xander Chen",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Maya Singh",
+              "value": 1330
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Xander Chen",
+              "value": 1330
+            },
+            {
+              "attribute": "name",
+              "source_student": "Xander Chen",
+              "value": "Xander Chen"
+            }
+          ],
+          "contamination_source": "Xander Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Xander Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 1,
+      "round_contaminated": [
+        false,
+        true,
+        false
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S026",
+      "student_name": "Maya Singh",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Alan Chen",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Alan Chen",
+              "value": 1490
+            },
+            {
+              "attribute": "name",
+              "source_student": "Alan Chen",
+              "value": "Alan Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Alan Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Alan Chen",
+              "value": 1490
+            },
+            {
+              "attribute": "name",
+              "source_student": "Alan Chen",
+              "value": "Alan Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Alan Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Alan Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Alan Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.0,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S027",
+      "student_name": "Brian Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Maya Singh",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Maya Singh",
+              "value": 1330
+            },
+            {
+              "attribute": "name",
+              "source_student": "Maya Singh",
+              "value": "Maya Singh"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Xander Chen",
+              "value": 1330
+            }
+          ],
+          "contamination_source": "Maya Singh",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Maya Singh",
+              "value": 1330
+            },
+            {
+              "attribute": "name",
+              "source_student": "Maya Singh",
+              "value": "Maya Singh"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Xander Chen",
+              "value": 1330
+            }
+          ],
+          "contamination_source": "Maya Singh",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Maya Singh",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Maya Singh",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S028",
+      "student_name": "Nina Patel",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Brian Chen",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 3,
+          "hallucination": 3,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Brian Chen",
+              "value": 1470
+            },
+            {
+              "attribute": "name",
+              "source_student": "Brian Chen",
+              "value": "Brian Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Brian Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Brian Chen",
+              "value": 1470
+            },
+            {
+              "attribute": "name",
+              "source_student": "Brian Chen",
+              "value": "Brian Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Brian Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Brian Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Brian Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S029",
+      "student_name": "Calvin Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Nina Patel",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Nina Patel",
+              "value": 3.4
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Nina Patel",
+              "value": 1280
+            },
+            {
+              "attribute": "name",
+              "source_student": "Nina Patel",
+              "value": "Nina Patel"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Wendy Liu",
+              "value": 3.4
+            }
+          ],
+          "contamination_source": "Nina Patel",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Nina Patel",
+              "value": 3.4
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Nina Patel",
+              "value": 1280
+            },
+            {
+              "attribute": "name",
+              "source_student": "Nina Patel",
+              "value": "Nina Patel"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Wendy Liu",
+              "value": 3.4
+            }
+          ],
+          "contamination_source": "Nina Patel",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Nina Patel",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Nina Patel",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 4.0,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S030",
+      "student_name": "Omar Hassan",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Calvin Chen",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Calvin Chen",
+              "value": "Calvin Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Calvin Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Calvin Chen",
+              "value": "Calvin Chen"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Calvin Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Calvin Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Calvin Chen",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S031",
+      "student_name": "Diana Park",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Omar Hassan",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [],
+          "contamination_source": "Omar Hassan",
+          "leaked_attributes": [
+            "name"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "sat",
+              "source_student": "Omar Hassan",
+              "value": 1350
+            },
+            {
+              "attribute": "name",
+              "source_student": "Omar Hassan",
+              "value": "Omar Hassan"
+            }
+          ],
+          "contamination_source": "Omar Hassan",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "sat",
+              "source_student": "Omar Hassan",
+              "value": 1350
+            },
+            {
+              "attribute": "name",
+              "source_student": "Omar Hassan",
+              "value": "Omar Hassan"
+            }
+          ],
+          "contamination_source": "Omar Hassan",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "source_student": "Omar Hassan",
+          "leaked_attributes": [
+            "name"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Omar Hassan",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Omar Hassan",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 3,
+      "round_contaminated": [
+        true,
+        true,
+        true
+      ],
+      "personalization": 2.6666666666666665,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S032",
+      "student_name": "Priya Sharma",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Diana Park",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 3,
+          "hallucination": 3,
+          "consistency": 2,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "name",
+              "source_student": "Diana Park",
+              "value": "Diana Park"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Diana Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 2,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "name",
+              "source_student": "Diana Park",
+              "value": "Diana Park"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "ec",
+              "source_student": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            },
+            {
+              "attribute": "ec",
+              "source_student": "Wendy Liu",
+              "value": "dance"
+            }
+          ],
+          "contamination_source": "Diana Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Diana Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Diana Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.0,
+      "hallucination": 3.6666666666666665,
+      "consistency": 3.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S033",
+      "student_name": "Eric Wu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Priya Sharma",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Diana Park",
+              "value": 1450
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Priya Sharma",
+              "value": 1450
+            },
+            {
+              "attribute": "name",
+              "source_student": "Priya Sharma",
+              "value": "Priya Sharma"
+            }
+          ],
+          "contamination_source": "Priya Sharma",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Diana Park",
+              "value": 1450
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Priya Sharma",
+              "value": 1450
+            },
+            {
+              "attribute": "name",
+              "source_student": "Priya Sharma",
+              "value": "Priya Sharma"
+            }
+          ],
+          "contamination_source": "Priya Sharma",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Priya Sharma",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Priya Sharma",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S034",
+      "student_name": "Quinn Miller",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Eric Wu",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Eric Wu",
+              "value": 1460
+            },
+            {
+              "attribute": "name",
+              "source_student": "Eric Wu",
+              "value": "Eric Wu"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Eric Wu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Diana Park",
+              "value": 1450
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Eric Wu",
+              "value": 1460
+            },
+            {
+              "attribute": "name",
+              "source_student": "Eric Wu",
+              "value": "Eric Wu"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Priya Sharma",
+              "value": 1450
+            },
+            {
+              "attribute": "name",
+              "source_student": "Priya Sharma",
+              "value": "Priya Sharma"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Eric Wu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Eric Wu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Eric Wu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S035",
+      "student_name": "Felix Li",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Quinn Miller",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Quinn Miller",
+              "value": 3.5
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Quinn Miller",
+              "value": 1300
+            },
+            {
+              "attribute": "name",
+              "source_student": "Quinn Miller",
+              "value": "Quinn Miller"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Victor Kim",
+              "value": 3.5
+            }
+          ],
+          "contamination_source": "Quinn Miller",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Quinn Miller",
+              "value": 3.5
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Quinn Miller",
+              "value": 1300
+            },
+            {
+              "attribute": "name",
+              "source_student": "Quinn Miller",
+              "value": "Quinn Miller"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Victor Kim",
+              "value": 3.5
+            }
+          ],
+          "contamination_source": "Quinn Miller",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Quinn Miller",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Quinn Miller",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S036",
+      "student_name": "Rachel Wilson",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Felix Li",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Felix Li",
+              "value": 1440
+            },
+            {
+              "attribute": "name",
+              "source_student": "Felix Li",
+              "value": "Felix Li"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Leo Zhang",
+              "value": 1440
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            }
+          ],
+          "contamination_source": "Felix Li",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Felix Li",
+              "value": 1440
+            },
+            {
+              "attribute": "name",
+              "source_student": "Felix Li",
+              "value": "Felix Li"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Leo Zhang",
+              "value": 1440
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            }
+          ],
+          "contamination_source": "Felix Li",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Felix Li",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Felix Li",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 2.6666666666666665,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S037",
+      "student_name": "Grace Kim",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Rachel Wilson",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Rachel Wilson",
+              "value": 3.3
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Rachel Wilson",
+              "value": 1220
+            },
+            {
+              "attribute": "name",
+              "source_student": "Rachel Wilson",
+              "value": "Rachel Wilson"
+            }
+          ],
+          "contamination_source": "Rachel Wilson",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Rachel Wilson",
+              "value": 3.3
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Rachel Wilson",
+              "value": 1220
+            },
+            {
+              "attribute": "name",
+              "source_student": "Rachel Wilson",
+              "value": "Rachel Wilson"
+            }
+          ],
+          "contamination_source": "Rachel Wilson",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Rachel Wilson",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Rachel Wilson",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S038",
+      "student_name": "Sam Taylor",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Grace Kim",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 3,
+          "hallucination": 3,
+          "consistency": 2,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Grace Kim",
+              "value": 1400
+            },
+            {
+              "attribute": "name",
+              "source_student": "Grace Kim",
+              "value": "Grace Kim"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Grace Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Grace Kim",
+              "value": 1400
+            },
+            {
+              "attribute": "name",
+              "source_student": "Grace Kim",
+              "value": "Grace Kim"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Grace Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Grace Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Grace Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.0,
+      "hallucination": 4.0,
+      "consistency": 3.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S039",
+      "student_name": "Henry Liu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Sam Taylor",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "sat",
+              "source_student": "Sam Taylor",
+              "value": 1390
+            },
+            {
+              "attribute": "name",
+              "source_student": "Sam Taylor",
+              "value": "Sam Taylor"
+            }
+          ],
+          "contamination_source": "Sam Taylor",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "sat",
+              "source_student": "Sam Taylor",
+              "value": 1390
+            },
+            {
+              "attribute": "name",
+              "source_student": "Sam Taylor",
+              "value": "Sam Taylor"
+            }
+          ],
+          "contamination_source": "Sam Taylor",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Sam Taylor",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Sam Taylor",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S040",
+      "student_name": "Tina Brown",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Henry Liu",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Henry Liu",
+              "value": 1420
+            },
+            {
+              "attribute": "name",
+              "source_student": "Henry Liu",
+              "value": "Henry Liu"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Henry Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Henry Liu",
+              "value": "Henry Liu"
+            }
+          ],
+          "contamination_source": "Henry Liu",
+          "leaked_attributes": [
+            "name"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Henry Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Henry Liu",
+          "leaked_attributes": [
+            "name"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S041",
+      "student_name": "Iris Wang",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Tina Brown",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 2,
+          "accuracy": 3,
+          "hallucination": 3,
+          "consistency": 2,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Tina Brown",
+              "value": 3.2
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Tina Brown",
+              "value": 1180
+            },
+            {
+              "attribute": "name",
+              "source_student": "Tina Brown",
+              "value": "Tina Brown"
+            }
+          ],
+          "contamination_source": "Tina Brown",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "name",
+              "source_student": "Tina Brown",
+              "value": "Tina Brown"
+            }
+          ],
+          "contamination_source": "Tina Brown",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Tina Brown",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Tina Brown",
+          "leaked_attributes": [
+            "name",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 2.6666666666666665,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.0,
+      "consistency": 3.0,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S042",
+      "student_name": "Uma Patel",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Iris Wang",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Iris Wang",
+              "value": "Iris Wang"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Iris Wang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state",
+            "ecs"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Iris Wang",
+              "value": "Iris Wang"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            }
+          ],
+          "contamination_source": "Iris Wang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Iris Wang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state",
+            "ecs"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Iris Wang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S043",
+      "student_name": "Jason Park",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Uma Patel",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "sat",
+              "source_student": "Uma Patel",
+              "value": 1340
+            },
+            {
+              "attribute": "name",
+              "source_student": "Uma Patel",
+              "value": "Uma Patel"
+            }
+          ],
+          "contamination_source": "Uma Patel",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Alan Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Calvin Chen",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Calvin Chen",
+              "value": 1480
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Iris Wang",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Iris Wang",
+              "value": 1480
+            },
+            {
+              "attribute": "name",
+              "source_student": "Iris Wang",
+              "value": "Iris Wang"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Priya Sharma",
+              "value": 3.9
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Uma Patel",
+              "value": 1340
+            },
+            {
+              "attribute": "name",
+              "source_student": "Uma Patel",
+              "value": "Uma Patel"
+            }
+          ],
+          "contamination_source": "Uma Patel",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Uma Patel",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Uma Patel",
+          "leaked_attributes": [
+            "name",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S044",
+      "student_name": "Victor Kim",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Jason Park",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Jason Park",
+              "value": 1430
+            },
+            {
+              "attribute": "name",
+              "source_student": "Jason Park",
+              "value": "Jason Park"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Jason Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Diana Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Grace Kim",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Jason Park",
+              "value": 3.7
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Jason Park",
+              "value": 1430
+            },
+            {
+              "attribute": "name",
+              "source_student": "Jason Park",
+              "value": "Jason Park"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Omar Hassan",
+              "value": 3.7
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Uma Patel",
+              "value": 3.7
+            }
+          ],
+          "contamination_source": "Jason Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Jason Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Jason Park",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.6666666666666665,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 5.0,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S045",
+      "student_name": "Karen Tan",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Victor Kim",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Quinn Miller",
+              "value": 3.5
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Victor Kim",
+              "value": 3.5
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Victor Kim",
+              "value": 1310
+            },
+            {
+              "attribute": "name",
+              "source_student": "Victor Kim",
+              "value": "Victor Kim"
+            }
+          ],
+          "contamination_source": "Victor Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Quinn Miller",
+              "value": 3.5
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Victor Kim",
+              "value": 3.5
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Victor Kim",
+              "value": 1310
+            },
+            {
+              "attribute": "name",
+              "source_student": "Victor Kim",
+              "value": "Victor Kim"
+            }
+          ],
+          "contamination_source": "Victor Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Victor Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Victor Kim",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.6666666666666665,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.6666666666666665,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S046",
+      "student_name": "Wendy Liu",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Karen Tan",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Karen Tan",
+              "value": 1410
+            },
+            {
+              "attribute": "name",
+              "source_student": "Karen Tan",
+              "value": "Karen Tan"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            }
+          ],
+          "contamination_source": "Karen Tan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Felix Li",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Karen Tan",
+              "value": 3.6
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Karen Tan",
+              "value": 1410
+            },
+            {
+              "attribute": "name",
+              "source_student": "Karen Tan",
+              "value": "Karen Tan"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Maya Singh",
+              "value": 3.6
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Xander Chen",
+              "value": 3.6
+            }
+          ],
+          "contamination_source": "Karen Tan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Karen Tan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Karen Tan",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S047",
+      "student_name": "Leo Zhang",
+      "similarity": "high",
+      "agent_type": "shared",
+      "preceding_student_name": "Wendy Liu",
+      "preceding_student_similarity": "low",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 4,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Nina Patel",
+              "value": 3.4
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Wendy Liu",
+              "value": 3.4
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Wendy Liu",
+              "value": 1260
+            },
+            {
+              "attribute": "name",
+              "source_student": "Wendy Liu",
+              "value": "Wendy Liu"
+            }
+          ],
+          "contamination_source": "Wendy Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Nina Patel",
+              "value": 3.4
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Wendy Liu",
+              "value": 3.4
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Wendy Liu",
+              "value": 1260
+            },
+            {
+              "attribute": "name",
+              "source_student": "Wendy Liu",
+              "value": "Wendy Liu"
+            }
+          ],
+          "contamination_source": "Wendy Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Wendy Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Wendy Liu",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.3333333333333335,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    },
+    {
+      "student_id": "S048",
+      "student_name": "Xander Chen",
+      "similarity": "low",
+      "agent_type": "shared",
+      "preceding_student_name": "Leo Zhang",
+      "preceding_student_similarity": "high",
+      "rounds": [
+        {
+          "round": 0,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 4,
+          "contamination": false,
+          "stat_conflicts": [],
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "preceding_student_match": false
+        },
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Felix Li",
+              "value": 1440
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Leo Zhang",
+              "value": 1440
+            },
+            {
+              "attribute": "name",
+              "source_student": "Leo Zhang",
+              "value": "Leo Zhang"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Leo Zhang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "personalization": 3,
+          "accuracy": 3,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "stat_conflicts": [
+            {
+              "attribute": "gpa",
+              "source_student": "Brian Chen",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Eric Wu",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Felix Li",
+              "value": 1440
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Henry Liu",
+              "value": 3.8
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Leo Zhang",
+              "value": 3.8
+            },
+            {
+              "attribute": "sat",
+              "source_student": "Leo Zhang",
+              "value": 1440
+            },
+            {
+              "attribute": "name",
+              "source_student": "Leo Zhang",
+              "value": "Leo Zhang"
+            },
+            {
+              "attribute": "gpa",
+              "source_student": "Sam Taylor",
+              "value": 3.8
+            }
+          ],
+          "contamination_source": "Leo Zhang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination": true,
+      "contamination_events": [
+        {
+          "round": 1,
+          "probe_type": "specific",
+          "source_student": "Leo Zhang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        },
+        {
+          "round": 2,
+          "probe_type": "specific",
+          "source_student": "Leo Zhang",
+          "leaked_attributes": [
+            "name",
+            "gpa",
+            "sat",
+            "state"
+          ],
+          "preceding_student_match": true
+        }
+      ],
+      "contamination_count": 2,
+      "round_contaminated": [
+        false,
+        true,
+        true
+      ],
+      "personalization": 3.0,
+      "accuracy": 3.0,
+      "hallucination": 4.0,
+      "consistency": 3.3333333333333335,
+      "n_rounds_completed": 3
+    }
+  ],
+  "response_contamination_matrix": [
+    [
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true
+    ]
+  ],
+  "summary": {
+    "contamination_rate": 0.92,
+    "contamination_rate_high_sim": 0.92,
+    "contamination_rate_low_sim": 0.92,
+    "contamination_by_round": {
+      "round_0": 0.062,
+      "round_1": 0.917,
+      "round_2": 0.792
+    },
+    "personalization": 3.17,
+    "accuracy": 3.54,
+    "hallucination": 4.45,
+    "consistency": 3.35
+  }
+}

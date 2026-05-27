@@ -1,0 +1,5 @@
+{
+  "score": 7,
+  "iteration": 9,
+  "findings": "Specific self-disclosing probe questions caused 12.5% contamination vs. 0% for vague probes \u2014 counterintuitively, when students explicitly state their own stats, the shared agent still attributes the immediately preceding student's stats. 100% of 5 contamination events traced to the immediately preceding student (directional spillover chain: S002\u2192S003\u2192S004\u2192S005), regardless of similarity direction."
+}

@@ -1,0 +1,5846 @@
+{
+  "experiment": "iteration11_context_stress",
+  "config": {
+    "n_students": 24,
+    "n_rounds": 3,
+    "condition": "shared_passive_accumulation",
+    "accumulation_cohorts": {
+      "low": 2,
+      "medium": 5,
+      "high": 8
+    },
+    "cohort_student_counts": {
+      "low": 8,
+      "medium": 8,
+      "high": 8
+    }
+  },
+  "students": [
+    {
+      "id": "S001",
+      "name": "Alan Chen",
+      "similarity": "high",
+      "cohort": "low",
+      "accumulation_depth": 2,
+      "majority_distance": 0
+    },
+    {
+      "id": "S002",
+      "name": "Brian Chen",
+      "similarity": "high",
+      "cohort": "medium",
+      "accumulation_depth": 5,
+      "majority_distance": 0
+    },
+    {
+      "id": "S003",
+      "name": "Calvin Chen",
+      "similarity": "high",
+      "cohort": "high",
+      "accumulation_depth": 8,
+      "majority_distance": 0
+    },
+    {
+      "id": "S004",
+      "name": "Diana Park",
+      "similarity": "high",
+      "cohort": "low",
+      "accumulation_depth": 2,
+      "majority_distance": 0
+    },
+    {
+      "id": "S005",
+      "name": "Eric Zhang",
+      "similarity": "high",
+      "cohort": "medium",
+      "accumulation_depth": 5,
+      "majority_distance": 2
+    },
+    {
+      "id": "S006",
+      "name": "Felicia Wu",
+      "similarity": "high",
+      "cohort": "high",
+      "accumulation_depth": 8,
+      "majority_distance": 0
+    },
+    {
+      "id": "S007",
+      "name": "Grace Kim",
+      "similarity": "high",
+      "cohort": "low",
+      "accumulation_depth": 2,
+      "majority_distance": 0
+    },
+    {
+      "id": "S008",
+      "name": "Henry Liu",
+      "similarity": "high",
+      "cohort": "medium",
+      "accumulation_depth": 5,
+      "majority_distance": 1
+    },
+    {
+      "id": "S009",
+      "name": "Iris Chen",
+      "similarity": "high",
+      "cohort": "high",
+      "accumulation_depth": 8,
+      "majority_distance": 0
+    },
+    {
+      "id": "S010",
+      "name": "Jason Park",
+      "similarity": "high",
+      "cohort": "low",
+      "accumulation_depth": 2,
+      "majority_distance": 2
+    },
+    {
+      "id": "S011",
+      "name": "Karen Tan",
+      "similarity": "high",
+      "cohort": "medium",
+      "accumulation_depth": 5,
+      "majority_distance": 0
+    },
+    {
+      "id": "S012",
+      "name": "Leo Wang",
+      "similarity": "high",
+      "cohort": "high",
+      "accumulation_depth": 8,
+      "majority_distance": 1
+    },
+    {
+      "id": "S013",
+      "name": "Kai Yamamoto",
+      "similarity": "low",
+      "cohort": "low",
+      "accumulation_depth": 2,
+      "majority_distance": 4
+    },
+    {
+      "id": "S014",
+      "name": "Ivy Torres",
+      "similarity": "low",
+      "cohort": "medium",
+      "accumulation_depth": 5,
+      "majority_distance": 4
+    },
+    {
+      "id": "S015",
+      "name": "Omar Hassan",
+      "similarity": "low",
+      "cohort": "high",
+      "accumulation_depth": 8,
+      "majority_distance": 3
+    },
+    {
+      "id": "S016",
+      "name": "Nina Patel",
+      "similarity": "low",
+      "cohort": "low",
+      "accumulation_depth": 2,
+      "majority_distance": 4
+    },
+    {
+      "id": "S017",
+      "name": "Marcus Lee",
+      "similarity": "low",
+      "cohort": "medium",
+      "accumulation_depth": 5,
+      "majority_distance": 4
+    },
+    {
+      "id": "S018",
+      "name": "Priya Sharma",
+      "similarity": "low",
+      "cohort": "high",
+      "accumulation_depth": 8,
+      "majority_distance": 4
+    },
+    {
+      "id": "S019",
+      "name": "Sam Rodriguez",
+      "similarity": "low",
+      "cohort": "low",
+      "accumulation_depth": 2,
+      "majority_distance": 4
+    },
+    {
+      "id": "S020",
+      "name": "Tanya Gupta",
+      "similarity": "low",
+      "cohort": "medium",
+      "accumulation_depth": 5,
+      "majority_distance": 4
+    },
+    {
+      "id": "S021",
+      "name": "Usman Ali",
+      "similarity": "low",
+      "cohort": "high",
+      "accumulation_depth": 8,
+      "majority_distance": 4
+    },
+    {
+      "id": "S022",
+      "name": "Vanessa Brown",
+      "similarity": "low",
+      "cohort": "low",
+      "accumulation_depth": 2,
+      "majority_distance": 4
+    },
+    {
+      "id": "S023",
+      "name": "Will Chen",
+      "similarity": "low",
+      "cohort": "medium",
+      "accumulation_depth": 5,
+      "majority_distance": 4
+    },
+    {
+      "id": "S024",
+      "name": "Xin Li",
+      "similarity": "low",
+      "cohort": "high",
+      "accumulation_depth": 8,
+      "majority_distance": 4
+    }
+  ],
+  "cohorts": {
+    "low": [
+      {
+        "student_id": "S001",
+        "student_name": "Alan Chen",
+        "similarity": "high",
+        "cohort": "low",
+        "accumulation_depth": 2,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 4.666666666666667,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S004",
+        "student_name": "Diana Park",
+        "similarity": "high",
+        "cohort": "low",
+        "accumulation_depth": 2,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 3,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.2
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.2
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.2
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.2
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.2
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.2
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S007",
+        "student_name": "Grace Kim",
+        "similarity": "high",
+        "cohort": "low",
+        "accumulation_depth": 2,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 3,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.7
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.7
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.7
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.7
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.7
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.7
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S010",
+        "student_name": "Jason Park",
+        "similarity": "high",
+        "cohort": "low",
+        "accumulation_depth": 2,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felicia Wu",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Henry Liu",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Karen Tan",
+                "value": "debate"
+              }
+            ]
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 2,
+            "accuracy": 3,
+            "hallucination": 4,
+            "consistency": 3,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 4,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felicia Wu",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Henry Liu",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Karen Tan",
+                "value": "debate"
+              }
+            ]
+          }
+        ],
+        "personalization": 3.6666666666666665,
+        "accuracy": 4.0,
+        "hallucination": 4.333333333333333,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S013",
+        "student_name": "Kai Yamamoto",
+        "similarity": "low",
+        "cohort": "low",
+        "accumulation_depth": 2,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 3,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.5
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.5
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.5
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.5
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.5
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.5
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.1
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.1
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.1
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.1
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.1
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.1
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S016",
+        "student_name": "Nina Patel",
+        "similarity": "low",
+        "cohort": "low",
+        "accumulation_depth": 2,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.4
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.4
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.4
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.4
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.4
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.4
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S019",
+        "student_name": "Sam Rodriguez",
+        "similarity": "low",
+        "cohort": "low",
+        "accumulation_depth": 2,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 3,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 5.0,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 310,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.7
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 310,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.7
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 310,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.7
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 310,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.7
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 310,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.7
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 310,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.7
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.6
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S022",
+        "student_name": "Vanessa Brown",
+        "similarity": "low",
+        "cohort": "low",
+        "accumulation_depth": 2,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 3,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.6
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.6
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.6
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.6
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.6
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.6
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7999999999999998
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7999999999999998
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7999999999999998
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7999999999999998
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7999999999999998
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 140,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7999999999999998
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 150,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.9
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 150,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.9
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 150,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.9
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 150,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.9
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 150,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.9
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 150,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.9
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.2
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.2
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.2
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.2
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.2
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.2
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.1
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.1
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.1
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.1
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.1
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.1
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 4.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 4.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 4.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 4.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 4.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 4.5
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          }
+        ],
+        "n_rounds_completed": 3
+      }
+    ],
+    "medium": [
+      {
+        "student_id": "S002",
+        "student_name": "Brian Chen",
+        "similarity": "high",
+        "cohort": "medium",
+        "accumulation_depth": 5,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 5.0,
+        "hallucination": 5.0,
+        "consistency": 4.666666666666667,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S005",
+        "student_name": "Eric Zhang",
+        "similarity": "high",
+        "cohort": "medium",
+        "accumulation_depth": 5,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Alan Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Calvin Chen",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Felicia Wu",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Henry Liu",
+                "value": "debate"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Karen Tan",
+                "value": "debate"
+              }
+            ]
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.1
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S008",
+        "student_name": "Henry Liu",
+        "similarity": "high",
+        "cohort": "medium",
+        "accumulation_depth": 5,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 30,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.5
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S011",
+        "student_name": "Karen Tan",
+        "similarity": "high",
+        "cohort": "medium",
+        "accumulation_depth": 5,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 3,
+            "contamination": true,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.333333333333333,
+        "accuracy": 4.666666666666667,
+        "hallucination": 4.666666666666667,
+        "consistency": 3.6666666666666665,
+        "contamination": true,
+        "contamination_events": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "source_student": "Henry Liu",
+            "leaked_attributes": [
+              "name",
+              "gpa"
+            ]
+          }
+        ],
+        "contamination_count": 1,
+        "window_positions": [
+          6
+        ],
+        "leaked_sim_distance": {
+          "gpa_delta": 0.1,
+          "sat_delta": 40,
+          "ec_overlap": 2,
+          "same_major": 1,
+          "same_state": 1,
+          "composite_sim": 13.4
+        },
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.9
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.9
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.9
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.9
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.9
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 10,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 60,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.0
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 60,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.0
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 60,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.0
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 60,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.0
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 60,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.0
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 60,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.0
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 2,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 13.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 2,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 13.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 2,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 13.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 2,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 13.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 2,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 13.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 2,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 13.4
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S014",
+        "student_name": "Ivy Torres",
+        "similarity": "low",
+        "cohort": "medium",
+        "accumulation_depth": 5,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 4,
+            "consistency": 3,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 4.666666666666667,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 270,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.9000000000000004
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 220,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 220,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 220,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 220,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 220,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 220,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.0
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.0
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.0
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.0
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.0
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.0
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.0
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S017",
+        "student_name": "Marcus Lee",
+        "similarity": "low",
+        "cohort": "medium",
+        "accumulation_depth": 5,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 320,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.800000000000001
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 320,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.800000000000001
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 320,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.800000000000001
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 320,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.800000000000001
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 320,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.800000000000001
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 320,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.800000000000001
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 380,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 380,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 380,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 380,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 380,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 380,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 100,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.8
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S020",
+        "student_name": "Tanya Gupta",
+        "similarity": "low",
+        "cohort": "medium",
+        "accumulation_depth": 5,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.0,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 180,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.8
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.8
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 140,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.6
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 140,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.6
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 140,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.6
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 140,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.6
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 140,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.6
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 140,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 2.6
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S023",
+        "student_name": "Will Chen",
+        "similarity": "low",
+        "cohort": "medium",
+        "accumulation_depth": 5,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 3,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 3.6666666666666665,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 390,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 390,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 390,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 390,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 390,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 390,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.8
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.8
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.8
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.8
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.8
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 340,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.8
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 360,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 360,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 360,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 360,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 360,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.8,
+            "sat_delta": 360,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.2
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 400,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 400,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 400,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 400,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 400,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 400,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.8
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.2
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.4
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4000000000000004
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4000000000000004
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4000000000000004
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4000000000000004
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4000000000000004
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.4000000000000004
+          }
+        ],
+        "n_rounds_completed": 3
+      }
+    ],
+    "high": [
+      {
+        "student_id": "S003",
+        "student_name": "Calvin Chen",
+        "similarity": "high",
+        "cohort": "high",
+        "accumulation_depth": 8,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S006",
+        "student_name": "Felicia Wu",
+        "similarity": "high",
+        "cohort": "high",
+        "accumulation_depth": 8,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.4
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S009",
+        "student_name": "Iris Chen",
+        "similarity": "high",
+        "cohort": "high",
+        "accumulation_depth": 8,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.8
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 20,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 8.6
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S012",
+        "student_name": "Leo Wang",
+        "similarity": "high",
+        "cohort": "high",
+        "accumulation_depth": 8,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 0,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 3.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 0,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 3.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 0,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 3.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 0,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 3.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 0,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 3.1
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 50,
+            "ec_overlap": 0,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 3.1
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.5
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 70,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 70,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 70,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 70,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 70,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 70,
+            "ec_overlap": 1,
+            "same_major": 1,
+            "same_state": 1,
+            "composite_sim": 7.9
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S015",
+        "student_name": "Omar Hassan",
+        "similarity": "low",
+        "cohort": "high",
+        "accumulation_depth": 8,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.333333333333333,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 170,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.3
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 150,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 150,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 150,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 150,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 150,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.9
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 150,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.9
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 80,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 80,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 80,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 80,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 80,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.8
+          },
+          {
+            "gpa_delta": 0.0,
+            "sat_delta": 80,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.8
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S018",
+        "student_name": "Priya Sharma",
+        "similarity": "low",
+        "cohort": "high",
+        "accumulation_depth": 8,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.5
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 90,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.5
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 130,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.1
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 110,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 110,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 110,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 110,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 110,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 110,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -1.7000000000000002
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          },
+          {
+            "gpa_delta": 0.1,
+            "sat_delta": 40,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -0.6000000000000001
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S021",
+        "student_name": "Usman Ali",
+        "similarity": "low",
+        "cohort": "high",
+        "accumulation_depth": 8,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 330,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.1
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 330,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.1
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 330,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.1
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 330,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.1
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 330,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.1
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 330,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.1
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 1.0,
+            "sat_delta": 370,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.7
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 350,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.3
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 350,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.3
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 350,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.3
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 350,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.3
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 350,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.3
+          },
+          {
+            "gpa_delta": 0.9,
+            "sat_delta": 350,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -5.3
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 280,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -4.199999999999999
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.7,
+            "sat_delta": 200,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.4
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.5999999999999996
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.5999999999999996
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.5999999999999996
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.5999999999999996
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.5999999999999996
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 240,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.5999999999999996
+          }
+        ],
+        "n_rounds_completed": 3
+      },
+      {
+        "student_id": "S024",
+        "student_name": "Xin Li",
+        "similarity": "low",
+        "cohort": "high",
+        "accumulation_depth": 8,
+        "agent_type": "shared",
+        "probe_type": "passive",
+        "rounds": [
+          {
+            "round": 0,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 4,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": []
+          },
+          {
+            "round": 1,
+            "probe_type": "passive",
+            "personalization": 4,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 4,
+            "contamination": false,
+            "stat_conflicts": [
+              {
+                "attribute": "ec",
+                "source_student": "Nina Patel",
+                "value": "dance"
+              },
+              {
+                "attribute": "ec",
+                "source_student": "Tanya Gupta",
+                "value": "dance"
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "probe_type": "normal",
+            "personalization": 5,
+            "accuracy": 5,
+            "hallucination": 5,
+            "consistency": 5,
+            "contamination": false,
+            "stat_conflicts": []
+          }
+        ],
+        "personalization": 4.666666666666667,
+        "accuracy": 4.666666666666667,
+        "hallucination": 5.0,
+        "consistency": 4.333333333333333,
+        "contamination": false,
+        "contamination_events": [],
+        "contamination_count": 0,
+        "window_positions": [],
+        "leaked_sim_distance": null,
+        "prior_student_distances": [
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 210,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.1
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 250,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.7
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 250,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.7
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 250,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.7
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 250,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.7
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 250,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.7
+          },
+          {
+            "gpa_delta": 0.6,
+            "sat_delta": 250,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.7
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.5,
+            "sat_delta": 230,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -3.3
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 160,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.2
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.6
+          },
+          {
+            "gpa_delta": 0.3,
+            "sat_delta": 80,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.6
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.4
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.4
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.4
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.4
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.4
+          },
+          {
+            "gpa_delta": 0.2,
+            "sat_delta": 120,
+            "ec_overlap": 1,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": 3.4
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 120,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 120,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 120,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 120,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 120,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          },
+          {
+            "gpa_delta": 0.4,
+            "sat_delta": 120,
+            "ec_overlap": 0,
+            "same_major": 0,
+            "same_state": 0,
+            "composite_sim": -2.0
+          }
+        ],
+        "n_rounds_completed": 3
+      }
+    ]
+  },
+  "summary": {
+    "low_n": 8,
+    "medium_n": 8,
+    "high_n": 8,
+    "low_personalization": 4.33,
+    "medium_personalization": 4.62,
+    "high_personalization": 4.67,
+    "low_accuracy": 4.62,
+    "medium_accuracy": 4.58,
+    "high_accuracy": 4.58,
+    "low_hallucination": 4.88,
+    "medium_hallucination": 4.92,
+    "high_hallucination": 5.0,
+    "low_consistency": 4.17,
+    "medium_consistency": 4.04,
+    "high_consistency": 4.33,
+    "low_contamination_rate": 0.0,
+    "medium_contamination_rate": 0.12,
+    "high_contamination_rate": 0.0,
+    "low_high_sim_contam": 0.0,
+    "medium_high_sim_contam": 0.25,
+    "high_high_sim_contam": 0.0,
+    "low_low_sim_contam": 0.0,
+    "medium_low_sim_contam": 0.0,
+    "high_low_sim_contam": 0.0,
+    "overall_n": 24,
+    "overall_contaminated": 1,
+    "overall_contamination_rate": 0.04,
+    "total_contamination_events": 1
+  }
+}

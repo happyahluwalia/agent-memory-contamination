@@ -1,0 +1,5008 @@
+{
+  "experiment": "iteration12_passive_contamination_replication",
+  "config": {
+    "n_students": 24,
+    "n_rounds": 3
+  },
+  "students": {
+    "shared_passive": [
+      {
+        "id": "S001",
+        "name": "Alan Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S002",
+        "name": "Brian Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S003",
+        "name": "Calvin Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S004",
+        "name": "Diana Park",
+        "similarity": "high"
+      },
+      {
+        "id": "S005",
+        "name": "Eric Wu",
+        "similarity": "high"
+      },
+      {
+        "id": "S006",
+        "name": "Felix Li",
+        "similarity": "high"
+      },
+      {
+        "id": "S007",
+        "name": "Grace Kim",
+        "similarity": "high"
+      },
+      {
+        "id": "S008",
+        "name": "Henry Liu",
+        "similarity": "high"
+      },
+      {
+        "id": "S009",
+        "name": "Isabella Park",
+        "similarity": "high"
+      },
+      {
+        "id": "S010",
+        "name": "Jason Wang",
+        "similarity": "high"
+      },
+      {
+        "id": "S011",
+        "name": "Kevin Zhang",
+        "similarity": "high"
+      },
+      {
+        "id": "S012",
+        "name": "Linda Wu",
+        "similarity": "high"
+      },
+      {
+        "id": "S013",
+        "name": "Kai Yamamoto",
+        "similarity": "low"
+      },
+      {
+        "id": "S014",
+        "name": "Ivy Torres",
+        "similarity": "low"
+      },
+      {
+        "id": "S015",
+        "name": "Omar Hassan",
+        "similarity": "low"
+      },
+      {
+        "id": "S016",
+        "name": "Nina Patel",
+        "similarity": "low"
+      },
+      {
+        "id": "S017",
+        "name": "Leo Garcia",
+        "similarity": "low"
+      },
+      {
+        "id": "S018",
+        "name": "Maya Singh",
+        "similarity": "low"
+      },
+      {
+        "id": "S019",
+        "name": "Noah Williams",
+        "similarity": "low"
+      },
+      {
+        "id": "S020",
+        "name": "Olivia Brown",
+        "similarity": "low"
+      },
+      {
+        "id": "S021",
+        "name": "Peter Davis",
+        "similarity": "low"
+      },
+      {
+        "id": "S022",
+        "name": "Quinn Miller",
+        "similarity": "low"
+      },
+      {
+        "id": "S023",
+        "name": "Rachel Wilson",
+        "similarity": "low"
+      },
+      {
+        "id": "S024",
+        "name": "Sam Taylor",
+        "similarity": "low"
+      }
+    ],
+    "memory_passive": [
+      {
+        "id": "S001",
+        "name": "Alan Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S002",
+        "name": "Brian Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S003",
+        "name": "Calvin Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S004",
+        "name": "Diana Park",
+        "similarity": "high"
+      },
+      {
+        "id": "S005",
+        "name": "Eric Wu",
+        "similarity": "high"
+      },
+      {
+        "id": "S006",
+        "name": "Felix Li",
+        "similarity": "high"
+      },
+      {
+        "id": "S007",
+        "name": "Grace Kim",
+        "similarity": "high"
+      },
+      {
+        "id": "S008",
+        "name": "Henry Liu",
+        "similarity": "high"
+      },
+      {
+        "id": "S009",
+        "name": "Isabella Park",
+        "similarity": "high"
+      },
+      {
+        "id": "S010",
+        "name": "Jason Wang",
+        "similarity": "high"
+      },
+      {
+        "id": "S011",
+        "name": "Kevin Zhang",
+        "similarity": "high"
+      },
+      {
+        "id": "S012",
+        "name": "Linda Wu",
+        "similarity": "high"
+      },
+      {
+        "id": "S013",
+        "name": "Kai Yamamoto",
+        "similarity": "low"
+      },
+      {
+        "id": "S014",
+        "name": "Ivy Torres",
+        "similarity": "low"
+      },
+      {
+        "id": "S015",
+        "name": "Omar Hassan",
+        "similarity": "low"
+      },
+      {
+        "id": "S016",
+        "name": "Nina Patel",
+        "similarity": "low"
+      },
+      {
+        "id": "S017",
+        "name": "Leo Garcia",
+        "similarity": "low"
+      },
+      {
+        "id": "S018",
+        "name": "Maya Singh",
+        "similarity": "low"
+      },
+      {
+        "id": "S019",
+        "name": "Noah Williams",
+        "similarity": "low"
+      },
+      {
+        "id": "S020",
+        "name": "Olivia Brown",
+        "similarity": "low"
+      },
+      {
+        "id": "S021",
+        "name": "Peter Davis",
+        "similarity": "low"
+      },
+      {
+        "id": "S022",
+        "name": "Quinn Miller",
+        "similarity": "low"
+      },
+      {
+        "id": "S023",
+        "name": "Rachel Wilson",
+        "similarity": "low"
+      },
+      {
+        "id": "S024",
+        "name": "Sam Taylor",
+        "similarity": "low"
+      }
+    ],
+    "shared_tagged_passive": [
+      {
+        "id": "S001",
+        "name": "Alan Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S002",
+        "name": "Brian Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S003",
+        "name": "Calvin Chen",
+        "similarity": "high"
+      },
+      {
+        "id": "S004",
+        "name": "Diana Park",
+        "similarity": "high"
+      },
+      {
+        "id": "S005",
+        "name": "Eric Wu",
+        "similarity": "high"
+      },
+      {
+        "id": "S006",
+        "name": "Felix Li",
+        "similarity": "high"
+      },
+      {
+        "id": "S007",
+        "name": "Grace Kim",
+        "similarity": "high"
+      },
+      {
+        "id": "S008",
+        "name": "Henry Liu",
+        "similarity": "high"
+      },
+      {
+        "id": "S009",
+        "name": "Isabella Park",
+        "similarity": "high"
+      },
+      {
+        "id": "S010",
+        "name": "Jason Wang",
+        "similarity": "high"
+      },
+      {
+        "id": "S011",
+        "name": "Kevin Zhang",
+        "similarity": "high"
+      },
+      {
+        "id": "S012",
+        "name": "Linda Wu",
+        "similarity": "high"
+      },
+      {
+        "id": "S013",
+        "name": "Kai Yamamoto",
+        "similarity": "low"
+      },
+      {
+        "id": "S014",
+        "name": "Ivy Torres",
+        "similarity": "low"
+      },
+      {
+        "id": "S015",
+        "name": "Omar Hassan",
+        "similarity": "low"
+      },
+      {
+        "id": "S016",
+        "name": "Nina Patel",
+        "similarity": "low"
+      },
+      {
+        "id": "S017",
+        "name": "Leo Garcia",
+        "similarity": "low"
+      },
+      {
+        "id": "S018",
+        "name": "Maya Singh",
+        "similarity": "low"
+      },
+      {
+        "id": "S019",
+        "name": "Noah Williams",
+        "similarity": "low"
+      },
+      {
+        "id": "S020",
+        "name": "Olivia Brown",
+        "similarity": "low"
+      },
+      {
+        "id": "S021",
+        "name": "Peter Davis",
+        "similarity": "low"
+      },
+      {
+        "id": "S022",
+        "name": "Quinn Miller",
+        "similarity": "low"
+      },
+      {
+        "id": "S023",
+        "name": "Rachel Wilson",
+        "similarity": "low"
+      },
+      {
+        "id": "S024",
+        "name": "Sam Taylor",
+        "similarity": "low"
+      }
+    ]
+  },
+  "memory_passive_results": [
+    {
+      "student_id": "S001",
+      "student_name": "Alan Chen",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Brian Chen",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Calvin Chen",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Diana Park",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Eric Wu",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Felix Li",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S007",
+      "student_name": "Grace Kim",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S008",
+      "student_name": "Henry Liu",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S009",
+      "student_name": "Isabella Park",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S010",
+      "student_name": "Jason Wang",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Alan Chen",
+              "value": "robotics"
+            },
+            {
+              "attribute": "gpa",
+              "source": "Brian Chen",
+              "value": "3.8"
+            },
+            {
+              "attribute": "ec",
+              "source": "Brian Chen",
+              "value": "robotics"
+            },
+            {
+              "attribute": "ec",
+              "source": "Diana Park",
+              "value": "robotics"
+            },
+            {
+              "attribute": "gpa",
+              "source": "Eric Wu",
+              "value": "3.8"
+            },
+            {
+              "attribute": "gpa",
+              "source": "Isabella Park",
+              "value": "3.8"
+            },
+            {
+              "attribute": "ec",
+              "source": "Isabella Park",
+              "value": "robotics"
+            },
+            {
+              "attribute": "gpa",
+              "source": "Peter Davis",
+              "value": "3.8"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S011",
+      "student_name": "Kevin Zhang",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S012",
+      "student_name": "Linda Wu",
+      "similarity": "high",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S013",
+      "student_name": "Kai Yamamoto",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S014",
+      "student_name": "Ivy Torres",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S015",
+      "student_name": "Omar Hassan",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S016",
+      "student_name": "Nina Patel",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S017",
+      "student_name": "Leo Garcia",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S018",
+      "student_name": "Maya Singh",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S019",
+      "student_name": "Noah Williams",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S020",
+      "student_name": "Olivia Brown",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S021",
+      "student_name": "Peter Davis",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S022",
+      "student_name": "Quinn Miller",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S023",
+      "student_name": "Rachel Wilson",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S024",
+      "student_name": "Sam Taylor",
+      "similarity": "low",
+      "agent_type": "memory",
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    }
+  ],
+  "shared_passive_results": [
+    {
+      "student_id": "S001",
+      "student_name": "Alan Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Brian Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Calvin Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Diana Park",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Eric Wu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 5.0,
+      "consistency": 2.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Felix Li",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S007",
+      "student_name": "Grace Kim",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.0,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S008",
+      "student_name": "Henry Liu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S009",
+      "student_name": "Isabella Park",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S010",
+      "student_name": "Jason Wang",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S011",
+      "student_name": "Kevin Zhang",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 5.0,
+      "consistency": 2.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S012",
+      "student_name": "Linda Wu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 2.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S013",
+      "student_name": "Kai Yamamoto",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 2,
+          "hallucination": 4,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.666666666666667,
+      "consistency": 2.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S014",
+      "student_name": "Ivy Torres",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 2,
+          "hallucination": 3,
+          "consistency": 1,
+          "contamination": true,
+          "contamination_source": "Kai Yamamoto",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 3.3333333333333335,
+      "hallucination": 4.333333333333333,
+      "consistency": 1.6666666666666667,
+      "contamination": true,
+      "contamination_count": 1
+    },
+    {
+      "student_id": "S015",
+      "student_name": "Omar Hassan",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "contamination_source": "Kai Yamamoto, Ivy Torres",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 1,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 2.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 2.3333333333333335,
+      "contamination": true,
+      "contamination_count": 1
+    },
+    {
+      "student_id": "S016",
+      "student_name": "Nina Patel",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 1,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 1,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 1,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 1.0,
+      "hallucination": 5.0,
+      "consistency": 1.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S017",
+      "student_name": "Leo Garcia",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S018",
+      "student_name": "Maya Singh",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S019",
+      "student_name": "Noah Williams",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "contamination_source": "Maya Singh",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": true,
+          "contamination_source": "Maya Singh",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.0,
+      "hallucination": 4.333333333333333,
+      "consistency": 3.0,
+      "contamination": true,
+      "contamination_count": 2
+    },
+    {
+      "student_id": "S020",
+      "student_name": "Olivia Brown",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "contamination_source": "Noah Williams, Maya Singh",
+          "leaked_attributes": [
+            "state",
+            "state"
+          ],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "contamination_source": "Noah Williams",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": true,
+          "contamination_source": "Noah Williams",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "contamination": true,
+      "contamination_count": 3
+    },
+    {
+      "student_id": "S021",
+      "student_name": "Peter Davis",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "contamination_source": "Olivia Brown",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": true,
+          "contamination_source": "Olivia Brown",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": true,
+      "contamination_count": 2
+    },
+    {
+      "student_id": "S022",
+      "student_name": "Quinn Miller",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 3,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": true,
+          "contamination_source": "Peter Davis",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.6666666666666667,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": true,
+      "contamination_count": 1
+    },
+    {
+      "student_id": "S023",
+      "student_name": "Rachel Wilson",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S024",
+      "student_name": "Sam Taylor",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": false,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 2,
+          "hallucination": 2,
+          "consistency": 1,
+          "contamination": true,
+          "contamination_source": "Rachel Wilson",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 2,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": true,
+          "contamination_source": "Rachel Wilson",
+          "leaked_attributes": [
+            "state"
+          ],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Noah Williams",
+              "value": "track"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": true,
+          "contamination_source": "unknown student",
+          "leaked_attributes": [
+            "gpa",
+            "ecs"
+          ],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Alan Chen",
+              "value": "robotics"
+            },
+            {
+              "attribute": "gpa",
+              "source": "Brian Chen",
+              "value": "3.8"
+            },
+            {
+              "attribute": "ec",
+              "source": "Brian Chen",
+              "value": "robotics"
+            },
+            {
+              "attribute": "ec",
+              "source": "Diana Park",
+              "value": "robotics"
+            },
+            {
+              "attribute": "gpa",
+              "source": "Eric Wu",
+              "value": "3.8"
+            },
+            {
+              "attribute": "gpa",
+              "source": "Isabella Park",
+              "value": "3.8"
+            },
+            {
+              "attribute": "ec",
+              "source": "Isabella Park",
+              "value": "robotics"
+            },
+            {
+              "attribute": "ec",
+              "source": "Kai Yamamoto",
+              "value": "soccer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "gpa",
+              "source": "Peter Davis",
+              "value": "3.8"
+            },
+            {
+              "attribute": "ec",
+              "source": "Rachel Wilson",
+              "value": "soccer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 2.3333333333333335,
+      "hallucination": 4.0,
+      "consistency": 1.3333333333333333,
+      "contamination": true,
+      "contamination_count": 3
+    }
+  ],
+  "shared_tagged_passive_results": [
+    {
+      "student_id": "S001",
+      "student_name": "Alan Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S002",
+      "student_name": "Brian Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S003",
+      "student_name": "Calvin Chen",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 3,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 3.6666666666666665,
+      "hallucination": 5.0,
+      "consistency": 2.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S004",
+      "student_name": "Diana Park",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S005",
+      "student_name": "Eric Wu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S006",
+      "student_name": "Felix Li",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 1,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S007",
+      "student_name": "Grace Kim",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S008",
+      "student_name": "Henry Liu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 1,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S009",
+      "student_name": "Isabella Park",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S010",
+      "student_name": "Jason Wang",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.3333333333333335,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S011",
+      "student_name": "Kevin Zhang",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S012",
+      "student_name": "Linda Wu",
+      "similarity": "high",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 4,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S013",
+      "student_name": "Kai Yamamoto",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.0,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S014",
+      "student_name": "Ivy Torres",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S015",
+      "student_name": "Omar Hassan",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S016",
+      "student_name": "Nina Patel",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 2,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 2,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 2.6666666666666665,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S017",
+      "student_name": "Leo Garcia",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "newspaper"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 5.0,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S018",
+      "student_name": "Maya Singh",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S019",
+      "student_name": "Noah Williams",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 2.0,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S020",
+      "student_name": "Olivia Brown",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.6666666666666667,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S021",
+      "student_name": "Peter Davis",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.6666666666666667,
+      "accuracy": 5.0,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S022",
+      "student_name": "Quinn Miller",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.6666666666666667,
+      "accuracy": 4.666666666666667,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S023",
+      "student_name": "Rachel Wilson",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 1,
+          "accuracy": 5,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 1,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 1.3333333333333333,
+      "accuracy": 4.333333333333333,
+      "hallucination": 5.0,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    },
+    {
+      "student_id": "S024",
+      "student_name": "Sam Taylor",
+      "similarity": "low",
+      "agent_type": "shared",
+      "use_identity_tags": true,
+      "agent_instance": 3,
+      "rounds": [
+        {
+          "round": 0,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 4,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 1,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": []
+        },
+        {
+          "round": 2,
+          "personalization": 2,
+          "accuracy": 4,
+          "hallucination": 5,
+          "consistency": 3,
+          "contamination": false,
+          "contamination_source": "none",
+          "leaked_attributes": [],
+          "stat_conflicts": [
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "dance"
+            },
+            {
+              "attribute": "ec",
+              "source": "Nina Patel",
+              "value": "volunteer"
+            },
+            {
+              "attribute": "ec",
+              "source": "Maya Singh",
+              "value": "theater"
+            },
+            {
+              "attribute": "ec",
+              "source": "Olivia Brown",
+              "value": "volunteer"
+            }
+          ]
+        }
+      ],
+      "personalization": 2.0,
+      "accuracy": 4.0,
+      "hallucination": 4.666666666666667,
+      "consistency": 3.0,
+      "contamination": false,
+      "contamination_count": 0
+    }
+  ],
+  "summary": {
+    "shared_passive_personalization": 1.1,
+    "shared_passive_accuracy": 3.78,
+    "shared_passive_hallucination": 4.89,
+    "shared_passive_consistency": 2.56,
+    "shared_passive_contamination_rate": 0.2917,
+    "shared_passive_contamination_high_sim": 0.0,
+    "shared_passive_contamination_low_sim": 0.5833,
+    "shared_passive_contamination_r0": 0.1667,
+    "shared_passive_contamination_r1": 0.25,
+    "shared_passive_contamination_r2": 0.125,
+    "shared_passive_severity": 1.15,
+    "shared_passive_spread": 0.15,
+    "memory_passive_personalization": 1.01,
+    "memory_passive_accuracy": 4.47,
+    "memory_passive_hallucination": 5.0,
+    "memory_passive_consistency": 2.94,
+    "memory_passive_contamination_rate": 0.0,
+    "memory_passive_contamination_high_sim": 0.0,
+    "memory_passive_contamination_low_sim": 0.0,
+    "memory_passive_contamination_r0": 0.0,
+    "memory_passive_contamination_r1": 0.0,
+    "memory_passive_contamination_r2": 0.0,
+    "memory_passive_severity": 0.0,
+    "memory_passive_spread": 0.0,
+    "shared_tagged_passive_personalization": 1.33,
+    "shared_tagged_passive_accuracy": 4.43,
+    "shared_tagged_passive_hallucination": 4.99,
+    "shared_tagged_passive_consistency": 2.81,
+    "shared_tagged_passive_contamination_rate": 0.0,
+    "shared_tagged_passive_contamination_high_sim": 0.0,
+    "shared_tagged_passive_contamination_low_sim": 0.0,
+    "shared_tagged_passive_contamination_r0": 0.0,
+    "shared_tagged_passive_contamination_r1": 0.0,
+    "shared_tagged_passive_contamination_r2": 0.0,
+    "shared_tagged_passive_severity": 0.0,
+    "shared_tagged_passive_spread": 0.0,
+    "tag_intervention_effect": 0.2917
+  }
+}
