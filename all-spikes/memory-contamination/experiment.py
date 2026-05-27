@@ -1,18 +1,28 @@
 #!/usr/bin/env python3
 """
-experiment.py — Iteration 11: Name-Tagging Intervention for Shared-History Contamination
+experiment.py — Iteration 12: 2×2 Decomposition of Name-Tagging Intervention
 
-Design: Replicates Iteration 10 (shared agent, N=48, 3 rounds, specific probes)
-but adds student name tags to BOTH user questions AND assistant responses.
+Design: 4 between-subjects conditions (tag_mode) × 32 students each:
+  1) no_tags:        No name tags on any turns (Iteration 10 baseline)
+  2) user_only:      Tag only user turns with [Student: name]
+  3) assistant_only: Tag only assistant responses with [Student: name]
+  4) both:           Tag both user turns and assistant responses (Iteration 11 replication)
 
-Key question: Does explicitly tagging every turn with the student's identity
-break the pollinator contagion chain documented in Iteration 10 (92% rate)?
+This is a full 2×2 factorial design:
+                   assistant_tag=OFF   assistant_tag=ON
+  user_tag=OFF     no_tags             assistant_only
+  user_tag=ON      user_only           both
 
-The mechanism: In Iteration 10, only user turns were tagged. Assistant responses
-were untagged, so the agent's own past replies became anonymous in the window —
-creating ambiguity about which student they referred to. By tagging both sides
-of every conversation pair, the agent should be able to correctly attribute
-each past response to its student, preventing cross-student leakage.
+Key question: Which side of the name-tagging eliminates contamination?
+Iteration 11 showed both-side tagging drops contamination from 92% → 0%.
+This decomposes the mechanism: is it user-side attribution (distinguishing
+which student is speaking), assistant-side attribution (distinguishing which
+student the agent's own past replies refer to), or both?
+
+Predictions:
+  - If user tags alone eliminate contamination → problem is input ambiguity
+  - If assistant tags alone eliminate contamination → problem is own-response ambiguity
+  - If both are needed → both mechanisms contribute independently (interaction)
 """
 
 import os, json, random
@@ -22,9 +32,11 @@ from anthropic import Anthropic
 client = Anthropic()
 random.seed(42)
 
-EXPERIMENT_NAME = "iteration11_name_tagging_intervention"
-N_STUDENTS = 48
+EXPERIMENT_NAME = "iteration12_tag_decomposition"
+N_STUDENTS = 32  # per condition
 N_ROUNDS = 3
+N_CONDITIONS = 4  # no_tags, user_only, assistant_only, both
+TAG_MODES = ["no_tags", "user_only", "assistant_only", "both"]
 
 # ─── Student profiles ──────────────────────────────────────────────────────────
 HIGH_SIM_STUDENTS = [
@@ -96,13 +108,19 @@ def get_probe_question(student: dict, round_num: int) -> tuple:
     )
 
 
-def run_shared_agent(students: list) -> list:
+def run_shared_agent(students: list, tag_mode: str = "no_tags") -> tuple:
     """
-    Shared-history agent. Processes students in order, appending to a single
-    context window. Records per-round response contamination status to enable
-    contagion analysis: does a contaminated response from student N-1 increase
-    contamination probability for student N?
+    Shared-history agent with configurable name-tagging.
+
+    tag_mode:
+      "no_tags"         — no name tags on any turns (Iteration 10 baseline)
+      "user_only"       — tag only user turns: [Student: name]
+      "assistant_only"  — tag only assistant responses: [Student: name]
+      "both"            — tag both user turns and assistant responses (Iteration 11 replication)
+
+    Returns (results, response_contamination_matrix).
     """
+    assert tag_mode in ("no_tags", "user_only", "assistant_only", "both"), f"Unknown tag_mode: {tag_mode}"
 
     results = []
     shared_history = []
@@ -119,8 +137,13 @@ def run_shared_agent(students: list) -> list:
 
         for round_num in range(N_ROUNDS):
             question, probe_type = get_probe_question(student, round_num)
-            tagged_question = f"[Student: {student['name']}] {question}"
-            shared_history.append({"role": "user", "content": tagged_question})
+
+            # Apply user-side tagging if enabled
+            if tag_mode in ("user_only", "both"):
+                user_content = f"[Student: {student['name']}] {question}"
+            else:
+                user_content = question
+            shared_history.append({"role": "user", "content": user_content})
 
             response = client.messages.create(
                 model="claude-sonnet-4-6",
@@ -130,11 +153,16 @@ def run_shared_agent(students: list) -> list:
                 ),
                 messages=shared_history[-8:]  # sliding window
             )
-            print(f"  [shared] {student['id']} ({student['name']}) round {round_num} ({probe_type}) — API call", flush=True)
+            print(f"  [{tag_mode}] {student['id']} ({student['name']}) round {round_num} ({probe_type}) — API call", flush=True)
 
             reply = response.content[0].text
-            tagged_reply = f"[Student: {student['name']}] {reply}"
-            shared_history.append({"role": "assistant", "content": tagged_reply})
+
+            # Apply assistant-side tagging if enabled
+            if tag_mode in ("assistant_only", "both"):
+                assistant_content = f"[Student: {student['name']}] {reply}"
+            else:
+                assistant_content = reply
+            shared_history.append({"role": "assistant", "content": assistant_content})
 
             # Evaluate
             round_scores = evaluate_response(student, reply, preceding_student)
@@ -275,23 +303,70 @@ def detect_stat_conflicts(student: dict, response: str) -> list:
     return conflicts
 
 
-def main():
-    print(f"\n{'='*60}")
-    print(f"EXPERIMENT: {EXPERIMENT_NAME}")
-    print(f"N_STUDENTS: {N_STUDENTS}, N_ROUNDS: {N_ROUNDS}")
-    print(f"{'='*60}\n")
+def format_results_summary(all_condition_data: dict) -> str:
+    """Build a compact cross-condition comparison string."""
 
-    students = generate_students(N_STUDENTS)
-    print(f"Generated {len(students)} students (alternating H/L)")
-    for s in students:
-        print(f"  {s['id']}: {s['name']:20} sim={s['similarity']}  "
-              f"GPA={s['gpa']} SAT={s['sat']} major={s['major']:12} state={s['state']}")
-    print()
+    metrics = ["personalization", "accuracy", "hallucination", "consistency"]
 
-    print("Running SHARED agent (all rounds: specific probes)...")
-    results, response_contamination = run_shared_agent(students)
+    lines = []
+    lines.append(f"{'─'*80}")
+    lines.append(f"CROSS-CONDITION COMPARISON — {EXPERIMENT_NAME}")
+    lines.append(f"{'─'*80}")
 
-    # ── Aggregate metrics ──────────────────────────────────────────────
+    # Header row
+    header = f"{'Metric':<25}"
+    for mode in TAG_MODES:
+        header += f" {mode:>16}"
+    lines.append(header)
+    lines.append(f"{'─'*80}")
+
+    # Contamination rate rows
+    for label, key in [("contamination_rate", "contamination_rate"),
+                        ("contamination_high_sim", "contamination_rate_high_sim"),
+                        ("contamination_low_sim", "contamination_rate_low_sim")]:
+        row = f"{label:<25}"
+        for mode in TAG_MODES:
+            row += f" {all_condition_data[mode][key]:>16.3f}"
+        lines.append(row)
+
+    # Round-by-round
+    for r in range(N_ROUNDS):
+        row = f"  contam_round_{r:<15}"
+        for mode in TAG_MODES:
+            row += f" {all_condition_data[mode][f'contamination_round_{r}']:>16.3f}"
+        lines.append(row)
+
+    lines.append(f"{'─'*80}")
+
+    # Quality metrics
+    for m in metrics:
+        row = f"{m:<25}"
+        for mode in TAG_MODES:
+            row += f" {all_condition_data[mode][m]:>16.2f}"
+        lines.append(row)
+
+    lines.append(f"{'─'*80}")
+
+    # Delta from no_tags baseline
+    lines.append("")
+    lines.append(f"{'DELTA from no_tags:':<25}")
+    for m in ["contamination_rate"] + metrics:
+        row = f"  {m:<23}"
+        for mode in TAG_MODES:
+            if mode == "no_tags":
+                row += f" {'—':>16}"
+            else:
+                delta = all_condition_data[mode][m] - all_condition_data["no_tags"][m]
+                row += f" {delta:>+16.3f}"
+        lines.append(row)
+
+    return "\n".join(lines)
+
+
+def run_condition(tag_mode: str, students: list) -> dict:
+    """Run a single tag_mode condition and return results + summary."""
+    results, response_contamination = run_shared_agent(students, tag_mode)
+
     def avg(metric):
         return round(sum(r[metric] for r in results) / len(results), 2)
 
@@ -311,208 +386,116 @@ def main():
 
     metrics = ["personalization", "accuracy", "hallucination", "consistency"]
 
-    print(f"\n{'─'*60}")
-    print(f"RESULTS — {EXPERIMENT_NAME}")
-    print(f"{'─'*60}")
-    print(f"{'Metric':<20} {'All':>8} {'High-sim':>10} {'Low-sim':>10}")
-    print(f"{'─'*50}")
-    for m in metrics:
-        high = sum(r[m] for r in results if r["similarity"] == "high") / max(1, len([r for r in results if r["similarity"] == "high"]))
-        low = sum(r[m] for r in results if r["similarity"] == "low") / max(1, len([r for r in results if r["similarity"] == "low"]))
-        print(f"{m:<20} {avg(m):>8.2f} {high:>10.2f} {low:>10.2f}")
-    print(f"{'─'*50}")
-    print(f"{'contamination_rate':<20} {contamination_rate():>8.3f} "
-          f"{contamination_rate([r for r in results if r['similarity']=='high']):>10.3f} "
-          f"{contamination_rate([r for r in results if r['similarity']=='low']):>10.3f}")
+    summary = {
+        "tag_mode": tag_mode,
+        "contamination_rate": contamination_rate(),
+        "contamination_rate_high_sim": contamination_rate([r for r in results if r["similarity"] == "high"]),
+        "contamination_rate_low_sim": contamination_rate([r for r in results if r["similarity"] == "low"]),
+        **{f"contamination_round_{r}": contamination_rate_round(results, r) for r in range(N_ROUNDS)},
+        **{f"{m}": avg(m) for m in metrics},
+    }
 
-    # ── Round-by-round breakdown ──────────────────────────────────────
-    print(f"\n{'─'*60}")
-    print(f"CONTAMINATION BY ROUND (all specific probes, N={N_STUDENTS} each)")
-    print(f"{'─'*60}")
-    for round_num in range(N_ROUNDS):
-        rate = contamination_rate_round(results, round_num)
-        high_rate = contamination_rate_round([r for r in results if r["similarity"] == "high"], round_num)
-        low_rate = contamination_rate_round([r for r in results if r["similarity"] == "low"], round_num)
-        print(f"  round {round_num:<3} (specific)  rate={rate:.3f}   "
-              f"high={high_rate:.3f}   low={low_rate:.3f}")
+    return {
+        "results": results,
+        "response_contamination": response_contamination,
+        "summary": summary,
+    }
 
-    # ── CONTAGION ANALYSIS ────────────────────────────────────────────
-    # Contagion: does a contaminated response from student N-1 increase
-    # probability of contamination for student N (in the same round)?
-    print(f"\n{'─'*60}")
-    print(f"CONTAGION ANALYSIS — Response-to-Response Transmission")
-    print(f"{'─'*60}")
 
-    for round_num in range(N_ROUNDS):
-        # For each pair (student i, round r), check if preceding student's
-        # response in same round was contaminated
-        n_prev_contaminated = 0
-        n_prev_clean = 0
-        n_contagion_events = 0  # N contaminated AND predecessor's response was contaminated
-        n_prev_contam_target_contam = 0
+def main():
+    print(f"\n{'='*60}")
+    print(f"EXPERIMENT: {EXPERIMENT_NAME}")
+    print(f"N_STUDENTS per condition: {N_STUDENTS}, N_ROUNDS: {N_ROUNDS}")
+    print(f"CONDITIONS: {TAG_MODES}")
+    print(f"{'='*60}\n")
 
-        for i in range(1, len(students)):  # skip S001 (no predecessor)
-            prev_contam = response_contamination[i - 1][round_num]
-            cur_contam = response_contamination[i][round_num]
+    students = generate_students(N_STUDENTS)
+    print(f"Generated {len(students)} students (alternating H/L)")
+    for s in students:
+        print(f"  {s['id']}: {s['name']:20} sim={s['similarity']}  "
+              f"GPA={s['gpa']} SAT={s['sat']} major={s['major']:12} state={s['state']}")
+    print()
 
-            if prev_contam:
-                n_prev_contaminated += 1
-                if cur_contam:
-                    n_contagion_events += 1
-                    n_prev_contam_target_contam += 1
-            else:
-                n_prev_clean += 1
+    all_condition_data = {}
 
-        contagion_rate = n_prev_contam_target_contam / max(1, n_prev_contaminated)
-        baseline_rate = n_prev_contam_target_contam / max(1, n_prev_contaminated + n_prev_clean)  # not quite right
-        # Better: compare contamination rate for students whose predecessor was contaminated
-        # vs contamination rate for students whose predecessor was clean
-        cur_contam_given_prev_contam = 0
-        cur_contam_given_prev_clean = 0
-        n_given_prev_contam = 0
-        n_given_prev_clean = 0
+    for tag_mode in TAG_MODES:
+        print(f"\n{'='*60}")
+        print(f"CONDITION: tag_mode = '{tag_mode}'")
+        print(f"{'='*60}")
+        cond = run_condition(tag_mode, students)
+        all_condition_data[tag_mode] = cond["summary"]
 
-        for i in range(1, len(students)):
-            prev_contam = response_contamination[i - 1][round_num]
-            cur_contam = response_contamination[i][round_num]
-            if prev_contam:
-                n_given_prev_contam += 1
-                if cur_contam:
-                    cur_contam_given_prev_contam += 1
-            else:
-                n_given_prev_clean += 1
-                if cur_contam:
-                    cur_contam_given_prev_clean += 1
+        # Print per-condition detail
+        results = cond["results"]
+        response_contamination = cond["response_contamination"]
+        summary = cond["summary"]
 
-        rate_given_contam = cur_contam_given_prev_contam / max(1, n_given_prev_contam)
-        rate_given_clean = cur_contam_given_prev_clean / max(1, n_given_prev_clean)
-        contagion_odds_ratio = (rate_given_contam / max(0.001, 1 - rate_given_contam)) / max(0.001, rate_given_clean / max(0.001, 1 - rate_given_clean))
+        metrics = ["personalization", "accuracy", "hallucination", "consistency"]
+        contam_students = [r for r in results if r["contamination"]]
 
-        print(f"\n  Round {round_num}:")
-        print(f"    P(contaminated_N | contaminated_N-1_response): {rate_given_contam:.3f}  (N={n_given_prev_contam})")
-        print(f"    P(contaminated_N | clean_N-1_response):        {rate_given_clean:.3f}  (N={n_given_prev_clean})")
-        print(f"    Odds ratio (contagion effect):                 {contagion_odds_ratio:.2f}x")
-        print(f"    ---")
-        print(f"    n_prev_response_contaminated = {n_given_prev_contam}")
-        print(f"    n_prev_response_clean = {n_given_prev_clean}")
+        print(f"\n  Contamination rate: {summary['contamination_rate']:.3f}")
+        print(f"  Contaminated: {len(contam_students)}/{len(results)} students")
+        if contam_students:
+            for r in results:
+                if r["contamination_events"]:
+                    for e in r["contamination_events"]:
+                        pred = r.get("preceding_student_name", "?")
+                        pred_sim = r.get("preceding_student_similarity", "?")
+                        pm = e.get("preceding_student_match", False)
+                        print(f"    {r['student_name']:20} sim={r['similarity']} "
+                              f"rnd={e['round']} src={e['source_student']:20} "
+                              f"leaked={e['leaked_attributes']} "
+                              f"pred_match={pm} [preceded_by={pred} ({pred_sim})]")
 
-    # ── CASCADE / CHAIN ANALYSIS ──────────────────────────────────────
-    print(f"\n{'─'*60}")
-    print(f"CASCADE ANALYSIS — Consecutive Contamination Chains")
-    print(f"{'─'*60}")
+        for m in metrics:
+            print(f"  {m}: {summary[m]:.2f}")
 
-    for round_num in range(N_ROUNDS):
-        current_chain = 0
-        max_chain = 0
-        chains = []
-        for i in range(len(students)):
-            if response_contamination[i][round_num]:
-                current_chain += 1
-            else:
-                if current_chain >= 2:
-                    chains.append(current_chain)
-                current_chain = 0
-        if current_chain >= 2:
-            chains.append(current_chain)
-        max_chain = max(chains) if chains else 0
-
-        print(f"  Round {round_num}: max_chain={max_chain}, chains_of_2+: {chains}")
-
-    # ── ROUND 1→2 PERSISTENCE ─────────────────────────────────────────
-    print(f"\n{'─'*60}")
-    print(f"ROUND 1→2 CARRYOVER (Within-Student Persistence)")
-    print(f"{'─'*60}")
-    contam_r1 = [r for r in results if response_contamination[results.index(r)][1]]
-    if contam_r1:
-        persisted = [r for r in contam_r1 if response_contamination[results.index(r)][2]]
-        print(f"  Students contaminated in round 1: {len(contam_r1)}")
-        print(f"  Students still contaminated in round 2: {len(persisted)}")
-        print(f"  Persistence rate: {len(persisted)/len(contam_r1):.3f}")
+    # ── Baseline validation ───────────────────────────────────────────
+    no_tags_rate = all_condition_data["no_tags"]["contamination_rate"]
+    print(f"\n{'─'*80}")
+    print(f"BASELINE VALIDATION")
+    print(f"{'─'*80}")
+    print(f"  no_tags contamination rate: {no_tags_rate:.3f}")
+    print(f"  Iteration 10 baseline (expected ~0.92): 0.920")
+    if abs(no_tags_rate - 0.92) < 0.10:
+        print(f"  ✓ Baseline replicates Iteration 10 (within 10pp)")
     else:
-        print(f"  No students contaminated in round 1 — cannot compute persistence.")
+        print(f"  ⚠ Baseline deviates from Iteration 10 (delta={abs(no_tags_rate-0.92):.3f}) — cross-condition comparisons may be unreliable")
 
-    # ── SIMILARITY-MODERATED CONTAGION ────────────────────────────────
-    print(f"\n{'─'*60}")
-    print(f"SIMILARITY × CONTAGION")
-    print(f"{'─'*60}")
-    sim_pairs = [("high", "high"), ("high", "low"), ("low", "high"), ("low", "low")]
-    for target_sim, pred_sim in sim_pairs:
-        rates = []
-        n_total = 0
-        for round_num in range(N_ROUNDS):
-            count_contam = 0
-            count_total = 0
-            for i in range(1, len(results)):
-                r = results[i]
-                if r["similarity"] == target_sim and r.get("preceding_student_similarity") == pred_sim:
-                    count_total += 1
-                    if response_contamination[i][round_num]:
-                        count_contam += 1
-            if count_total > 0:
-                rates.append(count_contam / count_total)
-                n_total += count_total
-        if rates:
-            print(f"  target={target_sim:<4} preceded_by={pred_sim:<4}  N={n_total//N_ROUNDS:2d}  "
-                  f"contamination rates by round: {[f'{r:.3f}' for r in rates]}  "
-                  f"avg={sum(rates)/len(rates):.3f}")
+    # ── 2×2 interaction analysis ──────────────────────────────────────
+    print(f"\n{'─'*80}")
+    print(f"2×2 FACTORIAL ANALYSIS (user_tag × assistant_tag)")
+    print(f"{'─'*80}")
+    u_no = all_condition_data["no_tags"]["contamination_rate"]
+    u_yes_a_no = all_condition_data["user_only"]["contamination_rate"]
+    u_no_a_yes = all_condition_data["assistant_only"]["contamination_rate"]
+    u_yes_a_yes = all_condition_data["both"]["contamination_rate"]
+    print(f"  {'':20} assistant_tag=OFF  assistant_tag=ON")
+    print(f"  {'user_tag=OFF':20} {u_no:.3f}{'':>14} {u_no_a_yes:.3f}")
+    print(f"  {'user_tag=ON':20}  {u_yes_a_no:.3f}{'':>14} {u_yes_a_yes:.3f}")
+    # Main effects
+    user_effect = (u_yes_a_no + u_yes_a_yes)/2 - (u_no + u_no_a_yes)/2
+    asst_effect = (u_no_a_yes + u_yes_a_yes)/2 - (u_no + u_yes_a_no)/2
+    print(f"  Main effect of user_tag: {user_effect:+.3f}")
+    print(f"  Main effect of assistant_tag: {asst_effect:+.3f}")
 
-    # ── PRECEDING-STUDENT MATCH ───────────────────────────────────────
-    print(f"\n{'─'*60}")
-    print(f"CONTAMINATION SOURCE — Preceding-Student Match")
-    print(f"{'─'*60}")
-    pm_events = []
-    total_events = 0
-    for r in results:
-        for e in r["contamination_events"]:
-            total_events += 1
-            if e.get("preceding_student_match"):
-                pm_events.append(e)
-    print(f"  Total contamination events: {total_events}")
-    print(f"  Events where source = preceding student: {len(pm_events)}/{total_events} "
-          f"({len(pm_events)/max(1,total_events)*100:.1f}%)")
-
-    # ── CONTAMINATION EVENTS DETAIL ───────────────────────────────────
-    print(f"\n{'─'*60}")
-    print(f"CONTAMINATION EVENTS DETAIL")
-    print(f"{'─'*60}")
-    for r in results:
-        if r["contamination_events"]:
-            for e in r["contamination_events"]:
-                pred = r.get("preceding_student_name", "?")
-                pred_sim = r.get("preceding_student_similarity", "?")
-                pm = e.get("preceding_student_match", False)
-                print(f"  {r['student_name']:20} sim={r['similarity']} "
-                      f"rnd={e['round']} src={e['source_student']:20} "
-                      f"leaked={e['leaked_attributes']} "
-                      f"pred_match={pm} "
-                      f"[preceded_by={pred} ({pred_sim})]")
-
-    # ── Summary ───────────────────────────────────────────────────────
-    any_contam = [r for r in results if r["contamination"]]
-    if any_contam:
-        total_leaks = sum(len(e["leaked_attributes"])
-                          for r in any_contam
-                          for e in r["contamination_events"])
-        total_events = sum(r['contamination_count'] for r in any_contam)
-        print(f"\n  Total contaminated students: {len(any_contam)}/{len(results)}")
-        print(f"  Mean leaked attributes per event: {total_leaks / max(1, total_events):.2f}")
+    # ── Cross-condition comparison ─────────────────────────────────────
+    print(f"\n{'='*80}")
+    print(format_results_summary(all_condition_data))
+    print(f"{'='*80}")
 
     # ── Save ──────────────────────────────────────────────────────────
     output = {
         "experiment": EXPERIMENT_NAME,
-        "config": {"n_students": N_STUDENTS, "n_rounds": N_ROUNDS},
+        "config": {"n_students_per_condition": N_STUDENTS, "n_rounds": N_ROUNDS, "conditions": TAG_MODES},
         "students": [{"id": s["id"], "name": s["name"], "similarity": s["similarity"]} for s in students],
-        "results": results,
-        "response_contamination_matrix": response_contamination,
-        "summary": {
-            "contamination_rate": contamination_rate(),
-            "contamination_rate_high_sim": contamination_rate([r for r in results if r["similarity"] == "high"]),
-            "contamination_rate_low_sim": contamination_rate([r for r in results if r["similarity"] == "low"]),
-            "contamination_by_round": {
-                f"round_{r}": contamination_rate_round(results, r) for r in range(N_ROUNDS)
-            },
-            **{f"{m}": avg(m) for m in metrics},
-        }
+        "conditions": {
+            mode: {
+                "results": all_condition_data[mode],
+            }
+            for mode in TAG_MODES
+        },
+        "cross_condition": all_condition_data,
     }
 
     out_file = Path(__file__).parent / f"results_{EXPERIMENT_NAME}.json"
@@ -520,8 +503,8 @@ def main():
         json.dump(output, f, indent=2)
 
     print(f"\nRaw results saved to: {out_file}")
-    print(f"\nSUMMARY JSON:")
-    print(json.dumps(output["summary"], indent=2))
+    print(f"\nSUMMARY (cross-condition):")
+    print(json.dumps(all_condition_data, indent=2))
 
 
 if __name__ == "__main__":
