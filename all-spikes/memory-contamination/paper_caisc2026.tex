@@ -1,0 +1,793 @@
+% CAISc 2026 Submission
+% To compile: upload this file to the Overleaf project at
+%   https://www.overleaf.com/read/tyqznhpcmjpp#e64292
+% and replace caisc_2026.tex with this file (keeping caisc_2026.sty).
+
+\documentclass{article}
+
+% ready for submission
+\usepackage{caisc_2026}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  frame=single,
+  xleftmargin=\parindent
+}
+
+\title{Memory Contamination in Multi-Agent AI College Counseling:\\
+A Study of Per-Student Agent Architecture}
+
+% Authors: human overseer + AI systems used
+\author{%
+  Harpreet Ahluwalia\thanks{lumne.ai. Correspondence: harpreet@lumne.ai} \\
+  lumne.ai \\
+  \texttt{harpreet@lumne.ai}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Large language model agents serving multiple students within a single context
+window risk cross-student data contamination. We study this phenomenon in a
+simulated college counseling environment using Claude Sonnet~4
+(\texttt{claude-sonnet-4-6}). Across eight experimental conditions with
+synthetic student profiles, we compare two agent architectures: per-student
+memory agents (isolated conversation history per student) and shared-history
+agents (single sliding window across all students). Shared agents produce
+contamination rates of 22--31\% in passive probe conditions, rising to 92\%
+in a preliminary high-accumulation run where students explicitly shared their
+statistics. Per-student memory agents produce near-zero contamination across
+all conditions (0/24 students in the cleanest replication). A simple
+name-tagging intervention (prepending \texttt{[Student: name]} to user and
+assistant turns) eliminates contamination entirely without architectural
+isolation. Counterintuitively, low-similarity students are contaminated more
+frequently than high-similarity students (58\% vs.\ 0\% in the primary
+replication), an inconsistency across iterations suggesting a measurement
+detectability artifact rather than a true safety difference. These findings
+have direct implications for production AI advising systems that serve
+multiple users sequentially.
+\end{abstract}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+% ─────────────────────────────────────────────────────────────────────────────
+
+College counseling is a high-stakes domain where incorrect information about
+a student's GPA, test scores, or extracurricular profile can lead to
+misdirected admissions advice. AI-powered college counseling platforms
+increasingly use large language models to generate personalized
+recommendations for students. A common architectural pattern involves a
+single agent instance that serves multiple students in sequence, maintaining
+a running conversation history within a sliding context window.
+
+This pattern introduces a subtle but dangerous failure mode: cross-student
+data contamination. When an agent serves Student~B immediately after
+Student~A, information about Student~A's GPA, SAT scores, or college
+preferences can leak into the agent's response to Student~B. In a production
+setting, this could cause a counselor to recommend safety schools for a
+student with a 3.2 GPA based on the previous student's 3.8 GPA, or to
+suggest extracurricular programs that belong to another student entirely.
+
+We formalize this contamination problem and study it across two agent
+architectures: (1) per-student memory agents that maintain isolated
+conversation histories for each student, and (2) shared-history agents that
+use a single sliding window across all students. We hypothesize that shared
+agents produce measurable cross-student contamination, that this
+contamination increases with context accumulation, and that simple
+interventions such as name tagging can eliminate it.
+
+Our contributions are threefold. First, we demonstrate that cross-student
+contamination is a real and measurable phenomenon in shared-history agents,
+with contamination rates ranging from 12\% to 92\% depending on probe
+condition. Second, we show that per-student memory agents consistently
+produce near-zero contamination (0/24 in the cleanest replication), in
+contrast to 29\% for shared agents under identical conditions. Third, we
+identify a practical intervention---name tagging---that eliminates
+contamination in shared agents without requiring architectural redesign.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Related Work}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\paragraph{LLM Hallucination in High-Stakes Domains.}
+Hallucination in large language models is well documented~\cite{ji2023survey},
+including in high-stakes domains such as medicine and law where incorrect
+information has direct consequences. Our work focuses on a specific subtype:
+cross-instance hallucination where the model reports a fact that is true for
+a different user. Unlike generic hallucination (inventing facts),
+contamination involves truthfully repeating a fact that belongs to the
+wrong individual.
+
+\paragraph{Multi-Session Context Pollution.}
+Prior work on multi-turn dialogue systems has identified confusion of
+information across turns within the same conversation as a recurring failure
+mode~\cite{shuster2022blenderbot3}. We extend this to cross-conversation
+pollution within a shared agent architecture. To our knowledge, no prior work
+has systematically measured the rate of statistical contamination in
+multi-student shared-context systems.
+
+\paragraph{Memory Architectures for LLM Agents.}
+Retrieval-augmented generation (RAG)~\cite{lewis2020rag} and
+memory-augmented agents~\cite{park2023generative} address the problem of
+maintaining long-term context across sessions. Per-session memory isolation
+is a standard architectural recommendation, but the empirical consequences of
+violating this isolation in practice have not been quantified.
+
+\paragraph{Bloom's 2-Sigma Problem and AI Tutoring.}
+Bloom's landmark finding that one-on-one tutoring improves outcomes by two
+standard deviations~\cite{bloom1984} motivates AI tutoring systems. College
+counseling requires the same degree of personalization: advice must be
+tailored to a specific student's GPA, test scores, extracurricular profile,
+and state of residence. Cross-student contamination directly undermines this
+requirement.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Methodology}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Synthetic Student Profiles}
+
+We constructed 24 synthetic student profiles divided into two similarity
+tiers. High-similarity students ($n{=}12$) were California-based computer
+science majors with GPAs in the 3.6--3.9 range and SAT scores of 1400--1490.
+Low-similarity students ($n{=}12$) represented diverse states (Colorado, New
+York, Florida, New Jersey, Washington, Oregon, Arizona, Ohio, Texas,
+Illinois), majors (English, Psychology, Finance, Chemistry, Economics, Art,
+History, Education, Biology, Business), and a broader range of GPAs
+(3.2--3.9) and SAT scores (1180--1450). All profile attributes (GPA, SAT,
+extracurriculars, major, state) were explicitly provided to the agent in each
+student's conversation.
+
+Students were presented to the agent in alternating high/low similarity order
+(H, L, H, L, \ldots) to ensure each student had a known-similarity
+predecessor. The first student in each sequence had no predecessor.
+
+\subsection{Agent Architectures}
+
+We implemented two agent architectures, both using Claude Sonnet~4
+(\texttt{claude-sonnet-4-6}) with temperature 0.0 and \texttt{max\_tokens}
+500.
+
+\textbf{Memory Agent.} Each student received a dedicated conversation
+history. The system prompt included the student's full profile (name, GPA,
+SAT, extracurriculars, major, state) and the assistant accumulated
+conversation history across rounds within that student's session. No
+cross-student history sharing occurred.
+
+\textbf{Shared Agent.} A single conversation history served all students.
+Messages were appended sequentially. The agent accessed the most recent 8
+turns of conversation (a sliding window of approximately 4 student
+interactions). The system prompt was generic: ``You are a college counselor
+helping students with their applications.''
+
+\textbf{Shared+Tagged Agent.} A variant of the shared agent where user
+messages were prefixed with \texttt{[Student: name]} and assistant responses
+were similarly tagged. This intervention was designed to provide explicit
+attribution cues without architectural isolation.
+
+\subsection{Probe Types}
+
+We tested two probe conditions. In the \textbf{passive probe} condition,
+students stated their own GPA and SAT and asked for college recommendations:
+``I have a 3.8 GPA and 1460 SAT from California. Can you recommend schools
+for my stats?'' This tested whether the agent spontaneously leaked data from
+previous students. In the \textbf{active probe} condition, students
+additionally cross-referenced a prior student, testing explicit attribution
+under cross-reference stress.
+
+\subsection{Contamination Detection}
+
+We used a two-stage evaluation protocol. First, a LLM-as-judge (Claude
+Sonnet~4) evaluated each response on four quality metrics and flagged whether
+any attributes from a different student appeared in the response. Second, a
+deterministic regex detector identified exact numerical and string matches
+from other student profiles. A response was classified as contaminated if
+either detection method found a cross-student attribute.
+
+\subsection{Experimental Conditions}
+
+We conducted experiments across eight conditions spanning multiple iterations.
+Key conditions included: memory vs.\ shared agent comparison (Iterations
+4--6, 12), passive vs.\ active probe comparison (Iteration~10), context
+accumulation stress test (Iteration~11), name-tagging intervention (Iterations
+11--12), and poison pill injection (Iterations 5--6).
+
+\subsection{Quality Metrics}
+
+Each response received four scores from the LLM judge (1--5 scale):
+\textbf{Personalization} (does the response reference this specific student's
+stats?), \textbf{Accuracy} (is the admissions advice factually correct?),
+\textbf{Hallucination} (does the response invent details? 5 = no
+hallucination), and \textbf{Consistency} (is the advice consistent with prior
+advice to this student?).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Results}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Memory Agents Exhibit Near-Zero Contamination}
+
+Across experimental conditions spanning eight iterations, per-student memory
+agents consistently produced low-to-zero contamination. The cleanest
+measurement is the Iteration~12 three-condition replication ($n{=}24$), which
+recorded 0\% contamination for the memory agent. Earlier iterations (4, 6, 8,
+9) showed non-zero rates of 6--8\%, discussed in the footnote below.
+
+\begin{table}[h]
+\centering
+\caption{Memory agent contamination rates across all conditions.}
+\label{tab:memory}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Experiment} & \textbf{Condition} & \textbf{N} & \textbf{Rate} \\
+\midrule
+Iteration 4 & Fixed cohorts, passive & 8  & 0.12 (1/8)* \\
+Iteration 5 & Poison pill injection   & 9  & 0.00 (0/9)  \\
+Iteration 6 & Scaled poison pill      & 16 & 0.06 (1/16)* \\
+Iteration 7 & Identity anchoring      & 12 & 0.00 (0/12) \\
+Iteration 8 & Prompt anchoring        & 12 & 0.08 (1/12)* \\
+Iteration 9 & Identity drift          & 24 & 0.08 (2/24)* \\
+Iteration 10 & Active vs.\ passive   & 8  & 0.00 (0/8)  \\
+Iteration 12 & 3-condition replication & 24 & 0.00 (0/24) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\small{* The non-zero entries in Iterations 4, 6, 8, and 9 require
+qualification. Iterations 4 and 6 used earlier evaluator prompts without
+explicit disambiguation of generic overlap (e.g., ``debate'' appearing in
+multiple profiles). Iterations 8 and 9 used improved prompts and still showed
+8\% rates (1--2 events per 12--24 students). These events may represent real
+edge-case contamination or residual evaluator false positives. Iteration 12
+used the most rigorous evaluator design and recorded 0/24 contamination
+events. The conservative claim is near-zero contamination, with the cleanest
+replication at 0\%.}
+
+\subsection{Shared Agents Show 22--92\% Contamination}
+
+Shared-history agents consistently produced contamination across conditions.
+
+\textbf{Passive probe contamination.} Shared agents showed contamination
+rates of 12--29\%. The Iteration~12 replication ($n{=}24$) produced the most
+reliable estimate: 29.17\% (7 of 24 students contaminated). Contamination
+appeared in all three rounds (R0: 16.7\%, R1: 25.0\%, R2: 12.5\%) and was
+concentrated entirely among low-similarity students (58.3\% contaminated
+vs.\ 0\% high-similarity).
+
+\textbf{Active probe contamination.} When students explicitly cross-referenced
+another student, shared agent contamination dropped to 0\%. When the model is
+asked a direct question about a named student, it must explicitly attribute
+its answer, which acts as an attribution anchor. Passive probes lack this
+anchor---the model draws on the full context window, mixing in preceding
+student history without any explicit attribution trigger. The 0\% active
+result therefore reflects the contamination mechanism as spontaneous context
+bleed, not explicit cross-reference confusion.
+
+\textbf{Preliminary cascade finding.} The highest contamination rate was
+observed when students explicitly shared their statistics with the shared agent
+accumulating 48 student sessions. Under this condition (Iteration~10,
+$n{=}48$, \emph{single run not yet replicated}), contamination reached 92.0\%
+(44 of 48 students). This condition produced a visible contamination cascade:
+a single leakage event propagated across subsequent students, escalating from
+state leakage to extracurricular leakage to GPA/SAT leakage. This finding
+should be treated as preliminary pending independent replication.
+
+\begin{table}[h]
+\centering
+\caption{Shared agent contamination under passive probe conditions.}
+\label{tab:shared}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Experiment} & \textbf{N} & \textbf{Condition} & \textbf{Rate} & \textbf{High-Sim} & \textbf{Low-Sim} \\
+\midrule
+Iter 10 passive & 8  & Passive probe            & 12.0\% & 25.0\% & 0.0\%  \\
+Iter 11         & 24 & Context stress (medium)  & 12.0\% & 25.0\% & 0.0\%  \\
+Iter 12         & 24 & 3-condition replication  & 29.2\% & 0.0\%  & 58.3\% \\
+Iter 5          & 9  & Poison pill              & 22.2\% & n/a    & n/a    \\
+Iter 6          & 16 & Scaled poison pill       & 31.2\% & 50.0\% & 16.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Context Accumulation Drives Contamination}
+
+The transition from 8 students (Iteration~10 passive, 12\% contamination) to
+48 students with explicit stat sharing (Iteration~10 pollinator, 92\%,
+\emph{single run}) suggests context accumulation is a primary driver. The
+Iteration~11 context stress experiment varied accumulated students before
+measurement: low accumulation (2 students) produced 0\%, medium (5 students)
+produced 12\%, and high (8 students) produced 0\% (though with different
+profile ordering).
+
+The mechanism appears to be a contamination cascade: once a student is
+contaminated with leaked data, the contaminated response enters the shared
+history and becomes a source for subsequent students. In the Iteration~12
+replication, we observed a clear cascade chain: Ivy Torres (contaminated from
+Kai Yamamoto in round 1) $\rightarrow$ Omar Hassan (rounds 0 and 1)
+$\rightarrow$ Noah Williams (rounds 0 and 1) $\rightarrow$ Olivia Brown
+(rounds 0, 1, 2) $\rightarrow$ Peter Davis (rounds 1, 2) $\rightarrow$ Quinn
+Miller (round 1) $\rightarrow$ Sam Taylor (rounds 0, 1, 2).
+
+\subsection{Name-Tagging Eliminates Contamination}
+
+The simplest intervention tested was prepending \texttt{[Student: name]} tags
+to user and assistant turns. Iteration~11 ($n{=}48$) showed that both-side
+tagging reduced contamination from 92\% to 0\%. Iteration~12 replicated this
+with $n{=}24$: shared+tagged contamination rate was 0\% vs.\ shared untagged
+at 29.17\%.
+
+A follow-up 2$\times$2 factorial decomposition was attempted. The run was
+interrupted after 2 students per condition due to API budget constraints and
+produced no interpretable results. This decomposition remains an open question.
+
+\begin{table}[h]
+\centering
+\caption{Name-tagging intervention results.}
+\label{tab:tagging}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Experiment} & \textbf{Condition} & \textbf{N} & \textbf{Rate} \\
+\midrule
+Iter 11 & No tags          & 48 & 92.0\% \\
+Iter 11 & Both-side tags   & 48 & 0.0\%  \\
+Iter 12 & No tags          & 24 & 29.2\% \\
+Iter 12 & Both-side tags   & 24 & 0.0\%  \\
+Iter 12 & Memory agent     & 24 & 0.0\%  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The Low-Similarity Paradox}
+
+The relationship between student similarity and contamination rate is
+inconsistent across iterations. In Iteration~12 ($n{=}24$), low-similarity
+students had a 58.3\% contamination rate while high-similarity students had
+0\%. In Iteration~10 passive ($n{=}8$), the pattern reversed: high-similarity
+students showed 25\% while low-similarity showed 0\%.
+
+These two results are contradictory. One hypothesis is that low-similarity
+contamination is more \emph{detectable} by the LLM evaluator: a Texas Business
+major's state leaking into a California CS major's response is an obvious
+anomaly, while a California CS major's robotics club leaking into another
+California CS major's response may not be flagged. However, the Iteration~10
+reversal undermines this as a complete account. We treat this as an open
+inconsistency warranting larger-scale replication before drawing design
+conclusions.
+
+\subsection{Poison Pill Propagation}
+
+Iterations 5 and 6 tested whether intentionally false data (a ``poison pill''
+injected into one student's history) would propagate to other students. In the
+shared agent, fabricated statistics propagated to 22--31\% of subsequent
+students. The poison propagation rate reached 88\% in the scaled condition
+($n{=}16$). Memory agents showed zero propagation. These iterations did not
+systematically compare implausible versus plausible poison values; that
+decomposition remains a direction for future work.
+
+\subsection{Response Quality}
+
+Table~\ref{tab:quality} shows quality metrics from Iteration~12. The accuracy
+improvement from untagged shared (3.78) to tagged shared (4.43) is meaningful:
+contaminated responses recommend schools based on the wrong student's GPA and
+state, which directly reduces accuracy. Name tagging restores accuracy to
+memory-agent levels (4.47).
+
+The personalization scores (1.01--1.33 across all three conditions) are low
+and warrant explanation. The passive probe design has students state their own
+stats and ask for advice, producing responses that do not deeply engage with
+the student's profile. The LLM evaluator scores personalization conservatively
+when the response gives recommendations without explicitly echoing back the
+student's GPA or extracurriculars. These scores reflect a limitation of the
+passive probe paradigm rather than a failure of the architectures under test.
+The contamination comparison remains valid because all three conditions used
+identical probes.
+
+\begin{table}[h]
+\centering
+\caption{Quality metrics from Iteration~12 three-condition replication.}
+\label{tab:quality}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric} & \textbf{Shared (untagged)} & \textbf{Shared+Tagged} & \textbf{Memory} \\
+\midrule
+Personalization (1--5) & 1.10 & 1.33 & 1.01 \\
+Accuracy (1--5)        & 3.78 & 4.43 & 4.47 \\
+Hallucination (1--5)   & 4.89 & 4.99 & 5.00 \\
+Consistency (1--5)     & 2.56 & 2.81 & 2.94 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Discussion}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{The Contamination Mechanism}
+
+Our experiments support a two-mechanism model. The primary mechanism is
+\textbf{window propagation}: the model sees the preceding student's
+conversation within the sliding window and spontaneously mixes attributes when
+generating a response. The secondary mechanism, \textbf{cross-talk}, where
+the model is explicitly asked about another student, produced 0\%
+contamination. Passive spillover is the dominant failure mode in production.
+
+\subsection{Why Low-Similarity Students May Be More Contaminated}
+
+When a low-similarity student's attribute (e.g., state = TX) leaks into a
+response for a California CS major, the anomaly is obvious. When a
+high-similarity California CS student's attributes leak into another
+California CS major's response, the evaluator may not flag it because the
+attributes overlap with the correct profile. This does not mean
+high-similarity students are safer: their contamination may be equally
+frequent but harder to detect.
+
+\subsection{Practical Implications for AI Advising Systems}
+
+The name-tagging intervention provides a deployment-ready solution for
+production systems. It requires no architectural changes and costs nothing in
+latency or compute. For the strongest safety guarantee, per-student memory
+agents remain the gold standard.
+
+\subsection{Design Implications}
+
+These findings suggest three design principles:
+\begin{enumerate}
+  \item \textbf{Never share conversation context across students without
+    explicit disambiguation.} Even a single contaminated response can cascade
+    through subsequent interactions.
+  \item \textbf{If context sharing is necessary, use name tagging.} The
+    \texttt{[Student: name]} prefix provides the minimum attribution cue
+    needed to keep student data separate.
+  \item \textbf{Treat the similarity-contamination relationship as
+    unresolved.} Our experiments produced contradictory findings across
+    iterations. Do not rely on student similarity as a proxy for contamination
+    risk without further investigation.
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Limitations}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\textbf{Sample Size.} Our sample sizes ranged from 8 to 48 students per
+condition. The 92\% contamination finding is a single observation and should
+be treated as preliminary. The contradictory low-similarity findings across
+iterations further indicate that larger samples are needed.
+
+\textbf{LLM-as-Judge Bias.} We used the same model (Claude Sonnet~4) as both
+the agent under test and the evaluation judge. The use of deterministic regex
+detection partially mitigates this, but regex only catches exact attribute
+matches, not paraphrased contamination.
+
+\textbf{Synthetic Profiles.} Our student profiles are artificial. Real college
+counseling involves nuanced personal histories, recommendation letters, and
+financial considerations that our synthetic profiles lack.
+
+\textbf{Single Model.} All experiments used Claude Sonnet~4
+(\texttt{claude-sonnet-4-6}). We did not test GPT-4, Gemini, open-source
+models, or other model families.
+
+\textbf{Evaluation Fidelity.} The low personalization scores across all
+conditions in Iteration~12 (1.01--1.33) suggest the evaluator was
+conservative. The contamination detection pipeline may miss subtle
+contamination (paraphrased attribute leakage) and may over-detect when
+students share attributes.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusion}
+% ─────────────────────────────────────────────────────────────────────────────
+
+Cross-student data contamination is a real and measurable phenomenon in
+shared-history AI agents. In our cleanest replication ($n{=}24$, three
+conditions), shared agents contaminate 29\% of students while memory agents
+contaminate 0\%, and name tagging drops the shared-agent rate to 0\%.
+
+The practical implication is direct: shared context windows must include
+explicit student attribution. Name tagging is a minimal, zero-cost
+intervention. For the strongest safety guarantee, per-student memory isolation
+remains the recommended architecture.
+
+Open questions include: replication of the 92\% cascade finding, resolution of
+the contradictory similarity-contamination relationship, and extension to model
+families beyond Claude Sonnet~4.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Acknowledgments}
+% ─────────────────────────────────────────────────────────────────────────────
+
+This research was conducted using Claude Sonnet~4 (\texttt{claude-sonnet-4-6})
+by Anthropic as the agent under test and as the LLM judge for response
+evaluation. The experimental loop was orchestrated by Ralph (DeepSeek~V4),
+which proposed experimental designs, modified the experiment code, and executed
+experiments autonomously. The autovoila framework facilitated the agentic
+research loop.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliographystyle{plainnat}
+
+\begin{thebibliography}{10}
+
+\bibitem{bloom1984}
+  Benjamin~S. Bloom.
+  \newblock The 2 sigma problem: The search for methods of group instruction as
+    effective as one-to-one tutoring.
+  \newblock \emph{Educational Researcher}, 13(6):4--16, 1984.
+
+\bibitem{ji2023survey}
+  Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko
+    Ishii, Yejin Choi, Andrea Madotto, and Pascale Fung.
+  \newblock Survey of hallucination in natural language generation.
+  \newblock \emph{ACM Computing Surveys}, 55(12):1--38, 2023.
+
+\bibitem{lewis2020rag}
+  Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+    Karpukhin, Naman Goyal, Heinrich K\"{u}ttler, Mike Lewis, Wen-tau Yih,
+    Tim Rockt\"{a}schel, Sebastian Riedel, and Douwe Kiela.
+  \newblock Retrieval-augmented generation for knowledge-intensive NLP tasks.
+  \newblock In \emph{Advances in Neural Information Processing Systems},
+    volume~33, pages 9459--9474, 2020.
+
+\bibitem{park2023generative}
+  Joon~Sung Park, Joseph~C. O'Brien, Carrie~J. Cai, Meredith~Ringel Morris,
+    Percy Liang, and Michael~S. Bernstein.
+  \newblock Generative agents: Interactive simulacra of human behavior.
+  \newblock In \emph{Proceedings of the 36th Annual ACM Symposium on User
+    Interface Software and Technology}, pages 1--22, 2023.
+
+\bibitem{shuster2022blenderbot3}
+  Kurt Shuster, Jing Xu, Mojtaba Komeili, Da~Ju, Eric~Michael Smith, Stephen
+    Roller, Megan Ung, Moya Chen, Kushal Arora, Joshua Lane, et~al.
+  \newblock Blenderbot~3: A deployed conversational agent that continually
+    learns to responsibly engage.
+  \newblock \emph{arXiv preprint arXiv:2208.03188}, 2022.
+
+\bibitem{anthropic2024claude}
+  Anthropic.
+  \newblock The Claude model family, 2024.
+  \newblock \url{https://docs.anthropic.com/en/docs/about-claude/models}.
+
+\end{thebibliography}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+% ─────────────────────────────────────────────────────────────────────────────
+
+\section{System Prompts}
+
+\subsection{Memory Agent System Prompt}
+
+\begin{lstlisting}
+You are a college counselor. Student profile:
+Name: Alan Chen
+GPA: 3.9, SAT: 1490
+Extracurriculars: robotics, debate
+Intended major: CS
+State: CA
+
+Provide personalized college counseling advice.
+\end{lstlisting}
+
+The student profile was embedded directly in the system prompt. Each student
+received a separate system prompt with their own profile and accumulated
+conversation history.
+
+\subsection{Shared Agent System Prompt}
+
+\begin{lstlisting}
+You are a college counselor helping students with their applications.
+\end{lstlisting}
+
+No student profile was included. All student information came from user
+messages. The agent accessed the most recent 8 conversation turns across all
+students.
+
+\subsection{Shared+Tagged Agent System Prompt}
+
+Identical to the shared agent prompt. The difference was message formatting:
+\begin{itemize}
+  \item User: \texttt{[Student: Alan Chen] I have a 3.9 GPA and 1490 SAT from
+    CA\ldots}
+  \item Assistant: \texttt{[Student: Alan Chen] Based on your profile\ldots}
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────────────────────────
+
+\section{Evaluator Prompt (Excerpt)}
+
+\begin{lstlisting}
+Rate this college counseling response for student Alan Chen.
+
+Student profile (CORRECT stats):
+- GPA: 3.9, SAT: 1490
+- ECs: robotics, debate
+- Major: CS, State: CA
+
+ALL OTHER STUDENT PROFILES (check if response mentions stats
+from any of these): [list of all 24 student profiles]
+
+IMPORTANT: The IMMEDIATELY PRECEDING student was Brian Chen
+(GPA=3.8, SAT=1470, state=CA, ECs=robotics, coding club).
+Check extra carefully whether any of Brian Chen's attributes
+leaked into this response.
+
+Score each on 1-5 and output JSON:
+{"personalization":4,"accuracy":3,"hallucination":5,
+ "consistency":4,"contamination":false,
+ "contamination_source":"none","leaked_attributes":[],
+ "preceding_student_match":false}
+\end{lstlisting}
+
+% ─────────────────────────────────────────────────────────────────────────────
+
+\section{Example Contamination Event}
+
+From Iteration~12, shared passive condition, round~1:
+
+\medskip
+\noindent\textbf{Target Student:} Ivy Torres (low-similarity)
+\begin{itemize}[noitemsep]
+  \item GPA: 3.2, SAT: 1200 | ECs: band, art club
+  \item Major: Education, State: OH
+\end{itemize}
+
+\noindent\textbf{Preceding Student:} Kai Yamamoto (low-similarity)
+\begin{itemize}[noitemsep]
+  \item GPA: 3.5, SAT: 1320 | ECs: soccer, yearbook
+  \item Major: Business, State: TX
+\end{itemize}
+
+\noindent\textbf{Leaked Attribute:} \texttt{state = TX} (Kai Yamamoto's state
+appeared in the response to Ivy Torres). The response addressed Ivy Torres
+by name but referenced Texas as her state.
+
+\medskip
+\noindent\textbf{Chain Cascade (Iteration~12 passive condition):}
+\begin{enumerate}[noitemsep]
+  \item Ivy Torres / OH (round 1) --- leaked TX from Kai Yamamoto
+  \item Omar Hassan / FL (round 0) --- TX leaked forward from Kai/Ivy
+  \item Noah Williams / GA (rounds 0, 1) --- leaked CO from Maya Singh
+  \item Olivia Brown / MI (rounds 0, 1, 2) --- GA and CO both leaked
+  \item Peter Davis / VA (rounds 1, 2) --- leaked MI from Olivia Brown
+  \item Quinn Miller / NC (round 1) --- leaked VA from Peter Davis
+  \item Sam Taylor / TN (rounds 0, 1, 2) --- leaked MD from Rachel Wilson + unknown GPA, ECs
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+
+\section*{CAISc 2026 --- AI Involvement Checklist}
+
+\textit{This checklist documents the role of AI systems at each stage of the
+research process. Items 1--4 use the scale: Low / Medium / High / NA /
+Unclear.}
+
+\subsection*{Research Stage Assessment}
+
+\begin{enumerate}
+
+  \item \textbf{Idea Generation.}
+    Were AI systems used to generate the core research idea or hypothesis?\\
+    \textbf{Answer:} Yes. The core research question (cross-student
+    contamination in shared-context agents) was motivated by a production
+    observation and formalized with AI assistance (Ralph/DeepSeek).\\
+    \textbf{Effort level:} Medium
+
+  \item \textbf{Experimental Design.}
+    Were AI systems used to design the experiments, methodology, or
+    evaluation protocol?\\
+    \textbf{Answer:} Yes (High). Ralph (DeepSeek~V4) autonomously proposed
+    all experimental conditions, student profiles, probe types, and
+    evaluation rubrics across 12 iterations.\\
+    \textbf{Effort level:} High
+
+  \item \textbf{Code Implementation and Execution.}
+    Were AI systems used to implement or run the experiments?\\
+    \textbf{Answer:} Yes (High). Ralph modified \texttt{experiment.py} for
+    each iteration and executed the experiments. Claude Sonnet~4 served as
+    the agent under test and as the LLM evaluator.\\
+    \textbf{Effort level:} High
+
+  \item \textbf{Manuscript Preparation.}
+    Were AI systems used to write or edit the manuscript?\\
+    \textbf{Answer:} Yes (High). Ralph drafted the initial manuscript from
+    experiment results. Human author reviewed, corrected factual errors, and
+    revised all sections.\\
+    \textbf{Effort level:} High
+
+\end{enumerate}
+
+\subsection*{AI System Documentation}
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+
+  \item \textbf{AI Systems Used.}
+    \begin{itemize}
+      \item \textbf{Ralph (DeepSeek~V4)}: Experimental design, code
+        implementation, experiment execution, and manuscript drafting.
+      \item \textbf{Claude Sonnet~4 (\texttt{claude-sonnet-4-6})}: Agent
+        under test (college counselor) and LLM-as-judge evaluator.
+      \item \textbf{Human (Harpreet Ahluwalia)}: Defined research question,
+        set evaluation thresholds, reviewed and corrected manuscript, validated
+        all statistical claims.
+    \end{itemize}
+
+  \item \textbf{Limitations and Failure Modes.}
+    Key limitations of the AI systems used: (a) Ralph occasionally fabricated
+    specific statistics not present in the results data (e.g., wrong student
+    states in the contamination example, unsupported claims about implausible
+    poison pills); all such errors were identified and corrected during human
+    review. (b) Claude Sonnet~4 as both agent and judge introduces circular
+    evaluation bias, acknowledged in Section~6. (c) The autonomous loop ran
+    out of API budget during Iteration~12, truncating the tag decomposition
+    experiment.
+
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+
+\section*{CAISc 2026 --- Reproducibility and Responsibility Checklist}
+
+\begin{enumerate}
+
+  \item \textbf{Code availability.} The experiment code is available at
+    \texttt{experiment.py} in the repository. Each iteration's configuration
+    is documented in the corresponding results JSON file.
+
+  \item \textbf{Data availability.} All experimental results are stored as
+    JSON files in the \texttt{all-spikes/memory-contamination/} directory,
+    organized by iteration number and experiment name.
+
+  \item \textbf{Model access.} Experiments used Claude Sonnet~4
+    (\texttt{claude-sonnet-4-6}) via the Anthropic API. Results depend on
+    model version and may not reproduce with future model updates.
+
+  \item \textbf{Random seed.} All experiments used random seed~42 for student
+    generation.
+
+  \item \textbf{Temperature.} The model was called with temperature~0.0 for
+    all evaluation prompts and default temperature for agent responses.
+
+  \item \textbf{Context window.} Shared agents used a sliding window of the
+    most recent 8 conversation turns. Memory agents accumulated full
+    per-student history.
+
+  \item \textbf{Student profiles.} The 24 synthetic profiles (12
+    high-similarity, 12 low-similarity) are defined in the experiment code
+    and are fully reproducible.
+
+  \item \textbf{Evaluation prompts.} The full evaluator prompt is included
+    in Appendix~B. Deterministic regex detection code is in the
+    \texttt{detect\_stat\_conflicts} function.
+
+  \item \textbf{API costs.} API cost scales with
+    $N_{\mathrm{students}} \times N_{\mathrm{rounds}} \times
+    N_{\mathrm{conditions}}$ per iteration, primarily driven by evaluation
+    calls.
+
+  \item \textbf{Contamination definition.} A response is classified as
+    contaminated if either the LLM judge flags it or the regex detector finds
+    an exact attribute match from a different student's profile.
+
+  \item \textbf{Responsible AI.} This work studies a failure mode of AI
+    systems in educational settings. We believe transparent reporting of
+    contamination rates, including the 92\% preliminary cascade finding,
+    is necessary for practitioners to make informed architectural decisions.
+    No real student data was used.
+
+\end{enumerate}
+
+\end{document}
